@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Qualaroo  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Qualaroo  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Qualaroo Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/qualaroo/QualarooSDKiOS"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Qualaroo Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Qualaroo  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Qualaroo.html">Qualaroo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Qualaroo/SDKError.html">– SDKError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ThemeConfigurator.html">ThemeConfigurator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ThemeConfigurator/Style.html">– Style</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='iosmobilesdk' class='heading'>iOSMobileSDK</h1>
+
+<p>QualarooSDKiOS is framework for iOS. It&rsquo;s used to display and gather data from survey configured by <a href="https://app.qualaroo.com">Qualaroo dashboard</a>.</p>
+<h2 id='how-to-get-started' class='heading'>How to get started</h2>
+
+<ul>
+<li>Download QualarooSDKiOS(link here!) and try out example app.</li>
+<li>Read FAQ(link here!) at wiki.</li>
+<li>Checkout documentation(link here!).</li>
+<li>Continue reading this page.</li>
+</ul>
+<h2 id='communication' class='heading'>Communication</h2>
+
+<ul>
+<li>If you are a developer and you need help with some  internal SDK issue or you just found a bug write: <a href="mailto:Mihaly@qualaroo.com">Mihaly@qualaroo.com</a></li>
+<li>If you want to know how can you benefit by using this SDK, or how to create survey using Qualaroo Dashboard write: <a href="mailto:Valerie@qularoo.com">Valerie@qularoo.com</a></li>
+<li>If you need a feature or piece of functionality that SDK is currently not providing you, write: <a href="mailto:Steve@qualaroo.com">Steve@qualaroo.com</a></li>
+</ul>
+<h2 id='installation' class='heading'>Installation:</h2>
+
+<p>Preferred and supported installation method right now is using CocoaPods.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p><a href="http://cocoapods.org/">CocoaPods</a> is a dependency manager for Swift and Objective-C, which automates and simplifies the process of using 3rd-party libraries like QualarooSDK in your projects. You can install it with the following command:</p>
+<pre class="highlight plaintext"><code>$ gem install cocoapods
+</code></pre>
+
+<p>To integrate QualarooSDKiOS into your Xcode project using CocoaPods, specify it in your Podfile:</p>
+<pre class="highlight plaintext"><code>source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+target 'TargetName' do
+pod 'QualarooSDKiOS'
+end
+</code></pre>
+
+<p>Then, run the following command:</p>
+<pre class="highlight plaintext"><code>$ pod install
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p>Not yet supported</p>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>Not  supported yet</p>
+<h3 id='manually' class='heading'>Manually</h3>
+
+<p>If you don&rsquo;t want to use any package managers, you can always add QualarooSDKiOS manually as an embedded framework.<br>
+It&rsquo;s quite easy, I&rsquo;m sure that you&rsquo;ve done it few times already.  </p>
+
+<ol>
+<li>Drag and drop the framework into your Xcode project. Check <q>Copy items if needed</q>. Probably you want to use <q>Frameworks</q> folder.</li>
+<li>Now you have to add it to the “Embedded Binaries” by using the “+” button on the <q>General</q> tab of your target.</li>
+<li>Done</li>
+</ol>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<p>Framework can be used for both iPhones and iPads.<br>
+It supports iOS 9.0 and above.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='import' class='heading'>Import</h3>
+
+<p>For swift it&rsquo;s just <code>import QualarooSDKiOS</code><br>
+For Objective-C it&rsquo;s <code>#import &lt;QualarooSDKiOS/QualarooSDKiOS.h&gt;</code></p>
+<h3 id='one-line-setup' class='heading'>One-line-setup</h3>
+
+<p>If you want SDK to work with your application after integrating SDK is to call</p>
+<pre class="highlight plaintext"><code>Qualaroo.shared().configure(withApiKey: "sampleApiKey")
+</code></pre>
+
+<p>Where to find <q>sampleApiKey</q>?
+Go to dashboard(link here) and find mobile application section, that should be named as application that you are using.
+Press setup on the top right corner of this section.</p>
+
+<p><img src="https://user-images.githubusercontent.com/8074854/28832928-25c4021c-76de-11e7-86f1-643ddedf0672.png" alt="where to find setup"></p>
+
+<p>Then you should be able to copy API Key, that was just displayed.</p>
+
+<p><img src="https://user-images.githubusercontent.com/8074854/28833190-e403a926-76de-11e7-872d-2fcbee759a42.png" alt="what shows after pressing setup"></p>
+
+<p>Use that copied key in configuration call.</p>
+
+<p>Finished. Your app is now integrated with Qualaroo SDK.</p>
+<h3 id='what-next' class='heading'>What next?</h3>
+
+<p>Of course there is something more. We wouldn&rsquo;t leave you with something that easy.
+First of all you have probably noticed that <code>configure(withApiKey:)</code> throws error. Probably that&rsquo;s why we should rather call it:</p>
+<pre class="highlight plaintext"><code>do {
+  try Qualaroo.shared.configure(withApiKey: "sampleApiKey")
+} catch {
+  print("Probably something went wrong")
+}
+</code></pre>
+
+<p><strong>Possible errors:</strong><br>
+invalidAPIKey<br>
+invalidSiteId<br>
+dataEncodingException</p>
+
+<p>All of them says that something is wrong with API key that you&rsquo;ve provided.
+If you can&rsquo;t find any spelling mistake, then probably you should <a href="mailto:Mihaly@qualaroo.com">conntact us</a> and report that we messed up something with your credentials.</p>
+<h3 id='features' class='heading'>Features</h3>
+
+<p>There is still more to explore :)</p>
+<h4 id='autotracking-vs-survey-showing-on-demand' class='heading'>Autotracking vs survey showing on demand</h4>
+
+<p>There are two ways you can display a survey.</p>
+
+<ul>
+<li>Calling <code>showSurvey(with alias: String, on viewController: UIViewController)</code></li>
+<li>Automatically when  UIViewController matching proper alias will show up.</li>
+</ul>
+
+<p>In first case it&rsquo;s simple: You call a function and if there is a survey with given alias (and it was fetched properly) new UIViewController will be presented on top of given one. No hidden agenda. You exacly know what is happening.<br>
+In second case it&rsquo;s easy: You don&rsquo;t do anything and survey will automatically shows when on viewDidAppear method of controller that name or title match any of active surveys. Under the hood there is some class name extracting and matching, with some viewDidAppear swizzling (<em>Call the iOS cops! Someone did some unauthorized swizzle!</em>).<br>
+You can disable second mechanism while initializing Qualaroo framework, by adding autotracking param for configure method.</p>
+<pre class="highlight plaintext"><code>configure(withApiKey: "sampleApiKey", autotracking: false)
+</code></pre>
+<h4 id='languages' class='heading'>Languages</h4>
+
+<p>SDK supports using few languages for surveys.<br>
+If survey have questions written only for one language, then have no worries - this language will be used.<br>
+But if there are more variations of survey then we need to choose which one we should show to current user.
+If survey have questions written only for one language, then have no worries - this language will be used.<br>
+How to know how many languages survey support or add new one? After opening edit page of survey from dashboard you should see this view on top of the screen.
+How to know how many languages survey support or add new one?<br>
+<img src="https://user-images.githubusercontent.com/8074854/28914723-09d321cc-783d-11e7-80e7-0d48613e566b.png" alt="Where to check languages"><br>
+You can expand languages list and just check how meny currently are supported.</p>
+
+<p>So what happen when we have more then one language and we want to be sure that correct one will be displayed. There is funcion for that.</p>
+<pre class="highlight plaintext"><code>Qualaroo.setPreferredSurveysLanguage("fr")
+</code></pre>
+
+<p>But be warned, function can throw an error if you will try to send language code that is something different then valid ISO Language Code. By example: we support languages like <q>en</q>, <q>fr</q>, <q>hu</q>, etc. But language with country code wont be supported. So <q>en-UK</q>, <q>en-AU</q> or <q>fr-CA</q> won&rsquo;t be supported.</p>
+
+<p>What if language that you have specified is not supported by survey? Simple then we will try to use english, and if english is not supported then we will use first one from supported languages list.</p>
+<h4 id='theme' class='heading'>Theme</h4>
+
+<p>We know that you like do things your own way. That&rsquo;s why we allow you fo fully customize colors used for displaying surveys.<br>
+First you need to create ThemeConfigurator with pattern you want to use.</p>
+<pre class="highlight plaintext"><code> ThemeConfigurator(logo: UIImage(named: "myOwnLogo"),
+                   backgroundColor: .white,
+                   textColor: .black,
+                   dimType: .light,
+                   buttonDisabledColor: .gray,
+                   buttonEnabledColor: .green,
+                   buttonTextColor: .white,
+                   borderColor: .black)
+</code></pre>
+
+<p>Or you can use one of default two we&rsquo;ve already created by calling <code>ThemeConfigurator.withStyle(_:logo:)</code>
+Note that logo is optional. If you dont provide one, we will be more then happy to use our Qualaroo logo.
+Right now we have two defaults styles:</p>
+<pre class="highlight plaintext"><code>ThemeConfigurator.Style.light
+ThemeConfigurator.Style.dark
+</code></pre>
+
+<p>If you want to apply created theme, just call <code>Qualaroo.setTheme(justCreatedTheme)</code><br>
+You can change theme as often as you want to. Just rememer that changing it while survey is currently displayed won&rsquo;t affect this survey. Current one will use previous theme, but next one and every after will use one you jus set. Unless you&rsquo;ll change it again.</p>
+<h4 id='targeting' class='heading'>Targeting</h4>
+
+<p>Sometimes you might want to add a targeting conditions that are specific to your product and aplication users.<br>
+For instance, you might decide to display a survey only to users who made a purchase in the past 30 days and only when the shopping cart contains exactly 2 items or client type is trial.
+That&rsquo;s not a problem. First you need to name these properties and create valid rule using proper dashboard field.
+[Image of new dashboard targeting section here]<br>
+Rule can be created like <code>(last_purchase_time&lt;30 and shopping_cart_count=2) or client_type=&quot;trial&quot;</code>.<br>
+Then when rule is created and accepted, we can go back to app and set user properties for current user:</p>
+<pre class="highlight plaintext"><code>Qualaroo.shared.setUserProperties(["last_purchase_time": "\(user.lastPurchaseTime)",
+                                   "shopping_cart_count": "\(user.cart.items.count)",
+                                   "client_type": user.type])
+</code></pre>
+
+<p>Now if user fulfills given rule - survey will show up. It won&rsquo;t show up for any user that is not fulfilling rule or if you didn&rsquo;t provide at least one of needed properties.</p>
+
+<p>It&rsquo;s checked everytime that you ask for the survey or when you open survey revated view (check autotracking), so you can change in a meantime, and next time survey will show up if requested.</p>
+
+<p>This is just an example, but I&rsquo;m sure, that you already know how you can use it.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>MIT License</p>
+
+<p>Copyright &copy; 2017 Qualaroo, Inc.</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the <q>Software</q>), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED <q>AS IS</q>, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://qualaroo.com" target="_blank" rel="external">Qualaroo</a>. All rights reserved. (Last updated: 2017-08-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
