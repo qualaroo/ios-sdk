@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC1A09F51F418B6D00BCB939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A09F41F418B6D00BCB939 /* AppDelegate.swift */; };
+		BC1A09F71F418B6D00BCB939 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A09F61F418B6D00BCB939 /* ViewController.swift */; };
+		BC1A09FA1F418B6D00BCB939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A09F81F418B6D00BCB939 /* Main.storyboard */; };
+		BC1A09FC1F418B6D00BCB939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1A09FB1F418B6D00BCB939 /* Assets.xcassets */; };
+		BC1A09FF1F418B6D00BCB939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A09FD1F418B6D00BCB939 /* LaunchScreen.storyboard */; };
+		BC1A0A071F418B9500BCB939 /* Qualaroo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A0A061F418B9500BCB939 /* Qualaroo.framework */; };
+		BC1A0A081F418B9500BCB939 /* Qualaroo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A0A061F418B9500BCB939 /* Qualaroo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC1A0A091F418B9500BCB939 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC1A0A081F418B9500BCB939 /* Qualaroo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BC1A09F11F418B6D00BCB939 /* Swift Qualaroo Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Qualaroo Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1A09F41F418B6D00BCB939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC1A09F61F418B6D00BCB939 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC1A09F91F418B6D00BCB939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC1A09FB1F418B6D00BCB939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC1A09FE1F418B6D00BCB939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC1A0A001F418B6D00BCB939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1A0A061F418B9500BCB939 /* Qualaroo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Qualaroo.framework; path = ../Qualaroo.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC1A09EE1F418B6D00BCB939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1A0A071F418B9500BCB939 /* Qualaroo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC1A09E81F418B6D00BCB939 = {
+			isa = PBXGroup;
+			children = (
+				BC1A0A061F418B9500BCB939 /* Qualaroo.framework */,
+				BC1A09F31F418B6D00BCB939 /* Swift Qualaroo Demo */,
+				BC1A09F21F418B6D00BCB939 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC1A09F21F418B6D00BCB939 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC1A09F11F418B6D00BCB939 /* Swift Qualaroo Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC1A09F31F418B6D00BCB939 /* Swift Qualaroo Demo */ = {
+			isa = PBXGroup;
+			children = (
+				BC1A09F41F418B6D00BCB939 /* AppDelegate.swift */,
+				BC1A09F61F418B6D00BCB939 /* ViewController.swift */,
+				BC1A09F81F418B6D00BCB939 /* Main.storyboard */,
+				BC1A09FB1F418B6D00BCB939 /* Assets.xcassets */,
+				BC1A09FD1F418B6D00BCB939 /* LaunchScreen.storyboard */,
+				BC1A0A001F418B6D00BCB939 /* Info.plist */,
+			);
+			path = "Swift Qualaroo Demo";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC1A09F01F418B6D00BCB939 /* Swift Qualaroo Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1A0A031F418B6D00BCB939 /* Build configuration list for PBXNativeTarget "Swift Qualaroo Demo" */;
+			buildPhases = (
+				BC1A09ED1F418B6D00BCB939 /* Sources */,
+				BC1A09EE1F418B6D00BCB939 /* Frameworks */,
+				BC1A09EF1F418B6D00BCB939 /* Resources */,
+				BC1A0A091F418B9500BCB939 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swift Qualaroo Demo";
+			productName = "Swift Qualaroo Demo";
+			productReference = BC1A09F11F418B6D00BCB939 /* Swift Qualaroo Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC1A09E91F418B6D00BCB939 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Mihály Papp";
+				TargetAttributes = {
+					BC1A09F01F418B6D00BCB939 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8MN9J7W5UB;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BC1A09EC1F418B6D00BCB939 /* Build configuration list for PBXProject "Swift Qualaroo Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC1A09E81F418B6D00BCB939;
+			productRefGroup = BC1A09F21F418B6D00BCB939 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC1A09F01F418B6D00BCB939 /* Swift Qualaroo Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC1A09EF1F418B6D00BCB939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1A09FF1F418B6D00BCB939 /* LaunchScreen.storyboard in Resources */,
+				BC1A09FC1F418B6D00BCB939 /* Assets.xcassets in Resources */,
+				BC1A09FA1F418B6D00BCB939 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC1A09ED1F418B6D00BCB939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1A09F71F418B6D00BCB939 /* ViewController.swift in Sources */,
+				BC1A09F51F418B6D00BCB939 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC1A09F81F418B6D00BCB939 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC1A09F91F418B6D00BCB939 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC1A09FD1F418B6D00BCB939 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC1A09FE1F418B6D00BCB939 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC1A0A011F418B6D00BCB939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC1A0A021F418B6D00BCB939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC1A0A041F418B6D00BCB939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8MN9J7W5UB;
+				FRAMEWORK_SEARCH_PATHS = ..;
+				INFOPLIST_FILE = "Swift Qualaroo Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qualaroo.demo.Swift-Qualaroo-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BC1A0A051F418B6D00BCB939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8MN9J7W5UB;
+				FRAMEWORK_SEARCH_PATHS = ..;
+				INFOPLIST_FILE = "Swift Qualaroo Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qualaroo.demo.Swift-Qualaroo-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC1A09EC1F418B6D00BCB939 /* Build configuration list for PBXProject "Swift Qualaroo Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1A0A011F418B6D00BCB939 /* Debug */,
+				BC1A0A021F418B6D00BCB939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC1A0A031F418B6D00BCB939 /* Build configuration list for PBXNativeTarget "Swift Qualaroo Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1A0A041F418B6D00BCB939 /* Debug */,
+				BC1A0A051F418B6D00BCB939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC1A09E91F418B6D00BCB939 /* Project object */;
+}
