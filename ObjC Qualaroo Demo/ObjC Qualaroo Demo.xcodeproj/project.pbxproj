@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC5EBBE71F41939F002051F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5EBBE61F41939F002051F1 /* main.m */; };
+		BC5EBBEA1F41939F002051F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5EBBE91F41939F002051F1 /* AppDelegate.m */; };
+		BC5EBBED1F41939F002051F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5EBBEC1F41939F002051F1 /* ViewController.m */; };
+		BC5EBBF01F41939F002051F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5EBBEE1F41939F002051F1 /* Main.storyboard */; };
+		BC5EBBF21F41939F002051F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5EBBF11F41939F002051F1 /* Assets.xcassets */; };
+		BC5EBBF51F41939F002051F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5EBBF31F41939F002051F1 /* LaunchScreen.storyboard */; };
+		BC5EBBFD1F419403002051F1 /* Qualaroo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5EBBFC1F419403002051F1 /* Qualaroo.framework */; };
+		BC5EBBFE1F419403002051F1 /* Qualaroo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5EBBFC1F419403002051F1 /* Qualaroo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC5EBBFF1F419403002051F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC5EBBFE1F419403002051F1 /* Qualaroo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BC5EBBE21F41939F002051F1 /* ObjC Qualaroo Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjC Qualaroo Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5EBBE61F41939F002051F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC5EBBE81F41939F002051F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC5EBBE91F41939F002051F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC5EBBEB1F41939F002051F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC5EBBEC1F41939F002051F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC5EBBEF1F41939F002051F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC5EBBF11F41939F002051F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC5EBBF41F41939F002051F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC5EBBF61F41939F002051F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5EBBFC1F419403002051F1 /* Qualaroo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Qualaroo.framework; path = ../Qualaroo.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC5EBBDF1F41939F002051F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5EBBFD1F419403002051F1 /* Qualaroo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC5EBBD91F41939F002051F1 = {
+			isa = PBXGroup;
+			children = (
+				BC5EBBFC1F419403002051F1 /* Qualaroo.framework */,
+				BC5EBBE41F41939F002051F1 /* ObjC Qualaroo Demo */,
+				BC5EBBE31F41939F002051F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC5EBBE31F41939F002051F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC5EBBE21F41939F002051F1 /* ObjC Qualaroo Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC5EBBE41F41939F002051F1 /* ObjC Qualaroo Demo */ = {
+			isa = PBXGroup;
+			children = (
+				BC5EBBE81F41939F002051F1 /* AppDelegate.h */,
+				BC5EBBE91F41939F002051F1 /* AppDelegate.m */,
+				BC5EBBEB1F41939F002051F1 /* ViewController.h */,
+				BC5EBBEC1F41939F002051F1 /* ViewController.m */,
+				BC5EBBEE1F41939F002051F1 /* Main.storyboard */,
+				BC5EBBF11F41939F002051F1 /* Assets.xcassets */,
+				BC5EBBF31F41939F002051F1 /* LaunchScreen.storyboard */,
+				BC5EBBF61F41939F002051F1 /* Info.plist */,
+				BC5EBBE51F41939F002051F1 /* Supporting Files */,
+			);
+			path = "ObjC Qualaroo Demo";
+			sourceTree = "<group>";
+		};
+		BC5EBBE51F41939F002051F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC5EBBE61F41939F002051F1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC5EBBE11F41939F002051F1 /* ObjC Qualaroo Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC5EBBF91F41939F002051F1 /* Build configuration list for PBXNativeTarget "ObjC Qualaroo Demo" */;
+			buildPhases = (
+				BC5EBBDE1F41939F002051F1 /* Sources */,
+				BC5EBBDF1F41939F002051F1 /* Frameworks */,
+				BC5EBBE01F41939F002051F1 /* Resources */,
+				BC5EBBFF1F419403002051F1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ObjC Qualaroo Demo";
+			productName = "ObjC Qualaroo Demo";
+			productReference = BC5EBBE21F41939F002051F1 /* ObjC Qualaroo Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC5EBBDA1F41939F002051F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Mihály Papp";
+				TargetAttributes = {
+					BC5EBBE11F41939F002051F1 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8MN9J7W5UB;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BC5EBBDD1F41939F002051F1 /* Build configuration list for PBXProject "ObjC Qualaroo Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC5EBBD91F41939F002051F1;
+			productRefGroup = BC5EBBE31F41939F002051F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC5EBBE11F41939F002051F1 /* ObjC Qualaroo Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC5EBBE01F41939F002051F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5EBBF51F41939F002051F1 /* LaunchScreen.storyboard in Resources */,
+				BC5EBBF21F41939F002051F1 /* Assets.xcassets in Resources */,
+				BC5EBBF01F41939F002051F1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC5EBBDE1F41939F002051F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5EBBED1F41939F002051F1 /* ViewController.m in Sources */,
+				BC5EBBEA1F41939F002051F1 /* AppDelegate.m in Sources */,
+				BC5EBBE71F41939F002051F1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC5EBBEE1F41939F002051F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC5EBBEF1F41939F002051F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC5EBBF31F41939F002051F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC5EBBF41F41939F002051F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC5EBBF71F41939F002051F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC5EBBF81F41939F002051F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC5EBBFA1F41939F002051F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8MN9J7W5UB;
+				FRAMEWORK_SEARCH_PATHS = ..;
+				INFOPLIST_FILE = "ObjC Qualaroo Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qualaroo.demo.ObjC-Qualaroo-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC5EBBFB1F41939F002051F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8MN9J7W5UB;
+				FRAMEWORK_SEARCH_PATHS = ..;
+				INFOPLIST_FILE = "ObjC Qualaroo Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qualaroo.demo.ObjC-Qualaroo-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC5EBBDD1F41939F002051F1 /* Build configuration list for PBXProject "ObjC Qualaroo Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC5EBBF71F41939F002051F1 /* Debug */,
+				BC5EBBF81F41939F002051F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC5EBBF91F41939F002051F1 /* Build configuration list for PBXNativeTarget "ObjC Qualaroo Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC5EBBFA1F41939F002051F1 /* Debug */,
+				BC5EBBFB1F41939F002051F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC5EBBDA1F41939F002051F1 /* Project object */;
+}
