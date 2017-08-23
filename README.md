@@ -9,9 +9,9 @@ QualarooSDKiOS is framework for iOS. It's used to display and gather data from s
 - Continue reading this page.
 
 ## Communication
-- If you are a developer and you need help with some  internal SDK issue or you just found a bug write: Mihaly@qualaroo.com
-- If you want to know how can you benefit by using this SDK, or how to create survey using Qualaroo Dashboard write: Valerie@qularoo.com
-- If you need a feature or piece of functionality that SDK is currently not providing you, write: Steve@qualaroo.com
+- If you are a developer and you need help with some  internal SDK issue or you just found a bug write: support@qualaroo.com
+- If you want to know how can you benefit by using this SDK, or how to create survey using Qualaroo Dashboard write: info@qularoo.com
+- If you need a feature or piece of functionality that SDK is currently not providing you, write: support@qualaroo.com
 
 ## Installation:
 Preferred and supported installation method right now is using CocoaPods.
@@ -42,7 +42,38 @@ If you don't want to use any package managers, you can always add QualarooSDKiOS
 It's quite easy, I'm sure that you've done it few times already.  
 1. Drag and drop the framework into your Xcode project. Check "Copy items if needed". Probably you want to use "Frameworks" folder.
 2. Now you have to add it to the “Embedded Binaries” by using the “+” button on the "General" tab of your target.
-3. Done
+3. Framework is supporting all architectures (so you can use it with simulator for example) but if you want to release you need to add this script to build phases after "Embed Frameworks"
+```
+APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
+
+# This script loops through the frameworks embedded in the application and
+# removes unused architectures.
+find "$APP_PATH" -name 'Qualaroo.framework' -type d | while read -r FRAMEWORK
+do
+FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
+FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
+echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
+
+EXTRACTED_ARCHS=()
+
+for ARCH in $ARCHS
+do
+echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
+lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+done
+
+echo "Merging extracted architectures: ${ARCHS}"
+lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
+rm "${EXTRACTED_ARCHS[@]}"
+
+echo "Replacing original executable with thinned version"
+rm "$FRAMEWORK_EXECUTABLE_PATH"
+mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
+
+done
+```
+Credits goes to Daniel Kennett.
 
 ## Requirements
 Framework can be used for both iPhones and iPads.  
