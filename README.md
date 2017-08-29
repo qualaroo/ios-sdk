@@ -3,9 +3,9 @@
 QualarooSDKiOS is framework for iOS. It's used to display and gather data from survey configured by [Qualaroo dashboard](https://app.qualaroo.com).
 
 ## How to get started
-- Download QualarooSDKiOS(link here!) and try out example app.
-- Read FAQ(link here!) at wiki.
-- Checkout documentation(link here!).
+- Download [QualarooSDKiOS](https://github.com/qualaroo/QualarooSDKiOS/archive/master.zip) and try out example app.
+- Read [FAQ](https://github.com/qualaroo/QualarooSDKiOS/wiki/FAQ) at wiki.
+- Checkout documentation - It's in `Documentation` folder. 
 - Continue reading this page.
 
 ## Communication
@@ -33,10 +33,6 @@ Then, run the following command:
 ```
 $ pod install
 ```
-### Carthage
-Not yet supported
-### Swift Package Manager
-Not  supported yet
 ### Manually
 If you don't want to use any package managers, you can always add QualarooSDKiOS manually as an embedded framework.  
 It's quite easy, I'm sure that you've done it few times already.  
@@ -78,6 +74,7 @@ Credits goes to Daniel Kennett.
 ## Requirements
 Framework can be used for both iPhones and iPads.  
 It supports iOS 9.0 and above.
+
 ## Usage
 ### Import
 For swift it's just `import QualarooSDKiOS`  
