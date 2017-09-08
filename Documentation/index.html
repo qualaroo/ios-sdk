@@ -36,12 +36,6 @@
               <li class="nav-group-task">
                 <a href="Classes/Qualaroo/SDKError.html">– SDKError</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Classes/ThemeConfigurator.html">ThemeConfigurator</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ThemeConfigurator/Style.html">– Style</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -56,15 +50,15 @@
 <h2 id='how-to-get-started' class='heading'>How to get started</h2>
 
 <ul>
-<li>Download QualarooSDKiOS(link here!) and try out example app.</li>
-<li>Read FAQ(link here!) at wiki.</li>
-<li>Checkout documentation(link here!).</li>
+<li>Download <a href="https://github.com/qualaroo/QualarooSDKiOS/archive/master.zip">QualarooSDKiOS</a> and try out example app.</li>
+<li>Read <a href="https://github.com/qualaroo/QualarooSDKiOS/wiki/FAQ">FAQ</a> at wiki.</li>
+<li>Checkout documentation - It&rsquo;s in <code>Documentation</code> folder.</li>
 <li>Continue reading this page.</li>
 </ul>
 <h2 id='communication' class='heading'>Communication</h2>
 
 <ul>
-<li>If you are a developer and you need help with some  internal SDK issue or you just found a bug write: <a href="mailto:support@qualaroo.com">support@qualaroo.com</a></li>
+<li>If you are a developer and you need help with some internal SDK issue or you found a bug write: <a href="mailto:support@qualaroo.com">support@qualaroo.com</a></li>
 <li>If you want to know how can you benefit by using this SDK, or how to create survey using Qualaroo Dashboard write: <a href="mailto:info@qularoo.com">info@qularoo.com</a></li>
 <li>If you need a feature or piece of functionality that SDK is currently not providing you, write: <a href="mailto:support@qualaroo.com">support@qualaroo.com</a></li>
 </ul>
@@ -89,19 +83,12 @@ end
 <p>Then, run the following command:</p>
 <pre class="highlight plaintext"><code>$ pod install
 </code></pre>
-<h3 id='carthage' class='heading'>Carthage</h3>
-
-<p>Not yet supported</p>
-<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
-
-<p>Not  supported yet</p>
 <h3 id='manually' class='heading'>Manually</h3>
 
-<p>If you don&rsquo;t want to use any package managers, you can always add QualarooSDKiOS manually as an embedded framework.<br>
-It&rsquo;s quite easy, I&rsquo;m sure that you&rsquo;ve done it few times already.  </p>
+<p>If you don&rsquo;t want to use any package managers, you can always add QualarooSDKiOS manually as an embedded framework.  </p>
 
 <ol>
-<li>Drag and drop the framework into your Xcode project. Check <q>Copy items if needed</q>. Probably you want to use <q>Frameworks</q> folder.</li>
+<li>Drag and drop the framework into your Xcode project. Check <q>Copy items if needed</q>. You will want to use <q>Frameworks</q> folder.</li>
 <li>Now you have to add it to the “Embedded Binaries” by using the “+” button on the <q>General</q> tab of your target.</li>
 <li>Framework is supporting all architectures (so you can use it with simulator for example) but if you want to release you need to add this script to build phases after <q>Embed Frameworks</q>
 &ldquo;`
@@ -134,11 +121,12 @@ rm <q>$FRAMEWORK_EXECUTABLE_PATH</q>
 mv <q>$FRAMEWORK_EXECUTABLE_PATH-merged</q> <q>$FRAMEWORK_EXECUTABLE_PATH</q></p>
 
 <p>done</p>
-<pre class="highlight plaintext"><code>Credits goes to Daniel Kennett.
+<pre class="highlight plaintext"><code>Credit goes to Daniel Kennett.
 
 ## Requirements
 Framework can be used for both iPhones and iPads.  
 It supports iOS 9.0 and above.
+
 ## Usage
 ### Import
 For swift it's just `import QualarooSDKiOS`  
@@ -148,8 +136,9 @@ If you want SDK to work with your application after integrating SDK is to call
 </code></pre>
 
 <p>Qualaroo.shared().configure(withApiKey: <q>sampleApiKey</q>)</p>
-<pre class="highlight plaintext"><code>Where to find "sampleApiKey"?
-Go to dashboard(link here) and find mobile application section, that should be named as application that you are using.
+<pre class="highlight plaintext"><code>Where can I find "sampleApiKey"?
+
+Go to your Qualaroo dashboard and find the mobile application that you're using.
 Press setup on the top right corner of this section.
 
 ![where to find setup](https://user-images.githubusercontent.com/8074854/28832928-25c4021c-76de-11e7-86f1-643ddedf0672.png)
@@ -163,8 +152,8 @@ Use that copied key in configuration call.
 Finished. Your app is now integrated with Qualaroo SDK.
 
 ### What next?
-Of course there is something more. We wouldn't leave you with something that easy.
-First of all you have probably noticed that `configure(withApiKey:)` throws error. Probably that's why we should rather call it:
+
+First of all you have probably noticed that `configure(withApiKey:)` throws error. That's why we can call it:
 </code></pre>
 
 <p>do {
@@ -178,40 +167,41 @@ invalidSiteId
 dataEncodingException
 
 All of them says that something is wrong with API key that you've provided.
-If you can't find any spelling mistake, then probably you should [conntact us](mailto:Mihaly@qualaroo.com) and report that we messed up something with your credentials.
+If you can't find any mistake, then you should [contact us](mailto:support@qualaroo.com) and report a bug and/or error with your credentials.
 
 ### Features
-There is still more to explore :)
 
 #### Autotracking vs survey showing on demand
 There are two ways you can display a survey.
 - Calling `showSurvey(with alias: String, on viewController: UIViewController)`
 - Automatically when  UIViewController matching proper alias will show up.
 
-In first case it's simple: You call a function and if there is a survey with given alias (and it was fetched properly) new UIViewController will be presented on top of given one. No hidden agenda. You exacly know what is happening.  
-In second case it's easy: You don't do anything and survey will automatically shows when on viewDidAppear method of controller that name or title match any of active surveys. Under the hood there is some class name extracting and matching, with some viewDidAppear swizzling (*Call the iOS cops! Someone did some unauthorized swizzle!*).  
+First case: You call a function and if there is a survey with given alias (and it was fetched properly) new UIViewController will be presented on top of given one. 
+Second case: You don't do anything and survey will automatically shows when on viewDidAppear method of controller that name or title match any of active surveys. Under the hood there is some class name extracting and matching, with some viewDidAppear swizzling.
+
 You can disable second mechanism while initializing Qualaroo framework, by adding autotracking param for configure method.
 </code></pre>
 
 <p>configure(withApiKey: <q>sampleApiKey</q>, autotracking: false)</p>
 <pre class="highlight plaintext"><code>
 #### Languages
-SDK supports using few languages for surveys.  
-If survey have questions written only for one language, then have no worries - this language will be used.  
-But if there are more variations of survey then we need to choose which one we should show to current user.
-If survey have questions written only for one language, then have no worries - this language will be used.  
-How to know how many languages survey support or add new one? After opening edit page of survey from dashboard you should see this view on top of the screen.
-How to know how many languages survey support or add new one?  
-![Where to check languages](https://user-images.githubusercontent.com/8074854/28914723-09d321cc-783d-11e7-80e7-0d48613e566b.png)  
-You can expand languages list and just check how meny currently are supported.
+The Qualaroo SDK supports using languages for surveys.  
+If survey have questions written only for one language, then this language will be used.  
 
-So what happen when we have more then one language and we want to be sure that correct one will be displayed. There is funcion for that.
+But, if there are more variations of the survey then we need to choose which one we should show to current user.
+
+To add more languages (or see those assigned to a specific survey), open the edit page of the survey from your Qualaroo dashboard. You should see this view on top of the screen.
+
+![Where to check languages](https://user-images.githubusercontent.com/8074854/28914723-09d321cc-783d-11e7-80e7-0d48613e566b.png)  
+You can expand languages list and check how many currently are supported.
+
+So what happen when we have more then one language and we want to be sure that correct one will be displayed. There is function:
 </code></pre>
 
 <p>Qualaroo.setPreferredSurveysLanguage(<q>fr</q>)</p>
-<pre class="highlight plaintext"><code>But be warned, function can throw an error if you will try to send language code that is something different then valid ISO Language Code. By example: we support languages like "en", "fr", "hu", etc. But language with country code wont be supported. So "en-UK", "en-AU" or "fr-CA" won't be supported.
+<pre class="highlight plaintext"><code>This function can throw an error if you try to send language code that is something different then valid ISO Language Code. For example, we support languages like "en", "fr", "hu", etc. But a language with a country code wont be supported. So "en-UK", "en-AU" or "fr-CA" won't be supported.
 
-What if language that you have specified is not supported by survey? Simple then we will try to use english, and if english is not supported then we will use first one from supported languages list.
+If a language that you have specified is not supported by the survey, we will try to use English. If English is not supported, then we will use first one from supported languages list.
 
 #### Theme
 
@@ -229,32 +219,31 @@ First you need to create ThemeConfigurator with pattern you want to use.
                    borderColor: .black)</p>
 <pre class="highlight plaintext"><code>
 Or you can use one of default two we've already created by calling `ThemeConfigurator.withStyle(_:logo:)`
-Note that logo is optional. If you dont provide one, we will be more then happy to use our Qualaroo logo.
+Note that logo is optional. If you dont provide one, we provide the Qualaroo logo.
 Right now we have two defaults styles:
 </code></pre>
 
 <p>ThemeConfigurator.Style.light
 ThemeConfigurator.Style.dark</p>
 <pre class="highlight plaintext"><code>If you want to apply created theme, just call `Qualaroo.setTheme(justCreatedTheme)`  
-You can change theme as often as you want to. Just rememer that changing it while survey is currently displayed won't affect this survey. Current one will use previous theme, but next one and every after will use one you jus set. Unless you'll change it again.
+You can change theme as often as you want to. Changing it while a survey is currently displayed won't affect the survey. The current one will use previous theme, but next one and every one after will use one you set (unless another change is made).
 
 #### Targeting
 Sometimes you might want to add a targeting conditions that are specific to your product and aplication users.   
 For instance, you might decide to display a survey only to users who made a purchase in the past 30 days and only when the shopping cart contains exactly 2 items or client type is trial.
-That's not a problem. First you need to name these properties and create valid rule using proper dashboard field.
-[Image of new dashboard targeting section here]  
-Rule can be created like `(last_purchase_time&lt;30 and shopping_cart_count=2) or client_type="trial"`.  
-Then when rule is created and accepted, we can go back to app and set user properties for current user:
+
+First, you need to name these properties and create valid rule using proper dashboard field.
+
+A rule can be created like `(last_purchase_time&lt;30 and shopping_cart_count=2) or client_type="trial"`.  
+Then, when the rule is created and accepted, we can go back to app and set user properties for current user:
 </code></pre>
 
 <p>Qualaroo.shared.setUserProperties([<q>last_purchase_time</q>: <q>\(user.lastPurchaseTime)</q>,
                                    <q>shopping_cart_count</q>: <q>\(user.cart.items.count)</q>,
                                    <q>client_type</q>: user.type])</p>
-<pre class="highlight plaintext"><code>Now if user fulfills given rule - survey will show up. It won't show up for any user that is not fulfilling rule or if you didn't provide at least one of needed properties.
+<pre class="highlight plaintext"><code>If a user fulfills a given rule - the survey will show. It won't show for any user that is not fulfilling rule or if you didn't provide at least one of needed properties.
 
-It's checked everytime that you ask for the survey or when you open survey revated view (check autotracking), so you can change in a meantime, and next time survey will show up if requested.
-
-This is just an example, but I'm sure, that you already know how you can use it.
+It's checked everytime that you ask for the survey or when you open survey revated view (check autotracking), so you can change in the meantime, and next time the survey will show up if requested.
 
 ## License
 MIT License
@@ -283,7 +272,8 @@ SOFTWARE.
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://qualaroo.com" target="_blank" rel="external">Qualaroo</a>. All rights reserved. (Last updated: 2017-08-29)</p>
+          <p>&copy; 2017 <a class="link" href="https://qualaroo.com" target="_blank" rel="external">Qualaroo</a>. All rights reserved. (Last updated: 2017-09-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
