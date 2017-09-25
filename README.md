@@ -26,7 +26,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'TargetName' do
-pod 'QualarooSDKiOS'
+pod 'Qualaroo'
 end
 ```
 Then, run the following command:
