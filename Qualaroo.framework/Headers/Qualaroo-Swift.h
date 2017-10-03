@@ -143,7 +143,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @interface NSBundle (SWIFT_EXTENSION(Qualaroo))
 @end
 
-@class ThemeConfigurator;
+@class UIImage;
 @class UIViewController;
 
 /// Main component of SDK
@@ -160,13 +160,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 /// possible errors SDKError.invalidAPIKey if apiKey was invalid.
 - (BOOL)configureWithApiKey:(NSString * _Nonnull)apiKey autotracking:(BOOL)autotracking error:(NSError * _Nullable * _Nullable)error;
 /// Set dafault language that you want to use for surveys. If survey won’t support preferred language it will try to use english, if it’s also not supported then it will use first one from supported languages.
-/// \param language String that is valid ISO Language Code. Currently Qualaroo is not supporting ISO Country Codes. Example “en” or “fr”. Not supported “en-AU” or “fr-CA”.
+/// \param language String that is valid ISO 639-1 Language Code. Currently Qualaroo is not supporting ISO Country Codes. Example “en” or “fr”. Not supported “en-AU” or “fr-CA”.
 ///
 - (BOOL)setPreferredSurveysLanguage:(NSString * _Nonnull)language error:(NSError * _Nullable * _Nullable)error;
-/// Set default theme you want to use for surveys. You can create your own one or use one of predefined be calling ThemeConfigurator.withStyle(_:logo:).
-/// \param theme Instance of configured ThemeConfigurator.
+/// Set default theme you want to use for surveys. You can create your own one or use one of predefined be calling Theme.withStyle(_:logo:).
+/// \param theme Instance of configured Theme.
 ///
-- (void)setTheme:(ThemeConfigurator * _Nonnull)theme;
+- (void)setLogo:(UIImage * _Nonnull)logo;
 /// Way to identify user. This ID will be sent with every response user gave us. Can be changed between surveys. We still will send same device unique ID, for every response given from this device.
 /// \param userID Unique ID of current user.
 ///
@@ -175,6 +175,21 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 /// \param userProporties Dictionary containing additional info about current user. Used for custom survey targeting. Should match schema used by dashboard on web.
 ///
 - (void)setUserProperties:(NSDictionary<NSString *, NSString *> * _Nonnull)userProporties;
+/// Add or change one userProperty.
+/// \param key String that is used as a key of property we want to add/update.
+///
+/// \param value New value of property that we are passing.
+///
+- (void)addUserProperty:(NSString * _Nonnull)key withValue:(NSString * _Nonnull)value;
+/// Remove userProperty if there is one. If there is no property with given key nothing happens.
+/// \param key String that is used as a key of property we want toremove.
+///
+- (void)removeUserProperty:(NSString * _Nonnull)key;
+/// Gives copy of userProperties.
+///
+/// returns:
+/// Dictionary with previously set userProperties.
+- (NSDictionary<NSString *, NSString *> * _Nonnull)userProperties SWIFT_WARN_UNUSED_RESULT;
 /// Way to show survey with selected name (alias).
 /// \param alias Name of survey we want to show. Can get/set it on “target” section of survey creation/editting.
 ///
@@ -188,37 +203,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
-@class UIColor;
-@class UIImage;
 
-/// Class for holding model used by view (like colors, fonts etc.).
-SWIFT_CLASS("_TtC8Qualaroo17ThemeConfigurator")
-@interface ThemeConfigurator : NSObject
-/// Way to create different theme for surveys.
-/// \param backgroundColor Color used as background for all questions and messages.
-///
-/// \param textColor Color of text used by all questions and messages.
-///
-/// \param dimType UIBlurEffectStyle used under survey view. Apart from blur survey have alpha applied on this dimming view.
-///
-/// \param buttonDisabledColor Color of disabled buttons, and initial “No” button.
-///
-/// \param buttonEnabledColor Color of enabled buttons.
-///
-/// \param buttonTextColor Color of text on buttons.
-///
-/// \param borderColor Corder which is used only for border of text fields.
-///
-/// \param tintColor Color used for “x” button that is closing survey, and for NPS segmented view.
-///
-/// \param logo Image displayed as logo for surveys. If not provided, then qualaroo logo will be used.
-///
-- (nonnull instancetype)initWithBackgroundColor:(UIColor * _Nonnull)backgroundColor textColor:(UIColor * _Nonnull)textColor dimType:(UIBlurEffectStyle)dimType buttonDisabledColor:(UIColor * _Nonnull)buttonDisabledColor buttonEnabledColor:(UIColor * _Nonnull)buttonEnabledColor buttonTextColor:(UIColor * _Nonnull)buttonTextColor borderColor:(UIColor * _Nonnull)borderColor tintColor:(UIColor * _Nonnull)tintColor logo:(UIImage * _Nonnull)logo OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@interface UIButton (SWIFT_EXTENSION(Qualaroo))
 @end
 
 
-@interface UIButton (SWIFT_EXTENSION(Qualaroo))
+@interface UIColor (SWIFT_EXTENSION(Qualaroo))
 @end
 
 
