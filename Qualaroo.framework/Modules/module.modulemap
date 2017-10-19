@@ -7,4 +7,5 @@ framework module Qualaroo {
 
 module Qualaroo.Swift {
     header "Qualaroo-Swift.h"
+    requires objc
 }
