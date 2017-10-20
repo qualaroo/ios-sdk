@@ -4,10 +4,10 @@ QualarooSDKiOS is framework for iOS. It's used to display and gather data from s
 
 ## How to get started
 - Download [QualarooSDKiOS](https://github.com/qualaroo/QualarooSDKiOS/archive/master.zip) and try out example app.
-- Read [FAQ](https://github.com/qualaroo/QualarooSDKiOS/wiki/FAQ) at wiki.
+- Check our [wiki page](https://github.com/qualaroo/QualarooSDKiOS/wiki).
 - Checkout documentation - It's in `Documentation` folder. 
 - Continue reading this page.
-- [What changed in the last version?](https://github.com/qualaroo/QualarooSDKiOS/wiki/What-changed-in-the-last-version%3F)
+- [Changelog](https://github.com/qualaroo/QualarooSDKiOS/wiki/What-changed-in-the-last-version%3F)
 
 ## Communication
 - If you are a developer and you need help with some internal SDK issue or you found a bug write: support@qualaroo.com
