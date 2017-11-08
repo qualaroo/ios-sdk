@@ -75,7 +75,7 @@ Credit goes to Daniel Kennett.
 
 ## Requirements
 Framework can be used for both iPhones and iPads.  
-It supports iOS 9.0 and above.
+It supports iOS 8.0 and above.
 
 ## Usage
 ### Import

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDKError Enum Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/SDKError" class="dashAnchor"></a>
+    <a title="SDKError Enum Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">Qualaroo Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">Qualaroo Reference</a>
+        <img id="carat" src="../../img/carat.png" />
+        SDKError Enum Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/Qualaroo.html">Qualaroo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Qualaroo/SDKError.html">– SDKError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SDKError</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SDKError</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                </div>
+              </div>
+            <p>Errors that Qualaroo SDK can throw</p>
+
+<ul>
+<li>invalidAPIKey: given apiKey is invalid. You can get it from <a href="https://app.qualaroo.com/dashboard">https://app.qualaroo.com/dashboard</a> by tapping on <q>Setup</q> when you expand selected site/application.</li>
+<li>noSurvey: There is no active survey with given name or it was corrupted.</li>
+<li>invalidSiteId: Paramether siteId should be non-empty String with only digits.</li>
+<li>dataEncodingException: Problem occured while using data(using: String.Encoding) function.</li>
+<li>languageCodeInvalid: Language code must be type of string with exactly two letters.</li>
+<li>alreadySeenOrFinished: There is survey with that alias but user already seen it or finished it, and it shouldn&rsquo;t be shown again or it&rsquo;s to soon to display it.</li>
+<li>noInternet: There is no access to web right now.</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC8SDKErrorO13invalidAPIKeyA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidAPIKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC8SDKErrorO13invalidAPIKeyA2DmF">invalidAPIKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Given apiKey is invalid. You can get it from <a href="https://app.qualaroo.com/dashboard">https://app.qualaroo.com/dashboard</a> by tapping on <q>Setup</q> when you expand selected site/application.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">invalidAPIKey</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC8SDKErrorO8noSurveyA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/noSurvey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC8SDKErrorO8noSurveyA2DmF">noSurvey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>There is no active survey with given name or it was corrupted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">noSurvey</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC8SDKErrorO13invalidSiteIdA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidSiteId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC8SDKErrorO13invalidSiteIdA2DmF">invalidSiteId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Paramether siteId should be non-empty String with only digits.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">invalidSiteId</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC8SDKErrorO21dataEncodingExceptionA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/dataEncodingException" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC8SDKErrorO21dataEncodingExceptionA2DmF">dataEncodingException</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Problem occured while using data(using: String.Encoding) function.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">dataEncodingException</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC8SDKErrorO19languageCodeInvalidA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/languageCodeInvalid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC8SDKErrorO19languageCodeInvalidA2DmF">languageCodeInvalid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Language code must be type of string with exactly two letters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">languageCodeInvalid</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC8SDKErrorO21alreadySeenOrFinishedA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/alreadySeenOrFinished" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC8SDKErrorO21alreadySeenOrFinishedA2DmF">alreadySeenOrFinished</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>There is survey with that alias but user already seen it or finished it, and it shouldn&rsquo;t be shown again or it&rsquo;s to soon to display it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">alreadySeenOrFinished</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC8SDKErrorO10noInternetA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/noInternet" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC8SDKErrorO10noInternetA2DmF">noInternet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>There is no access to web right now.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">noInternet</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://qualaroo.com" target="_blank" rel="external">Qualaroo</a>. All rights reserved. (Last updated: 2017-10-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
