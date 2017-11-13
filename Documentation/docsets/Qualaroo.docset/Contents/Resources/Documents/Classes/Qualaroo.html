@@ -15,6 +15,7 @@
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Qualaroo Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/qualaroo/QualarooSDKiOS"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -33,9 +34,6 @@
               <li class="nav-group-task">
                 <a href="../Classes/Qualaroo.html">Qualaroo</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Classes/Qualaroo/SDKError.html">– SDKError</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -46,7 +44,7 @@
             <h1>Qualaroo</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Qualaroo</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Qualaroo</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">Loggable</span></code></pre>
 
                 </div>
               </div>
@@ -56,10 +54,10 @@
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Public%20interface"></a>
-                <a name="//apple_ref/swift/Section/Public interface" class="dashAnchor"></a>
-                <a href="#/Public%20interface">
-                  <h3 class="section-name">Public interface</h3>
+                <a name="/Public%20interface%20-%20Class%20methods"></a>
+                <a name="//apple_ref/swift/Section/Public interface - Class methods" class="dashAnchor"></a>
+                <a href="#/Public%20interface%20-%20Class%20methods">
+                  <h3 class="section-name">Public interface - Class methods</h3>
                 </a>
               </div>
               <ul>
@@ -93,9 +91,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8QualarooAAC9configureySS10withApiKey_Sb12autotrackingtKF"></a>
-                    <a name="//apple_ref/swift/Method/configure(withApiKey:autotracking:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8QualarooAAC9configureySS10withApiKey_Sb12autotrackingtKF">configure(withApiKey:autotracking:)</a>
+                    <a name="/s:8QualarooAAC12isConfiguredSbyFZ"></a>
+                    <a name="//apple_ref/swift/Method/isConfigured()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC12isConfiguredSbyFZ">isConfigured()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -103,19 +101,79 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>You need to call this method on Qualaroo.shared to create and configure main component with given credentials</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    possible errors SDKError.invalidAPIKey if apiKey was invalid.
-
-</div>
+                        <p>Flag saying if Qualaroo module has been configured</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="n">withApiKey</span> <span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">autotracking</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isConfigured</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC7isReadySbyFZ"></a>
+                    <a name="//apple_ref/swift/Method/isReady()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC7isReadySbyFZ">isReady()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag saying if Qualaroo module has already finished featching all data, and it&rsquo;s ready for displaying surveys.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isReady</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20interface%20-%20Configuration"></a>
+                <a name="//apple_ref/swift/Section/Public interface - Configuration" class="dashAnchor"></a>
+                <a href="#/Public%20interface%20-%20Configuration">
+                  <h3 class="section-name">Public interface - Configuration</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8QualarooAAC9configureySS10withApiKey_Sb12autotrackingtF"></a>
+                    <a name="//apple_ref/swift/Method/configure(withApiKey:autotracking:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8QualarooAAC9configureySS10withApiKey_Sb12autotrackingtF">configure(withApiKey:autotracking:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You need to call this method on Qualaroo.shared to create and configure main component with given credentials.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="n">withApiKey</span> <span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">autotracking</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -131,7 +189,21 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>String that authenticate user. You can get it from <a href="https://app.qualaroo.com/dashboard">https://app.qualaroo.com/dashboard</a> by tapping on <q>Setup</q> when you expand selected site/application.</p>
+                                  <p>String that authenticate user. You can get it from <a href="https://app.qualaroo.com/dashboard">https://app.qualaroo.com/dashboard</a> by tapping on
+<q>Setup</q> when you expand selected site/application.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>autotracking</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Flag that decide if survey should be shown on controller with same title as survey name
+(alias) without any &lsquo;showSurvey&rsquo; call. By default it&rsquo;s true.</p>
                                 </div>
                               </td>
                             </tr>
@@ -154,7 +226,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Set dafault language that you want to use for surveys. If survey won&rsquo;t support preferred language it will try to use english, if it&rsquo;s also not supported then it will use first one from supported languages.</p>
+                        <p>Set dafault language that you want to use for surveys. If survey won&rsquo;t support preferred language it will try
+to use english, if it&rsquo;s also not supported then it will use first one from supported languages.</p>
 
                       </div>
                       <div class="declaration">
@@ -177,53 +250,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>String that is valid ISO 639-1 Language Code. Currently Qualaroo is not supporting ISO Country Codes. Example <q>en</q> or <q>fr</q>. Not supported <q>en-AU</q> or <q>fr-CA</q>.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8QualarooAAC7setLogoySo7UIImageCF"></a>
-                    <a name="//apple_ref/swift/Method/setLogo(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8QualarooAAC7setLogoySo7UIImageCF">setLogo(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set default theme you want to use for surveys. You can create your own one or use one of predefined be calling Theme.withStyle(_:logo:).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLogo</span><span class="p">(</span><span class="n">_</span> <span class="nv">logo</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>theme</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Instance of configured Theme.</p>
+                                  <p>String that is valid ISO 639-1 Language Code. Currently Qualaroo is not supporting ISO
+Country Codes. Example <q>en</q> or <q>fr</q>. Not supported <q>en-AU</q> or <q>fr-CA</q>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -246,7 +274,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Way to identify user. This ID will be sent with every response user gave us. Can be changed between surveys. We still will send same device unique ID, for every response given from this device.</p>
+                        <p>Way to identify user. This ID will be sent with every response user gave us. Can be changed between surveys.</p>
 
                       </div>
                       <div class="declaration">
@@ -299,7 +327,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUserProperties</span><span class="p">(</span><span class="n">_</span> <span class="nv">userProporties</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">])</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUserProperties</span><span class="p">(</span><span class="n">_</span> <span class="nv">userProperties</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -315,7 +343,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Dictionary containing additional info about current user. Used for custom survey targeting. Should match schema used by dashboard on web.</p>
+                                  <p>Dictionary containing additional info about current user. Used for custom survey
+targeting. Should match schema used by dashboard on web.</p>
                                 </div>
                               </td>
                             </tr>
@@ -419,7 +448,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>String that is used as a key of property we want toremove.</p>
+                                  <p>String that is used as a key of property we want to remove.</p>
                                 </div>
                               </td>
                             </tr>
@@ -460,12 +489,23 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20interface%20-%20Showing%20Surveys"></a>
+                <a name="//apple_ref/swift/Section/Public interface - Showing Surveys" class="dashAnchor"></a>
+                <a href="#/Public%20interface%20-%20Showing%20Surveys">
+                  <h3 class="section-name">Public interface - Showing Surveys</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8QualarooAAC10showSurveyySS4with_So16UIViewControllerC2ontKF"></a>
+                    <a name="/s:8QualarooAAC10showSurveyySS4with_So16UIViewControllerCSg2ontF"></a>
                     <a name="//apple_ref/swift/Method/showSurvey(with:on:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8QualarooAAC10showSurveyySS4with_So16UIViewControllerC2ontKF">showSurvey(with:on:)</a>
+                    <a class="token" href="#/s:8QualarooAAC10showSurveyySS4with_So16UIViewControllerCSg2ontF">showSurvey(with:on:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -474,18 +514,13 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Way to show survey with selected name (alias).</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    possible errors SDKError.noSurvey if there is no survey for given alias.
-
-</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">showSurvey</span><span class="p">(</span><span class="n">with</span> <span class="nv">alias</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">on</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">showSurvey</span><span class="p">(</span><span class="n">with</span> <span class="nv">alias</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">on</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -501,7 +536,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Name of survey we want to show. Can get/set it on <q>target</q> section of survey creation/editting.</p>
+                                  <p>Name of survey we want to show. Check <q>target</q> section of survey creation/editing on Qualaroo
+dashboard.</p>
                                 </div>
                               </td>
                             </tr>
@@ -513,7 +549,10 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>It will try to use navigationController of given viewController to present survey view, or viewController itself if there it hasn&rsquo;t got navigation controller. You need to be careful if using with view controllers that are not using full screen.</p>
+                                  <p>UIViewController you want to show survey on. If you skip this param or send a nil, survey
+will be shown on rootViewController. Otherwise it will try to use navigationController of given viewController
+to present survey view, or viewController itself if there no navigationController available. You need to be
+careful if with using view controllers that are not full screen.</p>
                                 </div>
                               </td>
                             </tr>
@@ -525,60 +564,11 @@
                 </li>
               </ul>
             </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Private%20interface/properties"></a>
-                <a name="//apple_ref/swift/Section/Private interface/properties" class="dashAnchor"></a>
-                <a href="#/Private%20interface/properties">
-                  <h3 class="section-name">Private interface/properties</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8QualarooAAC8SDKErrorO"></a>
-                    <a name="//apple_ref/swift/Enum/SDKError" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8QualarooAAC8SDKErrorO">SDKError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Errors that Qualaroo SDK can throw</p>
-
-<ul>
-<li>invalidAPIKey: given apiKey is invalid. You can get it from <a href="https://app.qualaroo.com/dashboard">https://app.qualaroo.com/dashboard</a> by tapping on <q>Setup</q> when you expand selected site/application.</li>
-<li>noSurvey: There is no active survey with given name or it was corrupted.</li>
-<li>invalidSiteId: Paramether siteId should be non-empty String with only digits.</li>
-<li>dataEncodingException: Problem occured while using data(using: String.Encoding) function.</li>
-<li>languageCodeInvalid: Language code must be type of string with exactly two letters.</li>
-<li>alreadySeenOrFinished: There is survey with that alias but user already seen it or finished it, and it shouldn&rsquo;t be shown again or it&rsquo;s to soon to display it.</li>
-<li>noInternet: There is no access to web right now.</li>
-</ul>
-
-                        <a href="../Classes/Qualaroo/SDKError.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SDKError</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://qualaroo.com" target="_blank" rel="external">Qualaroo</a>. All rights reserved. (Last updated: 2017-10-03)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://qualaroo.com" target="_blank" rel="external">Qualaroo</a>. All rights reserved. (Last updated: 2017-11-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
