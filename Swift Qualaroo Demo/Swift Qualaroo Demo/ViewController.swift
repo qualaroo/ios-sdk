@@ -15,13 +15,8 @@ class ViewController: UIViewController {
     super.viewDidLoad()
   }
 
-
   @IBAction func showSurvey(_ sender: Any) {
-    do {
-      try Qualaroo.shared.showSurvey(with: "YourSurveyAlias", on: self)
-    } catch {
-      print(String(reflecting: error))
-    }
+    Qualaroo.shared.showSurvey(with: "YourSurveyAlias", on: self)
   }
 
 }

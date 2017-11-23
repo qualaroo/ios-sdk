@@ -20,11 +20,7 @@
 }
 
 - (IBAction)showSurvey:(id)sender {
-  NSError *error = nil;
-  [Qualaroo.shared showSurveyWith:@"YourSurveyAlias" on:self error:&error];
-  if (error) {
-    NSLog(@"%@", error.debugDescription);
-  }
+  [Qualaroo.shared showSurveyWith:@"YourSurveyAlias" on:self];
 }
 
 @end

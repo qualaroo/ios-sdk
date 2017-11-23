@@ -190,12 +190,70 @@ SWIFT_MODULE_NAMESPACE_PUSH("Qualaroo")
 
 
 
+@class UIViewController;
 
 /// Main component of SDK
 SWIFT_CLASS("_TtC8Qualaroo8Qualaroo")
 @interface Qualaroo : NSObject
 /// Disabling creation objects of this class others than shared - that’s why it’s private.
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
+/// Instance of Qualaroo class that should be used.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _Nonnull shared;)
++ (Qualaroo * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+/// Flag saying if Qualaroo module has been configured
++ (BOOL)isConfigured SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)isConfigured SWIFT_WARN_UNUSED_RESULT;
+/// Flag saying if Qualaroo module has already finished featching all data, and it’s ready for displaying surveys.
++ (BOOL)isReady SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)isReady SWIFT_WARN_UNUSED_RESULT;
+/// You need to call this method on Qualaroo.shared to create and configure main component with given credentials.
+/// \param apiKey String that authenticate user. You can get it from https://app.qualaroo.com/dashboard by tapping on
+/// “Setup” when you expand selected site/application.
+///
+/// \param autotracking Flag that decide if survey should be shown on controller with same title as survey name
+/// (alias) without any ‘showSurvey’ call. By default it’s true.
+///
+- (void)configureWithApiKey:(NSString * _Nonnull)apiKey autotracking:(BOOL)autotracking;
+/// Set dafault language that you want to use for surveys. If survey won’t support preferred language it will try
+/// to use english, if it’s also not supported then it will use first one from supported languages.
+/// \param language String that is valid ISO 639-1 Language Code. Currently Qualaroo is not supporting ISO
+/// Country Codes. Example “en” or “fr”. Not supported “en-AU” or “fr-CA”.
+///
+- (BOOL)setPreferredSurveysLanguage:(NSString * _Nonnull)language error:(NSError * _Nullable * _Nullable)error;
+/// Way to identify user. This ID will be sent with every response user gave us. Can be changed between surveys.
+/// \param userID Unique ID of current user.
+///
+- (void)setUserID:(NSString * _Nonnull)userID;
+/// Set custom properties of current user.
+/// \param userProperties Dictionary containing additional info about current user. Used for custom survey
+/// targeting. Should match schema used by dashboard on web.
+///
+- (void)setUserProperties:(NSDictionary<NSString *, NSString *> * _Nonnull)userProperties;
+/// Add or change one userProperty.
+/// \param key String that is used as a key of property we want to add/update.
+///
+/// \param value New value of property that we are passing.
+///
+- (void)addUserProperty:(NSString * _Nonnull)key withValue:(NSString * _Nonnull)value;
+/// Remove userProperty if there is one. If there is no property with given key nothing happens.
+/// \param key String that is used as a key of property we want to remove.
+///
+- (void)removeUserProperty:(NSString * _Nonnull)key;
+/// Gives copy of userProperties.
+///
+/// returns:
+/// Dictionary with previously set userProperties.
+- (NSDictionary<NSString *, NSString *> * _Nonnull)userProperties SWIFT_WARN_UNUSED_RESULT;
+/// Way to show survey with selected name (alias).
+/// \param alias Name of survey we want to show. Check “target” section of survey creation/editing on Qualaroo
+/// dashboard.
+///
+/// \param viewController UIViewController you want to show survey on. If you skip this param or send a nil, survey
+/// will be shown on rootViewController. Otherwise it will try to use navigationController of given viewController
+/// to present survey view, or viewController itself if there no navigationController available. You need to be
+/// careful if with using view controllers that are not full screen.
+///
+- (void)showSurveyWith:(NSString * _Nonnull)alias on:(UIViewController * _Nullable)viewController;
 @end
 
 

@@ -18,11 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-  NSError *error = nil;
-  [Qualaroo.shared configureWithApiKey:@"YourApiKey==" autotracking:YES error:&error];
-  if (error) {
-    NSLog(@"%@", error.debugDescription);
-  }
+  [Qualaroo.shared configureWithApiKey:@"YourApiKey==" autotracking:YES];
   
   return YES;
 }
