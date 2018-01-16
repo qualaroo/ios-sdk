@@ -253,8 +253,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 /// to present survey view, or viewController itself if there no navigationController available. You need to be
 /// careful if with using view controllers that are not full screen.
 ///
-- (void)showSurveyWith:(NSString * _Nonnull)alias on:(UIViewController * _Nullable)viewController;
+/// \param forced Flag that will force survey to show without checking anything, if set as true. Even if targeting
+/// is wrong or user has already seen this survey. By default it’s false. Use it with precaution.
+///
+- (void)showSurveyWith:(NSString * _Nonnull)alias on:(UIViewController * _Nullable)viewController forced:(BOOL)forced;
 @end
+
+
 
 
 
