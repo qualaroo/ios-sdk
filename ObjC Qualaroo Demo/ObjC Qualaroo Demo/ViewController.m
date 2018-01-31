@@ -9,18 +9,33 @@
 #import "ViewController.h"
 #import <Qualaroo/Qualaroo.h>
 
-@interface ViewController ()
+@interface ViewController () <SurveyDelegate>
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-}
-
 - (IBAction)showSurvey:(id)sender {
-  [Qualaroo.shared showSurveyWith:@"YourSurveyAlias" on:self];
+  [Qualaroo.shared showSurveyWith:@"nps_app"
+                               on:self
+                           forced:false
+                         delegate:self];
 }
 
+- (void)surveyDidCloseWithErrorMessage:(NSString * _Nonnull)errorMessage {
+  NSLog(@"surveyDidCloseWithErrorMessage %@", errorMessage);
+}
+  
+- (void)surveyDidDismiss {
+  NSLog(@"surveyDidDismiss");
+}
+  
+- (void)surveyDidFinish {
+  NSLog(@"surveyDidFinish");
+}
+  
+- (void)surveyDidStart {
+  NSLog(@"surveyDidStart");
+}
+  
 @end

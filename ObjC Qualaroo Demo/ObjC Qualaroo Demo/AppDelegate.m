@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-  [Qualaroo.shared configureWithApiKey:@"YourApiKey==" autotracking:YES];
+  [Qualaroo.shared configureWithApiKey:@"NjgyMTc6MGQ2YmQ3NTdmMmRkNjkzZGM3OGU3ZWE4YmI2MDRmNWRhNmI1Y2I4Yjo2NjIxOA=="
+                          autotracking:YES];
   
   return YES;
 }

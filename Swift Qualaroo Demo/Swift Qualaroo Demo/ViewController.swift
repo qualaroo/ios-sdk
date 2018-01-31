@@ -16,8 +16,16 @@ class ViewController: UIViewController {
   }
 
   @IBAction func showSurvey(_ sender: Any) {
-    Qualaroo.shared.showSurvey(with: "YourSurveyAlias", on: self)
+    Qualaroo.shared.showSurvey(with: "YourSurveyAlias",
+                               on: self,
+                               delegate: self)
   }
 
 }
 
+extension ViewController: SurveyDelegate {
+  func surveyDidStart() { print("surveyDidStart") }
+  func surveyDidDismiss() { print("surveyDidDismiss") }
+  func surveyDidFinish() { print("surveyDidFinish") }
+  func surveyDidClose(errorMessage: String) { print("surveyDidClose errorMessage: \(errorMessage)") }
+}

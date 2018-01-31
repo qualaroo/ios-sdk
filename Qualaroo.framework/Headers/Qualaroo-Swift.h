@@ -190,12 +190,14 @@ SWIFT_MODULE_NAMESPACE_PUSH("Qualaroo")
 
 
 
+
+
 @class UIViewController;
+@protocol SurveyDelegate;
 
 /// Main component of SDK
 SWIFT_CLASS("_TtC8Qualaroo8Qualaroo")
 @interface Qualaroo : NSObject
-/// Disabling creation objects of this class others than shared - that’s why it’s private.
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 /// Instance of Qualaroo class that should be used.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _Nonnull shared;)
@@ -245,18 +247,30 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 /// Dictionary with previously set userProperties.
 - (NSDictionary<NSString *, NSString *> * _Nonnull)userProperties SWIFT_WARN_UNUSED_RESULT;
 /// Way to show survey with selected name (alias).
-/// \param alias Name of survey we want to show. Check “target” section of survey creation/editing on Qualaroo
-/// dashboard.
+/// \param alias Name of survey we want to show.
+/// Check “target” section of survey creation/editing on Qualaroo dashboard.
 ///
-/// \param viewController UIViewController you want to show survey on. If you skip this param or send a nil, survey
-/// will be shown on rootViewController. Otherwise it will try to use navigationController of given viewController
-/// to present survey view, or viewController itself if there no navigationController available. You need to be
-/// careful if with using view controllers that are not full screen.
+/// \param viewController UIViewController you want to show survey on.
+/// If you skip this param or send a nil, survey will be shown on the rootViewController.
+/// Otherwise it will try to use a navigationController of a given viewController to present survey view,
+/// or viewController itself if there no navigationController available.
+/// You need to be careful if with using view controllers that are not full screen.
 ///
-/// \param forced Flag that will force survey to show without checking anything, if set as true. Even if targeting
-/// is wrong or user has already seen this survey. By default it’s false. Use it with precaution.
+/// \param forced skips all targeting checks if set to true.
+/// This will cause the survey to always be shown, as long as it’s active. Use with precaution. Defaults to false.
 ///
-- (void)showSurveyWith:(NSString * _Nonnull)alias on:(UIViewController * _Nullable)viewController forced:(BOOL)forced;
+/// \param delegate Object that will receive information about survey starting, dismissing and finishing.
+///
+- (void)showSurveyWith:(NSString * _Nonnull)alias on:(UIViewController * _Nullable)viewController forced:(BOOL)forced delegate:(id <SurveyDelegate> _Nullable)delegate;
+@end
+
+
+SWIFT_PROTOCOL("_TtP8Qualaroo14SurveyDelegate_")
+@protocol SurveyDelegate
+- (void)surveyDidStart;
+- (void)surveyDidDismiss;
+- (void)surveyDidFinish;
+- (void)surveyDidCloseWithErrorMessage:(NSString * _Nonnull)errorMessage;
 @end
 
 
