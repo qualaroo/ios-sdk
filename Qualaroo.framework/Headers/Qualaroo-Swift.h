@@ -265,11 +265,16 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 @end
 
 
+/// Delegate that handles events sent by Survey.
 SWIFT_PROTOCOL("_TtP8Qualaroo14SurveyDelegate_")
 @protocol SurveyDelegate
+/// Survey view has loaded.
 - (void)surveyDidStart;
+/// User has dismissed survey before finishing it.
 - (void)surveyDidDismiss;
+/// User finished survey (or dismissed it on last message).
 - (void)surveyDidFinish;
+/// Some internal error occured. Survey was closed and probably not finished.
 - (void)surveyDidCloseWithErrorMessage:(NSString * _Nonnull)errorMessage;
 @end
 
