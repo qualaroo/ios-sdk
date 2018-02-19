@@ -222,6 +222,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 /// Country Codes. Example “en” or “fr”. Not supported “en-AU” or “fr-CA”.
 ///
 - (BOOL)setPreferredSurveysLanguage:(NSString * _Nonnull)language error:(NSError * _Nullable * _Nullable)error;
+/// Way to set default image of logo used on surveys.
+/// If not set it will use application icon, or qualaroo logo if application icon is unavailable.
+/// Keep in mind it will be overriden by logo set in the dashboard.
+/// \param name Name of UIImage we want to use for logo.
+///
+- (void)setDefaultLogoWithName:(NSString * _Nonnull)name;
 /// Way to identify user. This ID will be sent with every response user gave us. Can be changed between surveys.
 /// \param userID Unique ID of current user.
 ///
