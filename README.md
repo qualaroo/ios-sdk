@@ -39,7 +39,8 @@ If you don't want to use any package managers, you can always add QualarooSDKiOS
  
 1. Drag and drop the framework into your Xcode project. Check "Copy items if needed". You will want to use "Frameworks" folder.
 2. Now you have to add it to the “Embedded Binaries” by using the “+” button on the "General" tab of your target.
-### IMPORTANT
+
+## Release
 Framework is supporting all architectures (so you can use it with simulator for example). Apple is currently not supporting application that include dynamic frameworks containing `x86_64`/`i386` architectures. So if you want to release your application you need to remove them from framework. Easiest way to do it is to add this script to build phases after "Embed Frameworks" phase.
 ```
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
@@ -79,7 +80,7 @@ It supports iOS 8.0 and above.
 
 ## Usage
 ### Import
-For swift it's just `import QualarooSDKiOS`  
+For Swift it's `import QualarooSDKiOS`  
 For Objective-C it's `#import <QualarooSDKiOS/QualarooSDKiOS.h>`
 ### One-line-setup
 If you want SDK to work with your application after integrating SDK is to call
@@ -101,7 +102,7 @@ Use that copied key in configuration call.
 
 Finished. Your app is now integrated with Qualaroo SDK.
 
-### Features
+## Features
 
 [Check our wiki](https://github.com/qualaroo/QualarooSDKiOS/wiki/How-can-I-use-Qualaroo-SDK%3F) if you want to get familiar with features Qualaroo provide.
 
