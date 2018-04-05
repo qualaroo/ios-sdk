@@ -192,13 +192,19 @@ SWIFT_MODULE_NAMESPACE_PUSH("Qualaroo")
 
 
 
-@class UIViewController;
-@protocol SurveyDelegate;
 
 /// Main component of SDK
 SWIFT_CLASS("_TtC8Qualaroo8Qualaroo")
 @interface Qualaroo : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+
+@class UIViewController;
+@protocol QualarooSurveyDelegate;
+
+@interface Qualaroo (SWIFT_EXTENSION(Qualaroo))
 /// Instance of Qualaroo class that should be used.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _Nonnull shared;)
 + (Qualaroo * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
@@ -212,10 +218,17 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 /// \param apiKey String that authenticate user. You can get it from https://app.qualaroo.com/dashboard by tapping on
 /// “Setup” when you expand selected site/application.
 ///
-/// \param autotracking Flag that decide if survey should be shown on controller with same title as survey name
-/// (alias) without any ‘showSurvey’ call. By default it’s true.
+/// \param autotracking Flag that decide if survey should be shown on controller with same class name or title as
+/// survey name (alias) without any ‘showSurvey’ call. By default it’s true.
 ///
-- (void)configureWithApiKey:(NSString * _Nonnull)apiKey autotracking:(BOOL)autotracking;
+- (void)configureWithApiKey:(NSString * _Nonnull)apiKey autotracking:(BOOL)autotracking SWIFT_DEPRECATED_MSG("\n  This method will be removed in future releases, please use 'configure(with:)' instead.\n  \n  Keep in mind that calling 'configure(with:)' will not turn AutoShow (formerly Autotracking) on  by default, in opposition to 'configure(withApiKey:autotracking:)'.\n  If you want to enable AutoShow - call 'turnOnAutoShow()'.\n  ");
+/// You need to call this method on Qualaroo.shared to create and configure main component with given credentials.
+/// \param apiKey String that authenticate user. You can get it from https://app.qualaroo.com/dashboard by tapping on
+/// “Setup” when you expand selected site/application.
+///
+- (void)configureWith:(NSString * _Nonnull)apiKey;
+/// Calling this function forces SDK to refresh survey list and schedules next survey update in 1 hour.
+- (void)updateSurveysNow;
 /// Set dafault language that you want to use for surveys. If survey won’t support preferred language it will try
 /// to use english, if it’s also not supported then it will use first one from supported languages.
 /// \param language String that is valid ISO 639-1 Language Code. Currently Qualaroo is not supporting ISO
@@ -267,13 +280,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 ///
 /// \param delegate Object that will receive information about survey starting, dismissing and finishing.
 ///
-- (void)showSurveyWith:(NSString * _Nonnull)alias on:(UIViewController * _Nullable)viewController forced:(BOOL)forced delegate:(id <SurveyDelegate> _Nullable)delegate;
+- (void)showSurveyWith:(NSString * _Nonnull)alias on:(UIViewController * _Nullable)viewController forced:(BOOL)forced delegate:(id <QualarooSurveyDelegate> _Nullable)delegate;
 @end
 
+@class UserResponse;
 
 /// Delegate that handles events sent by Survey.
-SWIFT_PROTOCOL("_TtP8Qualaroo14SurveyDelegate_")
-@protocol SurveyDelegate
+SWIFT_PROTOCOL_NAMED("SurveyDelegate")
+@protocol QualarooSurveyDelegate
 /// Survey view has loaded.
 - (void)surveyDidStart;
 /// User has dismissed survey before finishing it.
@@ -282,6 +296,9 @@ SWIFT_PROTOCOL("_TtP8Qualaroo14SurveyDelegate_")
 - (void)surveyDidFinish;
 /// Some internal error occured. Survey was closed and probably not finished.
 - (void)surveyDidCloseWithErrorMessage:(NSString * _Nonnull)errorMessage;
+@optional
+/// Some question will be sending callbacks after user has responded. This method is optional.
+- (void)userDidAnswerQuestion:(UserResponse * _Nonnull)response;
 @end
 
 
@@ -291,6 +308,32 @@ SWIFT_PROTOCOL("_TtP8Qualaroo14SurveyDelegate_")
 
 
 
+
+
+/// Class used for getting info about how user answered questions.
+SWIFT_CLASS("_TtC8Qualaroo12UserResponse")
+@interface UserResponse : NSObject
+/// Returns alias of question that user responded to.
+///
+/// returns:
+/// String that is used as identifier of answered question.
+- (NSString * _Nonnull)getQuestionAlias SWIFT_WARN_UNUSED_RESULT;
+/// Returns array of selected options. If question was radio, dropdown, or NPS type then array contain only one element.
+/// For text questions array will contain only element with alias “text”.
+///
+/// returns:
+/// Array of strings that represent selected elements.
+- (NSArray<NSString *> * _Nonnull)getFilledElements SWIFT_WARN_UNUSED_RESULT;
+/// Returns text associated with selected element.
+/// This represents a text answer provided by the user.
+/// \param alias Identifier of element we want to check.
+///
+///
+/// returns:
+/// Text provided by the user, or nil it there was none.
+- (NSString * _Nullable)getElementText:(NSString * _Nonnull)alias SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
 
 SWIFT_MODULE_NAMESPACE_POP
 #pragma clang diagnostic pop
