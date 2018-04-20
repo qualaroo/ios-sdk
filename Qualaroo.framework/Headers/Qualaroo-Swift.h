@@ -199,6 +199,8 @@ SWIFT_CLASS("_TtC8Qualaroo8Qualaroo")
 
 
 
+
+
 @class UIViewController;
 @protocol QualarooSurveyDelegate;
 
@@ -279,6 +281,23 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Qualaroo * _
 /// \param delegate Object that will receive information about survey starting, dismissing and finishing.
 ///
 - (void)showSurveyWith:(NSString * _Nonnull)alias on:(UIViewController * _Nullable)viewController forced:(BOOL)forced delegate:(id <QualarooSurveyDelegate> _Nullable)delegate;
+/// Way to ABTest surveys with selected names (aliases).
+/// \param aliases List of survey names that we want to take part in AB test. Proablity of showing specific survey can
+/// be set on Qualaroo dashboard, under “Target” tab. Note that targetting options for all surveys (apart from target
+/// percent) should be exacly the same if we want AB test to be correct.
+///
+/// \param viewController UIViewController you want to show survey on.
+/// If you skip this param or send a nil, survey will be shown on the rootViewController.
+/// Otherwise it will try to use a navigationController of a given viewController to present survey view,
+/// or viewController itself if there no navigationController available.
+/// You need to be careful if with using view controllers that are not full screen.
+///
+/// \param forced skips all targeting checks if set to true.
+/// This will cause the survey to always be shown, as long as it’s active. Use with precaution. Defaults to false.
+///
+/// \param delegate Object that will receive information about survey starting, dismissing and finishing.
+///
+- (void)abTestSurveysWith:(NSArray<NSString *> * _Nonnull)aliases on:(UIViewController * _Nullable)viewController forced:(BOOL)forced delegate:(id <QualarooSurveyDelegate> _Nullable)delegate;
 @end
 
 @class UserResponse;
