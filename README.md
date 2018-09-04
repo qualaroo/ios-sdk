@@ -45,38 +45,38 @@ For Objective-C it's `#import <QualarooSDKiOS/QualarooSDKiOS.h>`
 #### Initialize the Client
 In order to be able to use Qualaroo SDK you need to to initialize it first.
 ```swift
-Qualaroo.shared().configure(with: "<your_key_here>")       
+Qualaroo.shared.configure(with: "<your_key_here>")       
 ```
-After initialization, the SDK will be accessible via `Qualaroo.shared()` method call.
+After initialization, the SDK will be accessible via `Qualaroo.shared` method call.
 
 #### Display survey with a given alias.
 The survey will be displayed if all conditions configured in our dashboard are met
 ```swift
 //Show survey with "your_survey_alias" alias
-Qualaroo.shared().showSurvey(with: "your_survey_alias")
+Qualaroo.shared.showSurvey(with: "your_survey_alias")
 ```
 #### Set user properties
 ```swift
 //Set unique user id
-Qualaroo.shared().setUserID("HAL_9000")
+Qualaroo.shared.setUserID("HAL_9000")
 //Add or replace user property "name" to "Hal"
-Qualaroo.shared().addUserProperty("name", withValue: "Hal")
+Qualaroo.shared.addUserProperty("name", withValue: "Hal")
 //remove property "name"
-Qualaroo.shared().removeUserProperty("name")
+Qualaroo.shared.removeUserProperty("name")
 ```
 
 #### Set preferred language
 You can set preferred language that you want to use when displaying surveys.
 ```swift
 //Set preferred display language to French
-Qualaroo.shared().setPreferredSurveysLanguage("fr");
+Qualaroo.shared.setPreferredSurveysLanguage("fr");
 ```
 Language that you provide should be an ISO 639-1 compatible language code (two lowercase letters)
 
 #### Configure options for displaying survey
 ```swift
 //Omit targetting options
-Qualaroo.shared().showSurvey(
+Qualaroo.shared.showSurvey(
     with: "your_survey_alias",
     forced: true
 )
@@ -112,7 +112,7 @@ class Foo {
 
     func showMySurvey() {
         // show "your_survey_alias" survey and register a delagate
-        Qualaroo.shared().showSurvey(
+        Qualaroo.shared.showSurvey(
             with: "your_survey_alias",
             delegate: surveyDelegate
         )    
@@ -127,7 +127,7 @@ This choice will be stored throught multiple app launches.
 
 To run an AB test out of surveys "A", "B" and "C":
 ```swift
-Qualaroo.shared().abTestSurveys(
+Qualaroo.shared.abTestSurveys(
     with: ["my_survey_A", "my_survey_B", "my_survey_C"]
 )
 ```
