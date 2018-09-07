@@ -327,6 +327,8 @@ SWIFT_PROTOCOL_NAMED("SurveyDelegate")
 
 
 
+
+
 /// Class used for getting info about how user answered questions.
 SWIFT_CLASS("_TtC8Qualaroo12UserResponse")
 @interface UserResponse : NSObject
