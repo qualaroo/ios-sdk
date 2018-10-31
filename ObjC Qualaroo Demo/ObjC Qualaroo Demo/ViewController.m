@@ -9,17 +9,13 @@
 #import "ViewController.h"
 #import <Qualaroo/Qualaroo.h>
 
-@interface ViewController () <SurveyDelegate>
-
-@end
-
 @implementation ViewController
 
 - (IBAction)showSurvey:(id)sender {
   [Qualaroo.shared showSurveyWith:@"nps_app"
                                on:self
                            forced:false
-                         delegate:self];
+                         delegate:nil];
 }
 
 - (void)surveyDidCloseWithErrorMessage:(NSString * _Nonnull)errorMessage {
