@@ -1,0 +1,8 @@
+#Disabled rules:
+disabled_rules:
+  - force_cast
+  - force_try
+  - trailing_whitespace
+  - function_parameter_count
+  - function_body_length
+  - type_body_length

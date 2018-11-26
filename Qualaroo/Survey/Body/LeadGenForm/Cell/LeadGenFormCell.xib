@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeadGenFormCell" customModule="Qualaroo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="LeadGenFormCell" customModule="Qualaroo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTH-e7-CuP">
+                    <rect key="frame" x="20" y="0.0" width="355" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="b2h-Em-eNk"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhI-ZG-U5V">
+                    <rect key="frame" x="20" y="4" width="110" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="IyS-YN-Zbo"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="YBc-cY-d1t"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOd-Pv-ZaD">
+                    <rect key="frame" x="138" y="4" width="221" height="41"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NhI-ZG-U5V" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FBd-aP-0z2"/>
+                <constraint firstItem="NhI-ZG-U5V" firstAttribute="leading" secondItem="uTH-e7-CuP" secondAttribute="leading" id="GKR-UU-5gt"/>
+                <constraint firstItem="fOd-Pv-ZaD" firstAttribute="leading" secondItem="NhI-ZG-U5V" secondAttribute="trailing" constant="8" id="IGu-AW-Exu"/>
+                <constraint firstItem="fOd-Pv-ZaD" firstAttribute="top" secondItem="NhI-ZG-U5V" secondAttribute="top" id="JgB-7K-RI5"/>
+                <constraint firstAttribute="trailing" secondItem="fOd-Pv-ZaD" secondAttribute="trailing" constant="16" id="PMq-NS-SPh"/>
+                <constraint firstAttribute="trailing" secondItem="uTH-e7-CuP" secondAttribute="trailing" id="Pv2-p6-K7W"/>
+                <constraint firstItem="fOd-Pv-ZaD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RXj-OL-sQz"/>
+                <constraint firstItem="uTH-e7-CuP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UzL-xB-qNm"/>
+                <constraint firstItem="uTH-e7-CuP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="ckx-S0-3HV"/>
+                <constraint firstItem="NhI-ZG-U5V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="rbh-IL-TJ1"/>
+                <constraint firstItem="fOd-Pv-ZaD" firstAttribute="bottom" secondItem="NhI-ZG-U5V" secondAttribute="bottom" id="w1g-Jw-Tc6"/>
+                <constraint firstAttribute="bottom" secondItem="NhI-ZG-U5V" secondAttribute="bottom" constant="4" id="zWr-7V-PY6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="answerTextField" destination="fOd-Pv-ZaD" id="F7m-Dy-abb"/>
+                <outlet property="questionLabel" destination="NhI-ZG-U5V" id="aOc-BH-TIj"/>
+                <outlet property="topSeparator" destination="uTH-e7-CuP" id="cyz-1n-TNW"/>
+                <outlet property="topSeparatorHeightConstraint" destination="b2h-Em-eNk" id="C8K-Di-O64"/>
+            </connections>
+            <point key="canvasLocation" x="35.5" y="-255.5"/>
+        </view>
+    </objects>
+</document>

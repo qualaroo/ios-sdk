@@ -1,6 +1,15 @@
-# iOSMobileSDK
+<p align="center"><img src="img/logo-dark.png?raw=true" align="center" width="300"/></p>
+<h1 align="center">QualarooSDK for iOS</h1>
 
-QualarooSDKiOS is framework for iOS. It's used to display and gather data from survey configured by [Qualaroo dashboard](https://app.qualaroo.com).
+<p align="center">
+  <a href="https://github.com/qualaroo/android-sdk/blob/dev/CHANGELOG.md">
+    <img src="https://img.shields.io/badge/version-1.9.0-blue.svg">
+  </a>
+</p>
+
+<p align="center">
+  Qualaroo helps companies identify and capitalize on mobile visitor revenue opportunities.
+</p>
 
 ## How to get started
 - Download [QualarooSDKiOS](https://github.com/qualaroo/QualarooSDKiOS/archive/master.zip) and try out example app.
@@ -29,25 +38,20 @@ Then, run the following command:
 ```
 $ pod install
 ```
-### Manually
-If you don't want to use any package managers, you can always add QualarooSDKiOS manually as an embedded framework.  
- 
-1. Drag and drop the framework into your Xcode project. Check "Copy items if needed". You will want to use "Frameworks" folder.
-2. Now you have to add it to the “Embedded Binaries” by using the “+” button on the "General" tab of your target.
 
 ## Usage
 Framework can be used for both iPhones and iPads.  It supports iOS 8.0 and above.
 
 #### Imports
-For Swift it's `import QualarooSDKiOS`  
-For Objective-C it's `#import <QualarooSDKiOS/QualarooSDKiOS.h>`
+For Swift it's `import Qualaroo`  
+For Objective-C it's `#import <Qualaroo/Qualaroo.h>`
 
 #### Initialize the Client
 In order to be able to use Qualaroo SDK you need to to initialize it first.
 ```swift
 Qualaroo.shared.configure(with: "<your_key_here>")       
 ```
-After initialization, the SDK will be accessible via `Qualaroo.shared` method call.
+After initialization, the SDK will be accessible via `Qualaroo.shared` field.
 
 #### Display survey with a given alias.
 The survey will be displayed if all conditions configured in our dashboard are met

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectableView" customModule="Qualaroo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="SelectableView" customModule="Qualaroo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vH6-I6-5y2" userLabel="FreeformContainer">
+                    <rect key="frame" x="0.0" y="110" width="375" height="0.0"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="52C-pe-Xi1">
+                            <rect key="frame" x="8" y="-8" width="359" height="0.0"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="52C-pe-Xi1" secondAttribute="bottom" constant="8" id="3kG-fF-hzA"/>
+                        <constraint firstAttribute="trailing" secondItem="52C-pe-Xi1" secondAttribute="trailing" constant="8" id="Cyq-mm-CDL"/>
+                        <constraint firstAttribute="height" id="Jua-93-X8p"/>
+                        <constraint firstItem="52C-pe-Xi1" firstAttribute="top" secondItem="vH6-I6-5y2" secondAttribute="top" priority="999" constant="8" id="Xrx-PB-je0"/>
+                        <constraint firstItem="52C-pe-Xi1" firstAttribute="leading" secondItem="vH6-I6-5y2" secondAttribute="leading" constant="8" id="r0f-5R-9W3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7yf-TU-NWr" userLabel="AnswerContainer">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-7P-jt1">
+                            <rect key="frame" x="8" y="45.5" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dhc-7P-jt1" secondAttribute="height" multiplier="1:1" id="7a7-9g-Ub6"/>
+                                <constraint firstAttribute="width" constant="20" id="eIW-9Z-m8H"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmi-il-WwY">
+                            <rect key="frame" x="36" y="4" width="331" height="102"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="dhc-7P-jt1" firstAttribute="leading" secondItem="7yf-TU-NWr" secondAttribute="leading" constant="8" id="36e-VA-HSW"/>
+                        <constraint firstItem="pmi-il-WwY" firstAttribute="centerY" secondItem="dhc-7P-jt1" secondAttribute="centerY" id="7iD-jy-EqY"/>
+                        <constraint firstAttribute="trailing" secondItem="pmi-il-WwY" secondAttribute="trailing" constant="8" id="mlw-Ts-XdV"/>
+                        <constraint firstAttribute="bottom" secondItem="pmi-il-WwY" secondAttribute="bottom" constant="4" id="qGt-B2-tWb"/>
+                        <constraint firstItem="pmi-il-WwY" firstAttribute="leading" secondItem="dhc-7P-jt1" secondAttribute="trailing" constant="8" id="s9a-WV-FWD"/>
+                        <constraint firstItem="pmi-il-WwY" firstAttribute="top" secondItem="7yf-TU-NWr" secondAttribute="top" constant="4" id="scC-PM-PcX"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="XSY-w8-Iq9" appends="YES" id="gMo-F0-K2X"/>
+                    </connections>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vH6-I6-5y2" firstAttribute="top" secondItem="7yf-TU-NWr" secondAttribute="bottom" id="388-ZQ-paW"/>
+                <constraint firstItem="vH6-I6-5y2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EfA-h7-SWR"/>
+                <constraint firstItem="vH6-I6-5y2" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="F4t-Lf-9s7"/>
+                <constraint firstAttribute="trailing" secondItem="7yf-TU-NWr" secondAttribute="trailing" id="Ngx-b2-Y0i"/>
+                <constraint firstAttribute="trailing" secondItem="vH6-I6-5y2" secondAttribute="trailing" id="aYa-hf-gxT"/>
+                <constraint firstItem="7yf-TU-NWr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="g7L-WC-UaZ"/>
+                <constraint firstItem="7yf-TU-NWr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pTi-P3-Ofc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="answerContainer" destination="7yf-TU-NWr" id="AG4-JN-Wb7"/>
+                <outlet property="freeformContainer" destination="vH6-I6-5y2" id="ZMJ-5N-CZc"/>
+                <outlet property="freeformContainerHeight" destination="Jua-93-X8p" id="v29-p9-QPg"/>
+                <outlet property="freeformTextView" destination="52C-pe-Xi1" id="hB1-dB-Uu6"/>
+                <outlet property="imageView" destination="dhc-7P-jt1" id="iCI-yk-FMJ"/>
+                <outlet property="titleLabel" destination="pmi-il-WwY" id="McY-yL-dCA"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-224"/>
+        </view>
+        <tapGestureRecognizer id="XSY-w8-Iq9">
+            <connections>
+                <action selector="answerPressed:" destination="iN0-l3-epB" id="ay8-Zu-g5X"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

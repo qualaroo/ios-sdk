@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnswerDropdownView" customModule="Qualaroo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="s2b-Py-KFD" customClass="AnswerDropdownView" customModule="Qualaroo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Maj-xx-qXC">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                </pickerView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Maj-xx-qXC" firstAttribute="leading" secondItem="s2b-Py-KFD" secondAttribute="leading" id="Ohs-GU-zfQ"/>
+                <constraint firstItem="Maj-xx-qXC" firstAttribute="top" secondItem="s2b-Py-KFD" secondAttribute="top" id="g4y-h4-27D"/>
+                <constraint firstAttribute="trailing" secondItem="Maj-xx-qXC" secondAttribute="trailing" id="hdv-R6-D1g"/>
+                <constraint firstAttribute="bottom" secondItem="Maj-xx-qXC" secondAttribute="bottom" id="vj3-XZ-SkJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="picker" destination="Maj-xx-qXC" id="2vY-sI-mKF"/>
+            </connections>
+            <point key="canvasLocation" x="43.5" y="-582"/>
+        </view>
+    </objects>
+</document>
