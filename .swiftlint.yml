@@ -1,0 +1,23 @@
+#We don't want to check external libraries
+excluded:
+  - Carthage
+
+#Disabled rules:
+disabled_rules:
+  - trailing_whitespace
+
+#Customize rules:
+line_length:
+  ignores_comments: true
+  warning: 120
+  error: 150
+identifier_name:
+  max_length:
+    error: 50
+  excluded:
+    - id
+    - i
+    - j
+function_parameter_count:
+  warning: 6
+  error: 10
