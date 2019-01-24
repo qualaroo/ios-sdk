@@ -15,6 +15,10 @@ extension Bundle {
   ///
   /// - Returns: Bundle used by Qualaroo Framework.
   static func qualaroo() -> Bundle {
-    return Bundle(identifier: "com.qualaroo.QualarooSDK")!
+    let bundle =
+        Bundle(identifier: "org.cocoapods.Qualaroo")
+            .map {$0.path(forResource: "Qualaroo", ofType: "bundle")}
+            .map { Bundle(path: $0!) }!!
+    return bundle
   }
 }
