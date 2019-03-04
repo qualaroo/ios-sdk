@@ -57,7 +57,7 @@ class AnswerListView: UIView {
     
     private func answerListView() -> AnswerListView {
       guard
-        let nib = Bundle.qualaroo().loadNibNamed("AnswerListView", owner: nil, options: nil),
+        let nib = Bundle.qualaroo()?.loadNibNamed("AnswerListView", owner: nil, options: nil),
         let view = nib.first as? AnswerListView else { return AnswerListView() }
       return view
     }

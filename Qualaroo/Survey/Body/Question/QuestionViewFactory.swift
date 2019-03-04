@@ -48,7 +48,7 @@ class QuestionViewFactory {
   
   private func npsQuestionView(with question: Question) -> AnswerNpsView? {
     guard
-      let nib = Bundle.qualaroo().loadNibNamed("AnswerNpsView", owner: nil, options: nil),
+      let nib = Bundle.qualaroo()?.loadNibNamed("AnswerNpsView", owner: nil, options: nil),
       let view = nib.first as? AnswerNpsView else { return nil }
     let responseBuilder = SingleSelectionAnswerResponseBuilder(question: question)
     let validator = AnswerNpsValidator(question: question)
@@ -67,7 +67,7 @@ class QuestionViewFactory {
   }
   private func textQuestionView(with question: Question) -> AnswerTextView? {
     guard
-      let nib = Bundle.qualaroo().loadNibNamed("AnswerTextView", owner: nil, options: nil),
+      let nib = Bundle.qualaroo()?.loadNibNamed("AnswerTextView", owner: nil, options: nil),
       let view = nib.first as? AnswerTextView else { return nil }
     let responseBuilder = AnswerTextResponseBuilder(question: question)
     let validator = AnswerTextValidator(question: question)
@@ -84,7 +84,7 @@ class QuestionViewFactory {
   }
   private func dropdownQuestionView(with question: Question) -> AnswerDropdownView? {
     guard
-      let nib = Bundle.qualaroo().loadNibNamed("AnswerDropdownView", owner: nil, options: nil),
+      let nib = Bundle.qualaroo()?.loadNibNamed("AnswerDropdownView", owner: nil, options: nil),
       let view = nib.first as? AnswerDropdownView else { return nil }
     let answers = question.answerList.map { $0.title }
     let responseBuilder = SingleSelectionAnswerResponseBuilder(question: question)
@@ -100,7 +100,7 @@ class QuestionViewFactory {
   }
   private func binaryQuestionView(with question: Question) -> AnswerBinaryView? {
     guard
-      let nib = Bundle.qualaroo().loadNibNamed("AnswerBinaryView", owner: nil, options: nil),
+      let nib = Bundle.qualaroo()?.loadNibNamed("AnswerBinaryView", owner: nil, options: nil),
       let view = nib.first as? AnswerBinaryView else { return nil }
     let responseBuilder = SingleSelectionAnswerResponseBuilder(question: question)
     let interactor = AnswerBinaryInteractor(responseBuilder: responseBuilder,

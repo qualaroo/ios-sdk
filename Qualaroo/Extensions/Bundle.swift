@@ -14,11 +14,8 @@ extension Bundle {
   /// Convenience way to get Qualaroo bundle.
   ///
   /// - Returns: Bundle used by Qualaroo Framework.
-  static func qualaroo() -> Bundle {
-    let bundle =
-        Bundle(identifier: "org.cocoapods.Qualaroo")
-            .map {$0.path(forResource: "Qualaroo", ofType: "bundle")}
-            .map { Bundle(path: $0!) }!!
-    return bundle
+  static func qualaroo() -> Bundle? {
+    guard let path = Bundle(for: Qualaroo.self).path(forResource: "Qualaroo", ofType: "bundle") else { return nil }
+    return Bundle(path: path)
   }
 }

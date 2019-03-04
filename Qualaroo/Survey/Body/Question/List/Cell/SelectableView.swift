@@ -58,7 +58,7 @@ class SelectableView: UIView {
     let viewModel: ViewModel
     lazy var view: SelectableView = {
       guard
-        let nib = Bundle.qualaroo().loadNibNamed("SelectableView", owner: nil, options: nil),
+        let nib = Bundle.qualaroo()?.loadNibNamed("SelectableView", owner: nil, options: nil),
         let view = nib.first as? SelectableView else { return SelectableView() }
       return view
     }()

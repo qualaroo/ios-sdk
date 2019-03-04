@@ -16,7 +16,7 @@ class LeadGenViewBuilder {
                          answerHandler: SurveyAnswerHandler,
                          theme: Theme) -> LeadGenFormView? {
     guard
-      let nib = Bundle.qualaroo().loadNibNamed("LeadGenFormView",
+      let nib = Bundle.qualaroo()?.loadNibNamed("LeadGenFormView",
                                                owner: nil,
                                                options: nil),
       let view = nib.first as? LeadGenFormView else { return nil }
@@ -72,7 +72,7 @@ class LeadGenViewBuilder {
                            textDelegate: TextChangeListener,
                            theme: Theme) -> LeadGenFormCell? {
     guard
-      let nib = Bundle.qualaroo().loadNibNamed("LeadGenFormCell",
+      let nib = Bundle.qualaroo()?.loadNibNamed("LeadGenFormCell",
                                                owner: nil,
                                                options: nil),
       let view = nib.first as? LeadGenFormCell else { return nil }
