@@ -6,4 +6,4 @@ env:
 
 script:
   - carthage bootstrap --platform iOS --cache-builds --no-use-binaries
-  - xcodebuild -project Qualaroo.xcodeproj -scheme QualarooTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=latest' VALID_ARCHS=x86_64 test -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
+  - xcodebuild -project Qualaroo.xcodeproj -scheme Qualaroo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=latest' VALID_ARCHS=x86_64 test -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
