@@ -6,6 +6,8 @@
 //  Copyright © 2018 Mihály Papp. All rights reserved.
 //
 
+// swiftlint:disable colon
+
 import Foundation
 
 public enum Model : String {
@@ -58,17 +60,16 @@ public enum Model : String {
 }
 
 // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#
-//MARK: UIDevice extensions
+// MARK: UIDevice extensions
 // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
-public extension UIDevice {
-  public var type: String {
+extension UIDevice {
+  var type: String {
     var systemInfo = utsname()
     uname(&systemInfo)
     let modelCode = withUnsafePointer(to: &systemInfo.machine) {
-      $0.withMemoryRebound(to: CChar.self, capacity: 1) {
-        ptr in String.init(validatingUTF8: ptr)
-        
+      $0.withMemoryRebound(to: CChar.self, capacity: 1) { ptr in
+        String.init(validatingUTF8: ptr)
       }
     }
     var modelMap : [ String : Model ] = [

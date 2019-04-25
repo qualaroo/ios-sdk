@@ -8,6 +8,10 @@
 //  under which redistribution and use of this file is permitted.
 //
 
+// swiftlint:disable vertical_whitespace
+// swiftlint:disable identifier_name
+// swiftlint:disable function_parameter_count
+
 import UIKit
 
 let kAnimationTime = 0.4

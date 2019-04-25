@@ -73,7 +73,7 @@ class QuestionViewFactorySpec: QuickSpec {
           let dict = JsonLibrary.question(type: "radio",
                                           answerList: answers)
           question = try! QuestionFactory(with: dict).build()
-          view = factory.createView(with: question) as! AnswerListView
+          view = factory.createView(with: question) as? AnswerListView
         }
         it("creates radio question") {
           let answersShowed = view.selectableViews.count
@@ -102,7 +102,7 @@ class QuestionViewFactorySpec: QuickSpec {
           let dict = JsonLibrary.question(type: "checkbox",
                                           answerList: answers)
           question = try! QuestionFactory(with: dict).build()
-          view = factory.createView(with: question) as! AnswerListView
+          view = factory.createView(with: question) as? AnswerListView
         }
         it("creates radio question") {
           let answersShowed = view.selectableViews.count
@@ -125,7 +125,7 @@ class QuestionViewFactorySpec: QuickSpec {
           let answers = [JsonLibrary.answer(), JsonLibrary.answer()]
           question = try! QuestionFactory(with: JsonLibrary.question(type: "dropdown",
                                                                      answerList: answers)).build()
-          view = factory.createView(with: question) as! AnswerDropdownView
+          view = factory.createView(with: question) as? AnswerDropdownView
         }
         it("creates dropdorn question") {
           expect(view.picker.numberOfComponents).to(equal(1))
@@ -142,7 +142,7 @@ class QuestionViewFactorySpec: QuickSpec {
         var view: AnswerTextView!
         beforeEach {
           let question = try! QuestionFactory(with: JsonLibrary.question(type: "text")).build()
-          view = factory.createView(with: question) as! AnswerTextView
+          view = factory.createView(with: question) as? AnswerTextView
         }
         it("creates text question") {
           expect(view).notTo(beNil())
@@ -161,7 +161,7 @@ class QuestionViewFactorySpec: QuickSpec {
           dict["nps_min_label"] = "MIN"
           dict["nps_max_label"] = "MAX"
           let question = try! QuestionFactory(with: dict).build()
-          view = factory.createView(with: question) as! AnswerNpsView
+          view = factory.createView(with: question) as? AnswerNpsView
         }
         it("creates nps question") {
           expect(view.minLabel.text).to(equal("MIN"))

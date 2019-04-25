@@ -10,7 +10,7 @@
 
 import Foundation
 
-struct ColorTheme : Equatable {
+struct ColorTheme: Equatable {
   
   let background: UIColor
   let text: UIColor
@@ -99,11 +99,9 @@ struct Theme: Equatable {
 
   private static func getColorTheme(from dictionary: [String: Any]) -> ColorTheme {
     if let theme = Theme.newStyleColors(dictionary) {
-      print("newColorTheme")
       return theme
     }
     if let theme = Theme.oldStyleColors(dictionary) {
-      print("oldColorTheme")
       return theme
     }
     return fallbackColorTheme()

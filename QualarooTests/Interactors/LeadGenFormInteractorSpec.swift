@@ -9,8 +9,6 @@
 //
 
 import Foundation
-
-import Foundation
 import Quick
 import Nimble
 @testable import Qualaroo

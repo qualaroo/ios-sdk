@@ -72,9 +72,6 @@ class CustomPropertiesFilter {
     }
     return "\"\(value)\""
   }
-  
-
-
 }
 
 extension CustomPropertiesFilter: FilterProtocol {

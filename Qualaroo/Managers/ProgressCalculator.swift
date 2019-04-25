@@ -12,7 +12,7 @@ class ProgressCalculator {
 
     private let surveyWireframe: SurveyWireframeProtocol
     private var nodes: Set<GraphNode> = []
-    private var graph: Graph? = nil
+    private var graph: Graph?
     
     init(_ wireframe: SurveyWireframeProtocol) {
         self.surveyWireframe = wireframe
@@ -47,7 +47,8 @@ class ProgressCalculator {
                 alias: "",
                 answerList: [AnswerResponse(id: $0.answerId, alias: "", text: "")]
             )
-            if let answerNode = surveyWireframe.nextNode(for: question.nodeId(), response: NodeResponse.question(response)) {
+            if let answerNode = surveyWireframe.nextNode(for: question.nodeId(),
+                                                         response: NodeResponse.question(response)) {
                 children.append(buildNode(answerNode))
             }
         }
@@ -122,7 +123,7 @@ class Graph {
         
         for node in nodes {
             for child in node.children {
-                if (distanceToNodes[child]! < distanceToNodes[node]! + 1) {
+                if distanceToNodes[child]! < distanceToNodes[node]! + 1 {
                     distanceToNodes[child] = distanceToNodes[node]! + 1
                 }
             }
@@ -140,7 +141,7 @@ class Graph {
     }
     
     private func topologicalSort(_ node: GraphNode, _ visited: inout Set<GraphNode>, _ result: inout [GraphNode]) {
-        if (visited.contains(node)) {
+        if visited.contains(node) {
             return
         }
         

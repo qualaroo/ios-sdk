@@ -41,7 +41,7 @@ class ReportClientSpec: QuickSpec {
         }
       }
       context("recording impression") {
-        var memory = PersistentMemory()
+        let memory = PersistentMemory()
         it("send request with given url") {
           let url = URL(string: "https://qualaroo.com")!
           let urlComposer = UrlComposerMock()

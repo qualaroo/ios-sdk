@@ -75,13 +75,12 @@ extension PersistentMemory: ReportRequestMemoryProtocol {
 }
 
 extension Optional where Wrapped: Any {
-  func ifNotNull(block: (Wrapped) -> ()) {
+  func ifNotNull(block: (Wrapped) -> Void) {
     if let value = self {
       block(value)
     }
   }
 }
-
 
 extension PersistentMemory: SeenSurveyMemoryProtocol {
   

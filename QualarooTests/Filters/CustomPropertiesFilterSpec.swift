@@ -63,13 +63,16 @@ class CustomPropertiesFilterSpec: QuickSpec {
         
         filter = self.buildFilter(["premium": "true", "age": "19", "name": "Joe"])
         expect(filter.check(rule: "(premium==\"true\" && age > 18) && name==\"Joe\"", surveyId: 0)).to(beTrue())
-      
         
         filter = self.buildFilter(["premium": "true", "age": "16", "name": "Joe"])
-        expect(filter.check(rule: "((premium==\"true\" && age > 18) && name==\"Joe\") || job == \"ceo\"", surveyId: 0)).to(beFalse())
+        expect(
+            filter.check(rule: "((premium==\"true\" && age > 18) && name==\"Joe\") || job == \"ceo\"", surveyId: 0))
+            .to(beFalse())
         
         filter = self.buildFilter(["premium": "true", "age": "16", "name": "Joe", "job": "ceo"])
-        expect(filter.check(rule: "((premium==\"true\" && age > 18) && name==\"Joe\") || job == \"ceo\"", surveyId: 0)).to(beTrue())
+        expect(
+            filter.check(rule: "((premium==\"true\" && age > 18) && name==\"Joe\") || job == \"ceo\"", surveyId: 0))
+            .to(beTrue())
         
         filter = self.buildFilter(["platform": "iOS"])
         expect(filter.check(rule: "platform==\"Android\"", surveyId: 0)).to(beFalse())

@@ -8,6 +8,8 @@
 //  under which redistribution and use of this file is permitted.
 //
 
+// swiftlint:disable function_parameter_count
+
 import Foundation
 import UIKit
 

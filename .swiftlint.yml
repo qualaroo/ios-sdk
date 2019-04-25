@@ -5,6 +5,8 @@ excluded:
 #Disabled rules:
 disabled_rules:
   - trailing_whitespace
+  - for_where
+  - todo
 
 #Customize rules:
 line_length:
