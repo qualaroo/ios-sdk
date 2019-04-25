@@ -2,8 +2,10 @@
 //  Qualaroo.h
 //  Qualaroo
 //
-//  Created by Mihály Papp on 04/07/2017.
-//  Copyright © 2017 Mihály Papp. All rights reserved.
+//  Copyright (c) 2018, Qualaroo, Inc. All Rights Reserved.
+//
+//  Please refer to the LICENSE.md file for the terms and conditions
+//  under which redistribution and use of this file is permitted.
 //
 
 #import <UIKit/UIKit.h>
