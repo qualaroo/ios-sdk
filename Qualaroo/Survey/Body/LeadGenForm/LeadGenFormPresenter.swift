@@ -39,7 +39,7 @@ extension LeadGenFormPresenter: TextChangeListener {
     return false
   }
   private func index(for textField: UITextField) -> Int? {
-    return view?.cells.index { $0.answerTextField == textField }
+    return view?.cells.firstIndex { $0.answerTextField == textField }
   }
   private func nextTextField(after index: Int) -> UITextField? {
     guard

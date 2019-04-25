@@ -153,9 +153,10 @@ class Graph {
     }
 }
 
-class GraphNode : Hashable, Equatable {
-    var hashValue: Int {
-        return id.hashValue
+class GraphNode: Hashable, Equatable {
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
     static func == (lhs: GraphNode, rhs: GraphNode) -> Bool {

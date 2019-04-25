@@ -5,7 +5,7 @@
   <a href="https://github.com/qualaroo/android-sdk/blob/dev/CHANGELOG.md">
     <img src="https://img.shields.io/badge/version-1.9.0-blue.svg"/>
   </a>
-  <img src="https://img.shields.io/badge/swift-4.2-green.svg"/>
+  <img src="https://img.shields.io/badge/swift-5.0-green.svg"/>
   <a href="https://travis-ci.org/qualaroo/ios-sdk">
     <img src="https://img.shields.io/travis/qualaroo/ios-sdk/master.svg"/>
   </a>  

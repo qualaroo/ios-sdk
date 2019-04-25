@@ -32,7 +32,7 @@ class SurveyViewMock: SurveyViewInterface {
   var uiNormalColorValue: UIColor?
   var showCloseButtonValue: Bool?
   var fullscreenValue: Bool?
-  var dimStyleValue: UIBlurEffectStyle?
+  var dimStyleValue: UIBlurEffect.Style?
   var closeSurveyDimValue: Bool?
   func setup(backgroundColor: UIColor,
              textColor: UIColor,

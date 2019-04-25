@@ -52,7 +52,7 @@ class SurveyPresenterSpec: QuickSpec {
           expect(view.uiNormalColorValue).to(equal(black))
           expect(view.showCloseButtonValue).to(beTrue())
           expect(view.fullscreenValue).to(beTrue())
-          expect(view.dimStyleValue).to(equal(UIBlurEffectStyle.dark))
+          expect(view.dimStyleValue).to(equal(UIBlurEffect.Style.dark))
         }
         it("should not animate dim whem survey displayed on fullscreen") {
           let view = SurveyViewMock()

@@ -67,7 +67,7 @@ class ThemeModelSpec: QuickSpec {
                                    fullscreen: true,
                                    closeButtonVisible: true,
                                    progressBar: "none")!
-          expect(theme.dimType).to(equal(UIBlurEffectStyle.light))
+          expect(theme.dimType).to(equal(UIBlurEffect.Style.light))
           expect(theme.keyboardStyle).to(equal(UIKeyboardAppearance.light))
         }
         it("should have white keyboard for very light dim") {
@@ -78,7 +78,7 @@ class ThemeModelSpec: QuickSpec {
                                    fullscreen: true,
                                    closeButtonVisible: true,
                                    progressBar: "none")!
-          expect(theme.dimType).to(equal(UIBlurEffectStyle.extraLight))
+          expect(theme.dimType).to(equal(UIBlurEffect.Style.extraLight))
           expect(theme.keyboardStyle).to(equal(UIKeyboardAppearance.light))
         }
         it("should have black keyboard for dark dim") {
@@ -89,7 +89,7 @@ class ThemeModelSpec: QuickSpec {
                                    fullscreen: true,
                                    closeButtonVisible: true,
                                    progressBar: "none")!
-          expect(theme.dimType).to(equal(UIBlurEffectStyle.dark))
+          expect(theme.dimType).to(equal(UIBlurEffect.Style.dark))
           expect(theme.keyboardStyle).to(equal(UIKeyboardAppearance.dark))
 
         }

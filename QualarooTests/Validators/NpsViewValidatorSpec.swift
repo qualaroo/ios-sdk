@@ -24,7 +24,7 @@ class AnswerNpsValidatorSpec: QuickSpec {
         
         let question = try! QuestionFactory(with: dict).build()
         let validator = AnswerNpsValidator(question: question)
-        var isValid = validator.isValid(selectedId: UISegmentedControlNoSegment)
+        var isValid = validator.isValid(selectedId: UISegmentedControl.noSegment)
         expect(isValid).to(beTrue())
         isValid = validator.isValid(selectedId: 1)
         expect(isValid).to(beTrue())
@@ -54,7 +54,7 @@ class AnswerNpsValidatorSpec: QuickSpec {
                                         isRequired: true)
         let question = try! QuestionFactory(with: dict).build()
         let validator = AnswerNpsValidator(question: question)
-        let isValid = validator.isValid(selectedId: UISegmentedControlNoSegment)
+        let isValid = validator.isValid(selectedId: UISegmentedControl.noSegment)
         expect(isValid).to(beFalse())
       }
     }
