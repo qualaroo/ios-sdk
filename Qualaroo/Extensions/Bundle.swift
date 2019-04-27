@@ -13,12 +13,11 @@ import Foundation
 extension Bundle {
   /// Convenience way to get Qualaroo bundle.
   ///
-  /// - Returns: Bundle used by Qualaroo Framework.
+  /// - Returns: Bundle used internally by Qualaroo Framework.
   static func qualaroo() -> Bundle {
-    let bundle =
-        Bundle(identifier: "org.cocoapods.Qualaroo")
-            .map {$0.path(forResource: "Qualaroo", ofType: "bundle")}
-            .map { Bundle(path: $0!) }!!
-    return bundle
+    let bundle = Bundle(for: Qualaroo.self)
+    let url = bundle.resourceURL!
+    let qualarooBundleUrl = url.appendingPathComponent("Qualaroo.bundle")
+    return Bundle(url: qualarooBundleUrl)!
   }
 }
