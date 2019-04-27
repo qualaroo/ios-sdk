@@ -49,7 +49,6 @@ class SurveyFactory {
     guard
       let alias = dictionary["canonical_name"] as? String,
       !alias.isEmpty else { throw SurveyError.missingOrWrongAlias }
-    print("Alias: \(alias)")
     return alias
   }
   
