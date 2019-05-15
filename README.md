@@ -35,7 +35,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'Qualaroo', '1.9.1'
+  pod 'Qualaroo', '1.9.2'
 end
 ```
 Then, run the following command:
