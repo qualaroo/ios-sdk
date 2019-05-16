@@ -12,8 +12,6 @@
 		BC1A09FA1F418B6D00BCB939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A09F81F418B6D00BCB939 /* Main.storyboard */; };
 		BC1A09FC1F418B6D00BCB939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1A09FB1F418B6D00BCB939 /* Assets.xcassets */; };
 		BC1A09FF1F418B6D00BCB939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A09FD1F418B6D00BCB939 /* LaunchScreen.storyboard */; };
-		BC1A0A071F418B9500BCB939 /* Qualaroo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A0A061F418B9500BCB939 /* Qualaroo.framework */; };
-		BC1A0A081F418B9500BCB939 /* Qualaroo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A0A061F418B9500BCB939 /* Qualaroo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BC1A0A081F418B9500BCB939 /* Qualaroo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +35,6 @@
 		BC1A09FB1F418B6D00BCB939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1A09FE1F418B6D00BCB939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1A0A001F418B6D00BCB939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC1A0A061F418B9500BCB939 /* Qualaroo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Qualaroo.framework; path = ../Qualaroo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC1A0A071F418B9500BCB939 /* Qualaroo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +51,6 @@
 		BC1A09E81F418B6D00BCB939 = {
 			isa = PBXGroup;
 			children = (
-				BC1A0A061F418B9500BCB939 /* Qualaroo.framework */,
 				BC1A09F31F418B6D00BCB939 /* Swift Qualaroo Demo */,
 				BC1A09F21F418B6D00BCB939 /* Products */,
 			);
@@ -127,6 +121,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
