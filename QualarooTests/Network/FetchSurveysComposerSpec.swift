@@ -35,7 +35,7 @@ class FetchSurveysComposerSpec: QuickSpec {
                                               appId: "testName",
                                               environment: .production)
           let components = URLComponents(url: composer.url()!, resolvingAgainstBaseURL: false)!
-          let version = Bundle.qualaroo().object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+          let version = Bundle.qualaroo()?.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
           let queryItems = [URLQueryItem(name: "sdk_version", value: version),
                             URLQueryItem(name: "client_app", value: "testName"),
                             URLQueryItem(name: "device_type", value: UIDevice.current.model),
@@ -47,7 +47,7 @@ class FetchSurveysComposerSpec: QuickSpec {
         it("should create basic info even without app name") {
           let composer = FetchSurveysComposer(siteId: "123123", deviceId: "1", environment: .production)
           let components = URLComponents(url: composer.url()!, resolvingAgainstBaseURL: false)!
-          let version = Bundle.qualaroo().object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+          let version = Bundle.qualaroo()?.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
           let queryItems = [URLQueryItem(name: "sdk_version", value: version),
                             URLQueryItem(name: "device_type", value: UIDevice.current.model),
                             URLQueryItem(name: "os_version", value: UIDevice.current.systemVersion),

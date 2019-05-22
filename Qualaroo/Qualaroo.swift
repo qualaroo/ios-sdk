@@ -54,17 +54,12 @@ public class Qualaroo: NSObject, Loggable {
     return Qualaroo()
   }
   
-  private var isDebugMode = false
-  @objc private func setDebugMode() {
-    isDebugMode = true
-  }
+  private var debugMode = false
   
   func currentEnvironment() -> Environment {
-    if isDebugMode {
-      return .staging
-    }
     return .production
   }
+    
   enum Environment {
     case production, staging
   }
@@ -143,7 +138,13 @@ extension Qualaroo {
   @objc public func isReady() -> Bool {
     return finishedDownloadingSurveys
   }
-  
+  @objc public func setDebugMode(_ isEnabled: Bool) {
+    return Qualaroo.shared.debugMode = isEnabled
+  }
+  @objc public func isDebugMode() -> Bool {
+        return Qualaroo.shared.debugMode
+  }
+    
   // MARK: - Configuration
   /// You need to call this method on Qualaroo.shared to create and configure main component with given credentials.
   ///

@@ -32,9 +32,9 @@ class Logger {
   static let sharedInstance = Logger()
   
   func log(_ string: String) {
-    #if DEBUG
+    if (Qualaroo.shared.isDebugMode()) {
       print("[Qualaroo]: \(string)")
-    #endif
+    }
   }
 }
 
