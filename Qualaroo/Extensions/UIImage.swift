@@ -20,7 +20,9 @@ extension UIImage {
     context.translateBy(x: 0.0, y: -self.size.height)
     context.setBlendMode(.multiply)
     let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
-    context.clip(to: rect, mask: self.cgImage!)
+    if let cgImage = self.cgImage {
+        context.clip(to: rect, mask: cgImage)
+    }
     color.setFill()
     context.fill(rect)
     guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else { return self }

@@ -239,6 +239,7 @@ extension SurveyInteractor: SurveyInteractorProtocol {
   
   func unexpectedErrorOccured(_ message: String) {
     closeSurvey(.error(message))
+    Qualaroo.log("It seems like an unexpected error has occured. Please contact support@qualaroo.com with surveyId:\(wireframe.currentSurveyId()); sdkVersion:\(SdkSession().sdkVersion)")
   }
   
 }
