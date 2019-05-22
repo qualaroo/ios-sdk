@@ -46,8 +46,8 @@ class SurveyAssembly {
 
   private func surveyInteractor(survey: Survey, delegate: SurveyDelegate?) -> SurveyInteractor {
     var languages: [String] = []
-    if clientInfo.preferredLanguage != nil {
-        languages.append(clientInfo.preferredLanguage!)
+    if let language = clientInfo.preferredLanguage {
+        languages.append(language)
     }
     let deviceLanguages = Locale.preferredLanguages.map { String($0.split(separator: "-")[0]) }
     languages.append(contentsOf: deviceLanguages)

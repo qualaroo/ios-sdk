@@ -10,7 +10,7 @@
 class XibView: UIView {
   override func awakeFromNib() {
     guard
-      let xib = Bundle.qualaroo().loadNibNamed(String(describing: type(of: self)),
+      let xib = Bundle.qualaroo()?.loadNibNamed(String(describing: type(of: self)),
                                                owner: self,
                                                options: nil),
       let views = xib as? [UIView],

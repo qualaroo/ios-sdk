@@ -14,10 +14,10 @@ extension Bundle {
   /// Convenience way to get Qualaroo bundle.
   ///
   /// - Returns: Bundle used internally by Qualaroo Framework.
-  static func qualaroo() -> Bundle {
+  static func qualaroo() -> Bundle? {
     let bundle = Bundle(for: Qualaroo.self)
-    let url = bundle.resourceURL!
+    guard let url = bundle.resourceURL else { return nil }
     let qualarooBundleUrl = url.appendingPathComponent("Qualaroo.bundle")
-    return Bundle(url: qualarooBundleUrl)!
+    return Bundle(url: qualarooBundleUrl)
   }
 }

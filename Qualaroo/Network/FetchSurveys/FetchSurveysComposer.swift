@@ -48,7 +48,7 @@ class FetchSurveysComposer {
   }
 
   private func versionQuery() -> [URLQueryItem] {
-    guard let version = Bundle.qualaroo().object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
+    guard let version = Bundle.qualaroo()?.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
       return []
     }
     return [URLQueryItem(name: "sdk_version", value: version)]

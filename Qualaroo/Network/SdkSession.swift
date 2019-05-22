@@ -14,7 +14,7 @@ struct SdkSession {
   let osVersion = UIDevice.current.systemVersion
   let deviceModel = UIDevice.current.type
   let language: String = Locale.current.languageCode ?? "unknown"
-  let sdkVersion: String = Bundle.qualaroo().object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "unknown"
+  let sdkVersion: String = Bundle.qualaroo()?.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "unknown"
   let appId: String = Bundle.main.bundleIdentifier ?? "unknown"
   let resolution: String
   let deviceType: String
