@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <Qualaroo/Qualaroo.h>
+@import Qualaroo;
 
 @interface AppDelegate ()
 

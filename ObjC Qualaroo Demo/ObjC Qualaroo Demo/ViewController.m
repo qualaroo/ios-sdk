@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <Qualaroo/Qualaroo.h>
+@import Qualaroo;
 
 @implementation ViewController
 
