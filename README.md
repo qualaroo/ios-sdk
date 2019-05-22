@@ -2,8 +2,8 @@
 <h1 align="center">QualarooSDK for iOS</h1>
 
 <p align="center">
-  <a href="https://github.com/qualaroo/android-sdk/blob/dev/CHANGELOG.md">
-    <img src="https://img.shields.io/badge/version-1.9.0-blue.svg"/>
+  <a href="https://github.com/qualaroo/ios-sdk/">
+    <img src="https://img.shields.io/badge/version-1.9.3-blue.svg"/>
   </a>
   <img src="https://img.shields.io/badge/swift-4.2-green.svg"/>
   <a href="https://travis-ci.org/qualaroo/ios-sdk">
@@ -35,7 +35,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'Qualaroo', '1.9.2'
+  pod 'Qualaroo', '1.9.3'
 end
 ```
 Then, run the following command:
@@ -145,6 +145,12 @@ Qualaroo.shared.abTestSurveys(
 )
 ```
 Keep in mind that this is an experimental feature and it's implementation might change in future releases.
+
+## Debug mode
+In order to get additional info and help us with potential bugs and issues, use the following command:
+```swift
+Qualaroo.shared.setDebugMode(true)
+```
 
 ## Release
 Framework is supporting all architectures (so you can use it with simulator for example). Apple is currently not supporting application that include dynamic frameworks containing `x86_64`/`i386` architectures. So if you want to release your application you need to remove them from framework. Easiest way to do it is to add this script to build phases after "Embed Frameworks" phase.
