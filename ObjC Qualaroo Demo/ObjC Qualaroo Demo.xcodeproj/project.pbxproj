@@ -13,8 +13,6 @@
 		BC5EBBF01F41939F002051F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5EBBEE1F41939F002051F1 /* Main.storyboard */; };
 		BC5EBBF21F41939F002051F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5EBBF11F41939F002051F1 /* Assets.xcassets */; };
 		BC5EBBF51F41939F002051F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5EBBF31F41939F002051F1 /* LaunchScreen.storyboard */; };
-		BC5EBBFD1F419403002051F1 /* Qualaroo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5EBBFC1F419403002051F1 /* Qualaroo.framework */; };
-		BC5EBBFE1F419403002051F1 /* Qualaroo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5EBBFC1F419403002051F1 /* Qualaroo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BC5EBBFE1F419403002051F1 /* Qualaroo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +39,6 @@
 		BC5EBBF11F41939F002051F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC5EBBF41F41939F002051F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC5EBBF61F41939F002051F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC5EBBFC1F419403002051F1 /* Qualaroo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Qualaroo.framework; path = ../Qualaroo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC5EBBFD1F419403002051F1 /* Qualaroo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +55,6 @@
 		BC5EBBD91F41939F002051F1 = {
 			isa = PBXGroup;
 			children = (
-				BC5EBBFC1F419403002051F1 /* Qualaroo.framework */,
 				BC5EBBE41F41939F002051F1 /* ObjC Qualaroo Demo */,
 				BC5EBBE31F41939F002051F1 /* Products */,
 			);
@@ -140,6 +134,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,6 +333,7 @@
 				BC5EBBFB1F41939F002051F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
