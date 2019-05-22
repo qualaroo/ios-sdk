@@ -48,7 +48,12 @@ Framework can be used for both iPhones and iPads.  It supports iOS 8.0 and above
 
 #### Imports
 For Swift it's `import Qualaroo`  
-For Objective-C it's `#import <Qualaroo/Qualaroo.h>`
+For Objective-C it's `@import Qualaroo;`
+
+Make sure that you have set **Always Embed Swift Standard Libraries** to **YES**
+
+##### Pure Obj-C projects:
+If you encounter problems in your project related to Swift symbols not being recognized, please add a new empty Swift file to your project (File->New file->Swift) and make sure you create an Objective C Bridging Header when Xcode prompts you to. 
 
 #### Initialize the Client
 In order to be able to use Qualaroo SDK you need to to initialize it first.
