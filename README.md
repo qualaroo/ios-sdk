@@ -9,7 +9,12 @@
   <a href="https://travis-ci.org/qualaroo/ios-sdk">
     <img src="https://img.shields.io/travis/qualaroo/ios-sdk/master.svg"/>
   </a>  
+  <a href="https://github.com/Carthage/Carthage">
+    <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"/>
+  </a>  
+
 </p>
+
 
 <p align="center">
   Qualaroo helps companies identify and capitalize on mobile visitor revenue opportunities.
