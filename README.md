@@ -40,13 +40,19 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'Qualaroo', '1.9.3'
+  pod 'Qualaroo', '1.10.0'
 end
 ```
 Then, run the following command:
 ```
 $ pod install
 ```
+### Carthage
+Simply add:
+```
+github "qualaroo/ios-sdk" ~> 1.10.0
+```
+to your `Cartfile`
 
 ## Usage
 Framework can be used for both iPhones and iPads.  It supports iOS 8.0 and above.
