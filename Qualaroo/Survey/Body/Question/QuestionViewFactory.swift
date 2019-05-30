@@ -115,10 +115,10 @@ class QuestionViewFactory {
   }
   private func radioQuestionView(with question: Question) -> AnswerListView? {
     guard
-        let onImage = UIImage(named: "radio_button_on",
+        let onImage = UIImage(named: "qualaroo_radio_button_on",
                               in: Bundle.qualaroo(),
                               compatibleWith: nil),
-        let offImage = UIImage(named: "radio_button_off",
+        let offImage = UIImage(named: "qualaroo_radio_button_off",
                            in: Bundle.qualaroo(),
                            compatibleWith: nil)
         else { return nil }
@@ -133,10 +133,10 @@ class QuestionViewFactory {
   }
   private func checkboxQuestionView(with question: Question) -> AnswerListView? {
     guard
-        let onImage = UIImage(named: "checkbox_button_on",
+        let onImage = UIImage(named: "qualaroo_checkbox_button_on",
                               in: Bundle.qualaroo(),
                               compatibleWith: nil),
-        let offImage = UIImage(named: "checkbox_button_off",
+        let offImage = UIImage(named: "qualaroo_checkbox_button_off",
                                in: Bundle.qualaroo(),
                                compatibleWith: nil)
         else { return nil }

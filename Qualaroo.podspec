@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "Qualaroo"
-  s.version      = "1.9.3-legacy"
+  s.version      = "1.9.4"
   s.summary      = "Qualaroo makes it easy to survey specific groups of application users to gain qualitative information."
   s.description  = <<-DESC
 		     Growing your business starts by understanding what your customers and potential customers want and what’s preventing them from achieving it. Qualaroo makes it easy to uncover these critical insights with our website and mobile application survey software. Uncover visitor confusion with your product offerings, understand objections in your purchase funnel, and more.
@@ -39,7 +39,6 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'Qualaroo' => ['Qualaroo/Survey/QualarooStoryboard.storyboard', 'Qualaroo/QualarooImages.xcassets', 'Qualaroo/Survey/**/*.xib']
   }
-  s.resources = 'Qualaroo/QualarooImages.xcassets/**/*.*'
   s.public_header_files = 'Qualaroo/Qualaroo.h'
   s.swift_version = '4.2'
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

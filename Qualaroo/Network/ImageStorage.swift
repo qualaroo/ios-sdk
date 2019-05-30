@@ -62,7 +62,7 @@ class ImageStorage {
   }
   
   private func qualarooImage() -> UIImage? {
-    return UIImage(named: "logo_ico",
+    return UIImage(named: "qualaroo_logo_ico",
                    in: Bundle.qualaroo(),
                    compatibleWith: nil)
   }

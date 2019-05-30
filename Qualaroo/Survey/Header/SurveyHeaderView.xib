@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -52,7 +51,7 @@
                                 <constraint firstAttribute="width" secondItem="hDg-Rp-Fkg" secondAttribute="height" multiplier="1:1" id="pS3-N4-1Bp"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
-                            <state key="normal" image="close_ico"/>
+                            <state key="normal" image="qualaroo_close_ico"/>
                             <connections>
                                 <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="zbq-9a-VWd"/>
                             </connections>
@@ -60,7 +59,7 @@
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdd-a8-SsL" userLabel="Logo Container">
                             <rect key="frame" x="14" y="32.5" width="56" height="56"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_ico" translatesAutoresizingMaskIntoConstraints="NO" id="KeJ-Ck-8WV">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qualaroo_logo_ico" translatesAutoresizingMaskIntoConstraints="NO" id="KeJ-Ck-8WV">
                                     <rect key="frame" x="6" y="6" width="44" height="44"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
@@ -127,7 +126,7 @@
         </view>
     </objects>
     <resources>
-        <image name="close_ico" width="64" height="64"/>
-        <image name="logo_ico" width="256" height="256"/>
+        <image name="qualaroo_close_ico" width="64" height="64"/>
+        <image name="qualaroo_logo_ico" width="256" height="256"/>
     </resources>
 </document>
