@@ -152,39 +152,10 @@ In order to get additional info and help us with potential bugs and issues, use 
 Qualaroo.shared.setDebugMode(true)
 ```
 
-## Release
-Framework is supporting all architectures (so you can use it with simulator for example). Apple is currently not supporting application that include dynamic frameworks containing `x86_64`/`i386` architectures. So if you want to release your application you need to remove them from framework. Easiest way to do it is to add this script to build phases after "Embed Frameworks" phase.
-```
-APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
+## Known issues
+If you notice the following log: `Could not load the "logo_ico" image referenced from a nib in the bundle with identifier "org.cocoapods.Qualaroo"` this might be caused by some other library that you are using. 
 
-# This script loops through the frameworks embedded in the application and
-# removes unused architectures.
-find "$APP_PATH" -name 'Qualaroo.framework' -type d | while read -r FRAMEWORK
-do
-FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
-FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
-echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
-
-EXTRACTED_ARCHS=()
-
-for ARCH in $ARCHS
-do
-echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
-lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
-EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
-done
-
-echo "Merging extracted architectures: ${ARCHS}"
-lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
-rm "${EXTRACTED_ARCHS[@]}"
-
-echo "Replacing original executable with thinned version"
-rm "$FRAMEWORK_EXECUTABLE_PATH"
-mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
-
-done
-```
-Credit goes to Daniel Kennett.
+If possible, share your Podfile with us by creating a [new issue](https://github.com/qualaroo/ios-sdk/issues/new) and we will provide a workaround for you.
 
 ## Features
 [Check our wiki](https://github.com/qualaroo/QualarooSDKiOS/wiki/How-can-I-use-Qualaroo-SDK%3F) if you want to get familiar with features Qualaroo provide.
