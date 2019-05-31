@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/qualaroo/ios-sdk/">
-    <img src="https://img.shields.io/badge/version-1.9.3-blue.svg"/>
+    <img src="https://img.shields.io/badge/version-1.10.0-blue.svg"/>
   </a>
   <img src="https://img.shields.io/badge/swift-4.2-green.svg"/>
   <a href="https://travis-ci.org/qualaroo/ios-sdk">
