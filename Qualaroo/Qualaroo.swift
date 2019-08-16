@@ -220,17 +220,12 @@ extension Qualaroo {
   }
 
   /// Set dafault language that you want to use for surveys. If survey won't support preferred language it will try
-  /// to use english, if it's also not supported then it will use first one from supported languages.
+  /// to use English, if it's also not supported then it will use first one from supported languages.
   ///
-  /// - Parameter language: String that is valid ISO 639-1 Language Code. Currently Qualaroo is not supporting ISO
-  /// Country Codes. Example "en" or "fr". Not supported "en-AU" or "fr-CA".
+  /// Parameter must be passed as an ISO 639-1 Language Code. In some rare cases you may use it in conjuction with ISO 3166-1 alpha-2 code. Keep in mind that this is not yet fully supported.
+  /// An example of such conjuction: "zh_TW"
+  /// - Parameter language: valid language code 
   @objc public func setPreferredSurveysLanguage(_ language: String) throws {
-    guard
-      language.count == 2,
-      language.rangeOfCharacter(from: CharacterSet.lowercaseLetters.inverted) == nil else {
-        Qualaroo.log("String should be valid ISO 639-1 Language Code.")
-        throw UserError.wrongLanguageCode
-    }
     clientInfo.preferredLanguage = language
   }
   
