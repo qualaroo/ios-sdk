@@ -2,5 +2,5 @@
 # platform :ios, '9.0'
 
 target 'ObjC Qualaroo Demo' do
-	pod 'Qualaroo', '1.10.0'
+	pod 'Qualaroo', '1.11.0'
 end
