@@ -34,7 +34,13 @@ class AnswerNpsView: UIView {
     minLabel.text = minText
     maxLabel.textColor = textColor
     maxLabel.text = maxText
-    npsSegmentedControl.tintColor = npsColor
+    if #available(iOS 13.0, *) {
+        npsSegmentedControl.selectedSegmentTintColor = npsColor
+        npsSegmentedControl.backgroundColor = textColor
+    } else {
+        //tint color does no longer work starting with iOS 13.0
+        npsSegmentedControl.tintColor = npsColor
+    }
     self.interactor = interactor
     enableTapAndSlide()
   }
