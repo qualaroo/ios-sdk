@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/qualaroo/ios-sdk/">
-    <img src="https://img.shields.io/badge/version-1.11.0-blue.svg"/>
+    <img src="https://img.shields.io/badge/version-1.12.0-blue.svg"/>
   </a>
   <img src="https://img.shields.io/badge/swift-4.2-green.svg"/>
   <a href="https://travis-ci.org/qualaroo/ios-sdk">
@@ -50,7 +50,7 @@ $ pod install
 ### Carthage
 Simply add:
 ```
-github "qualaroo/ios-sdk" ~> 1.11.0
+github "qualaroo/ios-sdk" ~> 1.12.0
 ```
 to your `Cartfile`
 
