@@ -25,11 +25,12 @@ class ABTest {
   
   func show(on viewController: UIViewController? = nil,
             forced: Bool = false,
-            delegate: SurveyDelegate? = nil) {
-    guard let survey = correctSurvey(index: 0) else { return }
-    guard Qualaroo.shared.shouldPresent(survey: survey, forced: forced, filters: filters) else { return }
+            delegate: SurveyDelegate? = nil) -> Bool {
+    guard let survey = correctSurvey(index: 0) else { return false }
+    guard Qualaroo.shared.shouldPresent(survey: survey, forced: forced, filters: filters) else { return false }
     markAllSurveysAsFinished(except: survey)
     Qualaroo.shared.present(survey: survey, on: viewController, delegate: delegate)
+    return true
   }
 }
 

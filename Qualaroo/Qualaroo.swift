@@ -290,12 +290,15 @@ extension Qualaroo {
   ///   - forced: skips all targeting checks if set to true.
   /// This will cause the survey to always be shown, as long as it's active. Use with precaution. Defaults to false.
   ///   - delegate: Object that will receive information about survey starting, dismissing and finishing.
+  /// - Returns: `true` if a survey will be presented.
+  @discardableResult
   @objc public func showSurvey(with alias: String,
                                on viewController: UIViewController? = nil,
                                forced: Bool = false,
-                               delegate: SurveyDelegate? = nil) {
-    guard let survey = surveyToPresent(alias: alias, forced: forced) else { return }
+                               delegate: SurveyDelegate? = nil) -> Bool {
+    guard let survey = surveyToPresent(alias: alias, forced: forced) else { return false }
     present(survey: survey, on: viewController, delegate: delegate)
+    return true
   }
   
   /// Way to ABTest surveys with selected names (aliases).
@@ -312,13 +315,15 @@ extension Qualaroo {
   ///   - forced: skips all targeting checks if set to true.
   /// This will cause the survey to always be shown, as long as it's active. Use with precaution. Defaults to false.
   ///   - delegate: Object that will receive information about survey starting, dismissing and finishing.
+  /// - Returns: `true` if a survey will be presented.
+  @discardableResult
   @objc public func abTestSurveys(with aliases: [String],
                                   on viewController: UIViewController? = nil,
                                   forced: Bool = false,
-                                  delegate: SurveyDelegate? = nil) {
+                                  delegate: SurveyDelegate? = nil) -> Bool {
     let surveysToTest = aliases.map({ survey(forAlias: $0)}).removeNils()
     let filters = services.surveyAbFilter(clientInfo: clientInfo)
     let abTest = ABTest(surveys: surveysToTest, memory: services.persistentMemory, filters: filters)
-    abTest.show(on: viewController, forced: forced, delegate: delegate)
+    return abTest.show(on: viewController, forced: forced, delegate: delegate)
   }
 }
