@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7rs-Yg-BHL">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7rs-Yg-BHL">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,8 +12,8 @@
             <objects>
                 <viewController storyboardIdentifier="SurveyView" id="7rs-Yg-BHL" customClass="SurveyView" customModule="Qualaroo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nvX-ZG-Cbm"/>
-                        <viewControllerLayoutGuide type="bottom" id="HHc-v1-9o1"/>
+                        <viewControllerLayoutGuide type="top" id="ofh-Ms-gGy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ufv-SE-ZJP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YrF-tf-Bx3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -34,13 +31,13 @@
                                 </connections>
                             </visualEffectView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-Qr-XSk">
-                                <rect key="frame" x="0.0" y="20" width="240" height="2"/>
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="yAi-Dz-qdm"/>
                                 </constraints>
                             </progressView>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mqv-DR-zmQ">
-                                <rect key="frame" x="0.0" y="22" width="240" height="645"/>
+                                <rect key="frame" x="0.0" y="2" width="240" height="665"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MmA-5W-THl" customClass="SurveyHeaderView" customModule="Qualaroo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -89,13 +86,13 @@
                             <constraint firstItem="UXp-yV-TKg" firstAttribute="trailing" secondItem="Mqv-DR-zmQ" secondAttribute="trailing" id="1q5-dX-iej"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Mqv-DR-zmQ" secondAttribute="bottom" id="4qX-uN-Ygb"/>
                             <constraint firstItem="UXp-yV-TKg" firstAttribute="leading" secondItem="YrF-tf-Bx3" secondAttribute="leading" id="5dp-b2-0ZM"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="UXp-yV-TKg" secondAttribute="bottom" id="6XX-Ve-Tev"/>
+                            <constraint firstAttribute="bottom" secondItem="UXp-yV-TKg" secondAttribute="bottom" id="6XX-Ve-Tev"/>
                             <constraint firstItem="bxZ-Qr-XSk" firstAttribute="bottom" secondItem="Mqv-DR-zmQ" secondAttribute="top" id="8eW-36-u62"/>
                             <constraint firstItem="bxZ-Qr-XSk" firstAttribute="leading" secondItem="YrF-tf-Bx3" secondAttribute="leading" id="9mm-hL-r7O"/>
                             <constraint firstItem="tdJ-LY-2E9" firstAttribute="leading" secondItem="YrF-tf-Bx3" secondAttribute="leading" id="LHk-a0-Adz"/>
-                            <constraint firstItem="bxZ-Qr-XSk" firstAttribute="top" secondItem="nvX-ZG-Cbm" secondAttribute="bottom" id="MkB-uW-awg"/>
+                            <constraint firstItem="bxZ-Qr-XSk" firstAttribute="top" secondItem="ofh-Ms-gGy" secondAttribute="bottom" id="MkB-uW-awg"/>
                             <constraint firstItem="Mqv-DR-zmQ" firstAttribute="centerY" secondItem="YrF-tf-Bx3" secondAttribute="centerY" priority="250" id="Nkc-HX-IxW"/>
-                            <constraint firstItem="Mqv-DR-zmQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nvX-ZG-Cbm" secondAttribute="bottom" id="T3M-1A-6qf"/>
+                            <constraint firstItem="Mqv-DR-zmQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ofh-Ms-gGy" secondAttribute="bottom" id="T3M-1A-6qf"/>
                             <constraint firstItem="bxZ-Qr-XSk" firstAttribute="trailing" secondItem="YrF-tf-Bx3" secondAttribute="trailing" id="bvl-lb-hyu"/>
                             <constraint firstAttribute="bottom" secondItem="Mqv-DR-zmQ" secondAttribute="bottom" priority="900" id="duo-oO-kOy"/>
                             <constraint firstItem="UXp-yV-TKg" firstAttribute="leading" secondItem="Mqv-DR-zmQ" secondAttribute="leading" id="gFK-Yh-fe9"/>
