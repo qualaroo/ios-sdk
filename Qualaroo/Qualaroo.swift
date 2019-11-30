@@ -297,7 +297,18 @@ extension Qualaroo {
     guard let survey = surveyToPresent(alias: alias, forced: forced) else { return }
     present(survey: survey, on: viewController, delegate: delegate)
   }
-  
+    
+  /// Allows to check whether specific survey will be displayed after showSurvey call
+  ///
+  /// - Parameters:
+  ///   - alias: alias of the survey
+    @objc public func willSurveyBeShown(with alias: String) -> Bool {
+      guard surveyToPresent(alias: alias, forced: false) != nil else {
+        return false
+      }
+      return true
+    }
+
   /// Way to ABTest surveys with selected names (aliases).
   ///
   /// - Parameters:
