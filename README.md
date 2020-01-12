@@ -3,9 +3,9 @@
 
 <p align="center">
   <a href="https://github.com/qualaroo/ios-sdk/">
-    <img src="https://img.shields.io/badge/version-1.12.1-blue.svg"/>
+    <img src="https://img.shields.io/badge/version-1.13.0-blue.svg"/>
   </a>
-  <img src="https://img.shields.io/badge/swift-4.2-green.svg"/>
+  <img src="https://img.shields.io/badge/swift-5.1-green.svg"/>
   <a href="https://travis-ci.org/qualaroo/ios-sdk">
     <img src="https://img.shields.io/travis/qualaroo/ios-sdk/master.svg"/>
   </a>  
@@ -79,6 +79,15 @@ The survey will be displayed if all conditions configured in our dashboard are m
 //Show survey with "your_survey_alias" alias
 Qualaroo.shared.showSurvey(with: "your_survey_alias")
 ```
+
+You can also check whether particular survey will be displayed (i.e. SDK is initialized and all of the conditions are met).
+```swift
+let willShowSurvey = Qualaroo.shared.willSurveyBeShown(with alias: String)
+if (willShowSurvey) {
+  // do something
+}
+```
+
 #### Set user properties
 ```swift
 //Set unique user id

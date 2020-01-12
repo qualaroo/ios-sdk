@@ -10,14 +10,14 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "Qualaroo"
-  s.version      = "1.12.1"
+  s.version      = "1.13.0"
   s.summary      = "Qualaroo makes it easy to survey specific groups of application users to gain qualitative information."
   s.description  = <<-DESC
 		     Growing your business starts by understanding what your customers and potential customers want and what’s preventing them from achieving it. Qualaroo makes it easy to uncover these critical insights with our website and mobile application survey software. Uncover visitor confusion with your product offerings, understand objections in your purchase funnel, and more.
 		     Qualaroo surveys lets you target questions to users anywhere inside your application, within your product or deep in your conversion funnel. When you understand the intent of your application users and customers you can more effectively address the concerns and issues that are preventing them from achieving their goals.
 		   DESC
   s.homepage     = "https://qualaroo.com"
-  s.screenshots  = "https://blog.qualaroo.com/wp-content/themes/qualaroo/images/logo.svg"
+  s.screenshots  = "https://qualaroo.com/app/themes/qualaroo/dist/images/svg/logo_c18c4539.svg"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
