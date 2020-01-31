@@ -111,6 +111,5 @@ extension FetchSurveysScheduler: FetchSurveysProtocol {
   
   func fetchSurveys() {
     setNewTimer()
-    tryToSendRequest()
   }
 }
