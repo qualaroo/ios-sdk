@@ -69,8 +69,10 @@ public class Qualaroo: NSObject, Loggable {
 extension Qualaroo: FetchSurveysDelegate {
 
   func fetchedSurveys(_ surveys: [Survey]) {
-    self.surveys = surveys
-    finishedDownloadingSurveys = true
+    DispatchQueue.main.async {
+      self.surveys = surveys
+      self.finishedDownloadingSurveys = true
+    }
   }
   
   func fetchingFinishedWithError(_ error: Error) {
