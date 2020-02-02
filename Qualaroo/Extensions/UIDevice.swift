@@ -62,7 +62,7 @@ public enum Model : String {
 // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 public extension UIDevice {
-  public var type: String {
+    var type: String {
     var systemInfo = utsname()
     uname(&systemInfo)
     let modelCode = withUnsafePointer(to: &systemInfo.machine) {
@@ -71,7 +71,7 @@ public extension UIDevice {
         
       }
     }
-    var modelMap : [ String : Model ] = [
+    let modelMap : [ String : Model ] = [
       "i386"      : .simulator,
       "x86_64"    : .simulator,
       //iPod

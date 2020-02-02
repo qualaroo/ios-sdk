@@ -153,11 +153,7 @@ class Graph {
     }
 }
 
-class GraphNode : Hashable, Equatable {
-    var hashValue: Int {
-        return id.hashValue
-    }
-    
+class GraphNode : Hashable, Equatable {    
     static func == (lhs: GraphNode, rhs: GraphNode) -> Bool {
         return lhs.id == rhs.id
     }
@@ -168,6 +164,10 @@ class GraphNode : Hashable, Equatable {
     init(_ id: Int64, _ children: [GraphNode]) {
         self.id = id
         self.children = children
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 
 }
