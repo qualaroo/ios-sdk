@@ -72,7 +72,7 @@ class FetchSurveysScheduler {
   private func setNewTimer() {
     timer.invalidate()
     let time = Const.surveyFetchInterval
-    timer = Timer(timeInterval: time, target: self, selector: #selector(tryToSendRequest), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: time, target: self, selector: #selector(tryToSendRequest), userInfo: nil, repeats: true)
     timer.fire()
   }
 }
@@ -111,6 +111,5 @@ extension FetchSurveysScheduler: FetchSurveysProtocol {
   
   func fetchSurveys() {
     setNewTimer()
-    tryToSendRequest()
   }
 }
