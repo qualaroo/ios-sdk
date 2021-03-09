@@ -36,7 +36,7 @@ class AnswerNpsView: UIView {
     maxLabel.text = maxText
     if #available(iOS 13.0, *) {
         npsSegmentedControl.selectedSegmentTintColor = npsColor
-        npsSegmentedControl.backgroundColor = textColor
+        npsSegmentedControl.backgroundColor = backgroundColor
     } else {
         //tint color does no longer work starting with iOS 13.0
         npsSegmentedControl.tintColor = npsColor
