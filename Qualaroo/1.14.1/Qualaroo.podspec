@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "BSD", :file => "LICENSE.md" }
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.author       = { "Mihály Papp" => "ajay@proprofs.com" }
+  s.author       = { "Mihály Papp" => "mihaly@qualaroo.com" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.platform     = :ios, "8.0"
