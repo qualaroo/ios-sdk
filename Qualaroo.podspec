@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "Qualaroo"
-  s.version      = "1.13.1"
+  s.version      = "1.14.1"
   s.summary      = "Qualaroo makes it easy to survey specific groups of application users to gain qualitative information."
   s.description  = <<-DESC
 		     Growing your business starts by understanding what your customers and potential customers want and what’s preventing them from achieving it. Qualaroo makes it easy to uncover these critical insights with our website and mobile application survey software. Uncover visitor confusion with your product offerings, understand objections in your purchase funnel, and more.
