@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,6 +21,7 @@
                 <outlet property="logoVerticalCenterConstraint" destination="Qai-ht-Zmc" id="FPv-gI-5pG"/>
                 <outlet property="lowerContainerHeightConstraint" destination="Lhf-ur-RSI" id="bPD-ug-OD7"/>
                 <outlet property="lowerLabel" destination="wlu-Fa-6Dy" id="7PA-By-G9c"/>
+                <outlet property="newCloseButton" destination="qBi-rQ-rDa" id="cBP-WK-pl7"/>
                 <outlet property="textMarginConstraint" destination="jbz-Ww-988" id="rNG-aO-0ER"/>
                 <outlet property="upperLabel" destination="CCn-87-fJV" id="Tio-9E-3eX"/>
             </connections>
@@ -77,6 +75,12 @@
                                 <constraint firstItem="KeJ-Ck-8WV" firstAttribute="centerX" secondItem="Mdd-a8-SsL" secondAttribute="centerX" id="vdo-0F-gPt"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBi-rQ-rDa">
+                            <rect key="frame" x="359" y="6" width="12" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <constraints>
                         <constraint firstItem="hDg-Rp-Fkg" firstAttribute="top" secondItem="Eu7-2b-khN" secondAttribute="top" constant="4" id="1aU-iN-IRA"/>
@@ -86,6 +90,8 @@
                         <constraint firstItem="CCn-87-fJV" firstAttribute="leading" secondItem="Eu7-2b-khN" secondAttribute="leading" priority="250" constant="8" id="KWh-cd-Fov"/>
                         <constraint firstAttribute="centerY" secondItem="Mdd-a8-SsL" secondAttribute="centerY" priority="750" id="Qai-ht-Zmc"/>
                         <constraint firstItem="CCn-87-fJV" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Eu7-2b-khN" secondAttribute="leading" constant="76" id="RjD-TY-GHv"/>
+                        <constraint firstItem="qBi-rQ-rDa" firstAttribute="leading" secondItem="CCn-87-fJV" secondAttribute="trailing" constant="4" id="Six-oQ-AyK"/>
+                        <constraint firstItem="qBi-rQ-rDa" firstAttribute="top" secondItem="Eu7-2b-khN" secondAttribute="top" constant="7" id="Ttj-XL-jlI"/>
                         <constraint firstItem="CCn-87-fJV" firstAttribute="centerY" secondItem="Eu7-2b-khN" secondAttribute="centerY" id="j9y-Pn-IQa"/>
                         <constraint firstAttribute="bottom" secondItem="CCn-87-fJV" secondAttribute="bottom" constant="10" id="jbz-Ww-988"/>
                         <constraint firstItem="CCn-87-fJV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Eu7-2b-khN" secondAttribute="leading" constant="32" id="mSX-fX-Iy3"/>
@@ -123,7 +129,7 @@
                 <constraint firstItem="Eu7-2b-khN" firstAttribute="leading" secondItem="jCb-FQ-V6b" secondAttribute="leading" id="hTB-jA-H6c"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-472.5" y="-45.5"/>
+            <point key="canvasLocation" x="-472.80000000000001" y="-46.326836581709152"/>
         </view>
     </objects>
     <resources>

@@ -41,8 +41,9 @@ class SurveyHeaderView: XibView {
   @IBOutlet weak var upperLabel: UILabel!
   @IBOutlet weak var lowerLabel: UILabel!
   @IBOutlet weak var closeButton: UIButton!
-  
-  // MARK: - Constraints
+
+    @IBOutlet weak var newCloseButton: UILabel!
+    // MARK: - Constraints
   @IBOutlet weak var logoToTextConstraint: NSLayoutConstraint!
   @IBOutlet weak var logoVerticalCenterConstraint: NSLayoutConstraint!
   @IBOutlet weak var edgeToLogoConstraint: NSLayoutConstraint!
@@ -60,6 +61,9 @@ class SurveyHeaderView: XibView {
     upperLabel.textColor = textColor
     lowerLabel.textColor = textColor
     configureLogo(backgroundColor: backgroundColor, logoUrl: logoUrl)
+    let tap = UITapGestureRecognizer(target: self, action:#selector(newCloseEvent))
+    newCloseButton.isUserInteractionEnabled = true
+        newCloseButton.addGestureRecognizer(tap)
   }
   
   private func configureLogo(backgroundColor: UIColor, logoUrl: String) {
@@ -79,14 +83,19 @@ class SurveyHeaderView: XibView {
   }
   
   private func setCloseButton(tintColor: UIColor) {
-    let image = closeButton.image(for: .normal)?.withRenderingMode(.alwaysTemplate)
-    closeButton.tintColor = tintColor
-    closeButton.setImage(image, for: .normal)
+//    let image = closeButton.image(for: .normal)?.withRenderingMode(.alwaysTemplate)
+//    closeButton.tintColor = tintColor
+//    closeButton.setImage(image, for: .normal)
+    newCloseButton.textColor = tintColor
+    newCloseButton.tintColor = tintColor
   }
   
   private func setCloseButton(hidden: Bool) {
+    newCloseButton.isHidden = hidden
+    newCloseButton.alpha = hidden ? 0 : 1
     closeButton.isHidden = hidden
-    closeButton.alpha = hidden ? 0 : 1
+    closeButton.alpha = 0
+    
   }
   
   func displayQuestion(with model: CopyViewModel, duration: TimeInterval) -> Animatable {
@@ -232,8 +241,10 @@ class SurveyHeaderView: XibView {
   
   private func showCloseButtonAnimation(duration: TimeInterval) -> Animatable {
     return Animation(duration: duration) {
-      self.closeButton.isHidden = false
-      self.closeButton.alpha = 1
+      self.closeButton.isHidden = true
+      self.closeButton.alpha = 0
+        self.newCloseButton.isHidden = false
+        self.newCloseButton.alpha = 1
     }
   }
   
@@ -265,4 +276,9 @@ class SurveyHeaderView: XibView {
   @IBAction func closeButtonPressed(_ sender: UIButton) {
     delegate?.closeButtonPressed()
   }
+    
+    @objc func newCloseEvent() {
+//        print("Close")
+        delegate?.closeButtonPressed()
+    }
 }
