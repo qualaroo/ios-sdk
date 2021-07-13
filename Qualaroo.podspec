@@ -39,6 +39,7 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'Qualaroo' => ['Qualaroo/Survey/QualarooStoryboard.storyboard', 'Qualaroo/QualarooImages.xcassets', 'Qualaroo/Survey/**/*.xib']
   }
+  s.resources = ['Qualaroo/QualarooImages.xcassets']
   s.public_header_files = 'Qualaroo/Qualaroo.h'
   s.swift_version = '4.2'
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
