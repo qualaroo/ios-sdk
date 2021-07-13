@@ -36,11 +36,11 @@ $ gem install cocoapods
 ```
 To integrate QualarooSDKiOS into your Xcode project using CocoaPods, specify it in your Podfile:
 ```
-source 'https://cdn.cocoapods.org/'
+
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'Qualaroo', '1.14.1'
+  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :branch => 'master'
 end
 ```
 Then, run the following command:
