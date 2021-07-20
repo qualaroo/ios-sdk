@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/qualaroo/ios-sdk/">
-    <img src="https://img.shields.io/badge/version-1.14.1-blue.svg"/>
+    <img src="https://img.shields.io/badge/version-1.14.4-blue.svg"/>
   </a>
   <img src="https://img.shields.io/badge/swift-5.1-green.svg"/>
   <a href="https://travis-ci.org/qualaroo/ios-sdk">
@@ -40,7 +40,7 @@ To integrate QualarooSDKiOS into your Xcode project using CocoaPods, specify it 
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :branch => 'master'
+  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.4'
 end
 ```
 Then, run the following command:
@@ -50,7 +50,7 @@ $ pod install
 ### Carthage
 Simply add:
 ```
-github "qualaroo/ios-sdk" ~> 1.14.1
+github "qualaroo/ios-sdk" ~> 1.14.4
 ```
 to your `Cartfile`
 
