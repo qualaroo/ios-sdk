@@ -29,11 +29,17 @@ class AnswerNpsView: UIView {
                  textColor: UIColor,
                  npsColor: UIColor,
                  interactor: AnswerNpsInteractor) {
+
     self.backgroundColor = backgroundColor
     minLabel.textColor = textColor
     minLabel.text = minText
     maxLabel.textColor = textColor
     maxLabel.text = maxText
+    npsSegmentedControl.layer.borderColor = textColor.cgColor
+    npsSegmentedControl.layer.borderWidth = 1
+    npsSegmentedControl.setDividerImage(imageWithColor(color: textColor), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+    npsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: textColor], for: UIControl.State.normal)
+    npsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: backgroundColor], for: UIControl.State.selected)
     if #available(iOS 13.0, *) {
         npsSegmentedControl.selectedSegmentTintColor = npsColor
         npsSegmentedControl.backgroundColor = backgroundColor
@@ -44,6 +50,18 @@ class AnswerNpsView: UIView {
     self.interactor = interactor
     enableTapAndSlide()
   }
+
+      private func imageWithColor(color: UIColor) -> UIImage {
+          let rect = CGRect(x: 0.0, y: 0.0, width:  1.0, height: 1.0)
+          UIGraphicsBeginImageContext(rect.size)
+          let context = UIGraphicsGetCurrentContext()
+          context!.setFillColor(color.cgColor);
+          context!.fill(rect);
+          let image = UIGraphicsGetImageFromCurrentImageContext();
+          UIGraphicsEndImageContext();
+          return image!
+      }
+
   private func enableTapAndSlide() {
     let recognizer = UILongPressGestureRecognizer(target: self,
                                                   action: #selector(pressed))
