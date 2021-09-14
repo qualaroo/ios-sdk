@@ -36,10 +36,13 @@ Pod::Spec.new do |s|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source_files = 'Qualaroo/**/*.{h,m,swift}'
   s.requires_arc = true
+  s.default_subspecs = :none
   s.resource_bundles = {
     'Qualaroo' => ['Qualaroo/Survey/QualarooStoryboard.storyboard', 'Qualaroo/QualarooImages.xcassets', 'Qualaroo/Survey/**/*.xib']
   }
-  s.resources = ['Qualaroo/QualarooImages.xcassets']
+  s.subspec 'Flutter' do |flutter|
+  flutter.resources = ['Qualaroo/QualarooImages.xcassets']
+  end
   s.public_header_files = 'Qualaroo/Qualaroo.h'
   s.swift_version = '4.2'
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
