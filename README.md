@@ -40,9 +40,21 @@ To integrate QualarooSDKiOS into your Xcode project using CocoaPods, specify it 
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.4'
+  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.5'
 end
 ```
+
+To integrate QualarooSDKiOS into your Flutter app using CocoaPods, specify it in your Podfile:
+```
+
+platform :ios, '8.0'
+
+target 'TargetName' do
+  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.5'
+  pod 'Qualaroo/Flutter', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.5'
+end
+```
+
 Then, run the following command:
 ```
 $ pod install
@@ -50,7 +62,7 @@ $ pod install
 ### Carthage
 Simply add:
 ```
-github "qualaroo/ios-sdk" ~> 1.14.4
+github "qualaroo/ios-sdk" ~> 1.14.5
 ```
 to your `Cartfile`
 
