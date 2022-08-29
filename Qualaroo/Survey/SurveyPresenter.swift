@@ -73,6 +73,7 @@ class SurveyPresenter {
       return
     }
     surveyViewInterface.displayLeadGenForm(with: converter.convert(leadGenForm.description),
+                                           fontStyleTitle: leadGenForm.font_style_decription,
                                            leadGenView: embeddedView,
                                            buttonModel: buttonViewModel(with: leadGenForm))
   }
@@ -125,7 +126,7 @@ private extension SurveyPresenter {
   func copyViewModel(with question: Question) -> SurveyHeaderView.CopyViewModel {
     return SurveyHeaderView.CopyViewModel(title: converter.convert(question.title),
                                           description: converter.convert(question.description),
-                                          descriptionPlacement: question.descriptionPlacement)
+                                          descriptionPlacement: question.descriptionPlacement,fontStyleQuestion: question.fontStyleQuestion,fontStyleDescription: question.fontStyleDescription)
   }
   
   func buttonViewModel(with colors: ColorTheme) -> SurveyButtonsView.ViewModel {

@@ -56,7 +56,7 @@ class UrlComposer {
     case .production:
       return "turbo.qualaroo.com"
     case .staging:
-      return "stage1.turbo.qualaroo.com"
+        return "turbo-staging.qualaroo.com"
     }
   }
   private func commonUrlComponents() -> URLComponents {
