@@ -14,6 +14,8 @@ class SurveyHeaderView: XibView {
     let title: String
     let description: String?
     let descriptionPlacement: Question.DescriptionPlacement
+    let fontStyleQuestion: String
+    let fontStyleDescription: String
   }
   
   struct CloseButtonViewModel {
@@ -33,6 +35,9 @@ class SurveyHeaderView: XibView {
     static let questionTitleFont = UIFont.boldSystemFont(ofSize: 16)
     static let questionDescriptionFont = UIFont.systemFont(ofSize: 16)
     static let messageFont = UIFont.systemFont(ofSize: 18)
+    static let italicFont = UIFont.italicSystemFont(ofSize: 16)
+    static let obliqueFont =   UIFont(name: "Avenir-HeavyOblique", size:16)
+    static let normalFont =  UIFont.systemFont(ofSize: 16)
   }
   
   // MARK: - Outlets
@@ -92,9 +97,9 @@ class SurveyHeaderView: XibView {
   func displayQuestion(with model: CopyViewModel, duration: TimeInterval) -> Animatable {
     let description = model.description ?? ""
     switch model.descriptionPlacement {
-    case .none: return applyTitleOnlyState(title: model.title, duration: duration)
-    case .after: return applyTitleLeadingState(title: model.title, description: description, duration: duration)
-    case .before: return applyDescriptionLeadingState(title: model.title, description: description, duration: duration)
+    case .none: return applyTitleOnlyState(title: model.title, duration: duration,fontStyleQuestion:model.fontStyleQuestion)
+    case .after: return applyTitleLeadingState(title: model.title, description: description, duration: duration, fontStyleQuestion:model.fontStyleQuestion, fontStyleDescription:model.fontStyleDescription)
+    case .before: return applyDescriptionLeadingState(title: model.title, description: description, duration: duration,fontStyleQuestion:model.fontStyleQuestion, fontStyleDescription:model.fontStyleDescription)
     }
   }
   
@@ -110,26 +115,31 @@ class SurveyHeaderView: XibView {
     return animation
   }
   
-  func displayLeadGenForm(title: String, duration: TimeInterval) -> Animatable {
-    return applyTitleOnlyState(title: title, duration: duration)
+    func displayLeadGenForm(title: String, duration: TimeInterval, fontStyleTitle:String ) -> Animatable {
+    return applyTitleOnlyState(title: title, duration: duration, fontStyleQuestion: fontStyleTitle)
   }
   
   // MARK: - Animations
-  private func applyTitleOnlyState(title: String, duration: TimeInterval) -> Animatable {
+    private func applyTitleOnlyState(title: String, duration: TimeInterval, fontStyleQuestion:String) -> Animatable {
+        setFontType(type: fontStyleQuestion, uilabel: upperLabel)
     let changeUpperText = changeUpperTextToTitleAnimation(title, duration: duration)
     let hideLowerText = hideLowerTextAnimation(duration: duration)
     let changeToQuestion = changeToQuestionAnimation(duration: duration)
     return Animation.group([changeUpperText, hideLowerText, changeToQuestion])
   }
   
-  private func applyTitleLeadingState(title: String, description: String, duration: TimeInterval) -> Animatable {
+    private func applyTitleLeadingState(title: String, description: String, duration: TimeInterval, fontStyleQuestion:String, fontStyleDescription:String) -> Animatable {
+        setFontType(type: fontStyleQuestion, uilabel: upperLabel)
+        setFontType(type: fontStyleDescription, uilabel: lowerLabel)
     let changeUpperText = changeUpperTextToTitleAnimation(title, duration: duration)
     let changeLowerText = changeLowerTextToDescriptionAnimation(description, duration: duration)
     let changeToQuestion = changeToQuestionAnimation(duration: duration)
     return Animation.group([changeUpperText, changeLowerText, changeToQuestion])
   }
   
-  private func applyDescriptionLeadingState(title: String, description: String, duration: TimeInterval) -> Animatable {
+  private func applyDescriptionLeadingState(title: String, description: String, duration: TimeInterval,fontStyleQuestion:String, fontStyleDescription:String) -> Animatable {
+      setFontType(type: fontStyleDescription, uilabel: upperLabel)
+      setFontType(type: fontStyleQuestion, uilabel: lowerLabel)
     let changeUpperText = changeUpperTextToDescriptionAnimation(description, duration: duration)
     let changeLowerText = changeLowerTextToTitleAnimation(title, duration: duration)
     let changeToQuestion = changeToQuestionAnimation(duration: duration)
@@ -187,7 +197,6 @@ class SurveyHeaderView: XibView {
       self.upperLabel.alpha = 0
     }
     let showNewTextAnimation = Animation(duration: duration/2) {
-      self.upperLabel.font = font
       self.upperLabel.text = text
       self.upperLabel.alpha = 1
     }
@@ -207,7 +216,6 @@ class SurveyHeaderView: XibView {
       self.lowerContainerHeightConstraint.priority = UILayoutPriority.defaultLow
       self.lowerLabel.alpha = 0
       self.lowerLabel.text = text
-      self.lowerLabel.font = font
       self.superview?.superview?.layoutIfNeeded()
     }
     let showNewText = Animation(duration: duration/2) {
@@ -265,4 +273,17 @@ class SurveyHeaderView: XibView {
   @IBAction func closeButtonPressed(_ sender: UIButton) {
     delegate?.closeButtonPressed()
   }
+    
+    private func setFontType(type:String, uilabel:UILabel){
+        switch(type){
+        case "italic":
+            uilabel.font = Const.italicFont
+            break;
+        case "oblique":
+            uilabel.font = Const.obliqueFont
+            break;
+        default:
+            uilabel.font = Const.normalFont
+        }
+    }
 }

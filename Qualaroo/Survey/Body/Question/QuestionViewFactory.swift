@@ -39,6 +39,10 @@ class QuestionViewFactory {
       view = radioQuestionView(with: question)
     case .checkbox:
       view = checkboxQuestionView(with: question)
+    case .emoji:
+        view = emojiQuestionView(with: question)
+    case .thumb:
+        view = thumbQuestionView(with: question)
     case .unknown:
       view = nil
     }
@@ -113,6 +117,31 @@ class QuestionViewFactory {
                    interactor: interactor)
     return view
   }
+    
+    private func emojiQuestionView(with question: Question) -> AnswerEmojiView? {
+        guard
+         let nib = Bundle.qualaroo()?.loadNibNamed("AnswerEmojiView", owner: nil, options: nil),
+          let view = nib.first as? AnswerEmojiView else { return nil }
+        let answers = question.answerList.map { $0.emojiUrl }
+        let responseBuilder = SingleSelectionAnswerResponseBuilder(question: question)
+        let interactor = AnswerEmojiInteractor(responseBuilder: responseBuilder,answerHandler: answerHandler)
+        view.setupView(backgroundColor: theme.colors.background,textColor: theme.colors.text, answers:answers,interactor:interactor)
+        return view
+        
+    }
+    
+    private func thumbQuestionView(with question: Question) -> AnswerThumbView? {
+        guard
+         let nib = Bundle.qualaroo()?.loadNibNamed("AnswerThumbView", owner: nil, options: nil),
+          let view = nib.first as? AnswerThumbView else { return nil }
+        let answers = question.answerList.map { $0.emojiUrl }
+        let responseBuilder = SingleSelectionAnswerResponseBuilder(question: question)
+        let interactor = AnswerThumbInteractor(responseBuilder: responseBuilder,answerHandler: answerHandler)
+        view.setupView(backgroundColor: theme.colors.background,textColor: theme.colors.text, answers:answers,interactor:interactor)
+        return view
+        
+    }
+    
   private func radioQuestionView(with question: Question) -> AnswerListView? {
     guard
         let onImage = UIImage(named: "radio_button_on",

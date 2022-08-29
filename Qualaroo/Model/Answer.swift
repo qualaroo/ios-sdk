@@ -24,6 +24,7 @@ class AnswerFactory {
   return Answer(answerId: try answerId(),
                 alias: alias(),
                 title: try title(),
+                emojiUrl:  emojiUrl(),
                 nextNodeId: nextNodeId(),
                 isFreeformCommentAllowed: hasFreeformField())
   }
@@ -46,6 +47,15 @@ class AnswerFactory {
     return title
   }
   
+    private func emojiUrl()  -> String? {
+        let emoji_url = dictionary["emoji_url"] ?? ""
+        return emoji_url as? String
+//        guard let emoji_url = dictionary["emoji_url"] as? String else {
+//            throw AnswerError.missingOrWrongTitle
+//        }
+//        return emoji_url
+    }
+    
   private func nextNodeId() -> NodeId? {
     let nextMap = dictionary["next_map"] as? [String: Any]
     return (nextMap?["id"] as? NSNumber) as? NodeId
@@ -70,6 +80,7 @@ struct Answer {
   let answerId: AnswerId
   let alias: String?
   let title: String
+    let emojiUrl: String?
   let nextNodeId: NodeId?
   let isFreeformCommentAllowed: Bool
   
@@ -79,6 +90,8 @@ extension Answer: Equatable {
   static func == (lhs: Answer, rhs: Answer) -> Bool {
     return lhs.answerId == rhs.answerId &&
            lhs.title == rhs.title &&
+      lhs.emojiUrl == rhs.emojiUrl &&
+
            lhs.nextNodeId == rhs.nextNodeId &&
            lhs.isFreeformCommentAllowed == rhs.isFreeformCommentAllowed
   }

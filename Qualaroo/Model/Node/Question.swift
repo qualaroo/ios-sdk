@@ -26,7 +26,9 @@ class QuestionFactory {
     return Question(questionId: try questionId(),
                     type: try type(),
                     title: try title(),
+                    fontStyleQuestion: fontStyleQuestion(),
                     description: description(),
+                    fontStyleDescription: fontStyleDescription(),
                     descriptionPlacement: descriptionPlacement(),
                     buttonText: buttonText(),
                     shouldShowButton: shouldShowButton(),
@@ -65,11 +67,20 @@ class QuestionFactory {
     }
     return title.plainText()
   }
+    private func fontStyleQuestion()  -> String {
+       let style = dictionary["font_style_question"] as? String
+        return style?.plainText() ?? "normal"
+    }
   
   private func description() -> String {
     let description = dictionary["description"] as? String
     return description?.plainText() ?? ""
   }
+    
+    private func fontStyleDescription()  -> String {
+       let style = dictionary["font_style_description"] as? String
+        return style?.plainText() ?? "normal"
+    }
   
   private func descriptionPlacement() -> Question.DescriptionPlacement {
     if description().isEmpty {
@@ -219,6 +230,15 @@ class QuestionFactory {
       if try answerList().count == 0 {
         throw QuestionError.wrongAnswerNumber
       }
+    case .emoji:
+        if try answerList().count != 5 {
+            throw QuestionError.wrongAnswerNumber
+        }
+    case .thumb:
+        if try answerList().count != 2 {
+            throw QuestionError.wrongAnswerNumber
+        }
+        
     case .text:
       if try answerList().count != 0 {
         throw QuestionError.wrongAnswerNumber
@@ -243,7 +263,7 @@ enum QuestionError: Int, QualarooError {
 struct Question {
   
   enum Category {
-    case nps, checkbox, radio, text, dropdown, binary, unknown
+    case nps, checkbox, radio, text, dropdown, binary,emoji, thumb, unknown
     init(rawValue: String) {
       switch rawValue {
       case "nps": self = .nps
@@ -253,6 +273,8 @@ struct Question {
       case "text": self = .text
       case "text_single": self = .text
       case "binary": self = .binary
+      case "emoji": self = .emoji
+      case "thumb": self = .thumb
       default: self = .unknown
       }
     }
@@ -272,7 +294,9 @@ struct Question {
   let questionId: NodeId
   let type: Category
   let title: String
+  let fontStyleQuestion:String
   let description: String
+  let fontStyleDescription:String
   let descriptionPlacement: DescriptionPlacement
   let buttonText: String
   let shouldShowButton: Bool

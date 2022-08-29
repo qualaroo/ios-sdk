@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -23,6 +23,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4F7F2F5A2852025500B12B68 /* AnswerThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F2F592852025500B12B68 /* AnswerThumbView.swift */; };
+		4F7F2F5C285203D500B12B68 /* AnswerThumbInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F2F5B285203D500B12B68 /* AnswerThumbInteractor.swift */; };
+		4F7F2F5E285203FD00B12B68 /* AnswerThumbView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7F2F5D285203FD00B12B68 /* AnswerThumbView.xib */; };
+		4FBAD5EA27FEBF090018894C /* AnswerEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBAD5E727FEBF090018894C /* AnswerEmojiView.swift */; };
+		4FBAD5EB27FEBF090018894C /* AnswerEmojiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBAD5E827FEBF090018894C /* AnswerEmojiInteractor.swift */; };
+		4FBAD5EC27FEBF090018894C /* AnswerEmojiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBAD5E927FEBF090018894C /* AnswerEmojiView.xib */; };
 		BC0421812008EE3D00679012 /* LeadGenFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0421802008EE3D00679012 /* LeadGenFormPresenter.swift */; };
 		BC042183200903A800679012 /* LeadGenFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC042182200903A800679012 /* LeadGenFormInteractor.swift */; };
 		BC04218520090F1200679012 /* TextChangeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04218420090F1200679012 /* TextChangeListener.swift */; };
@@ -194,6 +200,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F7F2F592852025500B12B68 /* AnswerThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerThumbView.swift; sourceTree = "<group>"; };
+		4F7F2F5B285203D500B12B68 /* AnswerThumbInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerThumbInteractor.swift; sourceTree = "<group>"; };
+		4F7F2F5D285203FD00B12B68 /* AnswerThumbView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerThumbView.xib; sourceTree = "<group>"; };
+		4FBAD5E727FEBF090018894C /* AnswerEmojiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerEmojiView.swift; sourceTree = "<group>"; };
+		4FBAD5E827FEBF090018894C /* AnswerEmojiInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerEmojiInteractor.swift; sourceTree = "<group>"; };
+		4FBAD5E927FEBF090018894C /* AnswerEmojiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerEmojiView.xib; sourceTree = "<group>"; };
 		BC0421802008EE3D00679012 /* LeadGenFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadGenFormPresenter.swift; sourceTree = "<group>"; };
 		BC042182200903A800679012 /* LeadGenFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadGenFormInteractor.swift; sourceTree = "<group>"; };
 		BC04218420090F1200679012 /* TextChangeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChangeListener.swift; sourceTree = "<group>"; };
@@ -378,6 +390,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F7F2F562852018700B12B68 /* Thumb */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F2F592852025500B12B68 /* AnswerThumbView.swift */,
+				4F7F2F5B285203D500B12B68 /* AnswerThumbInteractor.swift */,
+				4F7F2F5D285203FD00B12B68 /* AnswerThumbView.xib */,
+			);
+			path = Thumb;
+			sourceTree = "<group>";
+		};
+		4FBAD5E627FEBF090018894C /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				4FBAD5E727FEBF090018894C /* AnswerEmojiView.swift */,
+				4FBAD5E827FEBF090018894C /* AnswerEmojiInteractor.swift */,
+				4FBAD5E927FEBF090018894C /* AnswerEmojiView.xib */,
+			);
+			path = Emoji;
+			sourceTree = "<group>";
+		};
 		BC16CFEA1F3093950044EBFA /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,13 +677,14 @@
 		BCB4048A1F18B84A004B0F95 /* Question */ = {
 			isa = PBXGroup;
 			children = (
+				4F7F2F562852018700B12B68 /* Thumb */,
+				4FBAD5E627FEBF090018894C /* Emoji */,
 				BCC1D46A1FF40E6C007CD322 /* AbstractAnswerComponents.swift */,
 				BC22558D1F0E88070014F953 /* QuestionViewFactory.swift */,
 				BCC1D45A1FF393CC007CD322 /* NPS */,
 				BCC1D45B1FF3997A007CD322 /* Text */,
 				BCC1D45C1FF3A0ED007CD322 /* Dropdown */,
 				BCC1D45D1FF3AFA6007CD322 /* List */,
-				BC650F9120247E02008F61AC /* Binary */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -685,6 +718,7 @@
 		BCC1D4581FF39131007CD322 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				BC650F9120247E02008F61AC /* Binary */,
 				BC0E1C691F7E42A100B63EBD /* SurveyHeaderView.swift */,
 				BC0E1C671F7E41DD00B63EBD /* SurveyHeaderView.xib */,
 			);
@@ -924,7 +958,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "Mihály Papp";
 				TargetAttributes = {
 					BC5AA7471F3C9C580018AC18 = {
@@ -947,10 +981,11 @@
 				};
 			};
 			buildConfigurationList = BCEF5B3E1F0B8D3D002CB4F8 /* Build configuration list for PBXProject "Qualaroo" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -975,10 +1010,12 @@
 				BC9D32AF1FA3107A00B639D8 /* LeadGenFormView.xib in Resources */,
 				BCEF5B741F0D1CEB002CB4F8 /* QualarooStoryboard.storyboard in Resources */,
 				BC0E1C621F7D628700B63EBD /* SurveyButtonsView.xib in Resources */,
+				4FBAD5EC27FEBF090018894C /* AnswerEmojiView.xib in Resources */,
 				BC22558C1F0E6AF60014F953 /* QualarooImages.xcassets in Resources */,
 				BC650F9320247E21008F61AC /* AnswerBinaryView.xib in Resources */,
 				BC0E1C661F7D724400B63EBD /* AnswerTextView.xib in Resources */,
 				BCAF49B71F9630E20015503E /* AnswerDropdownView.xib in Resources */,
+				4F7F2F5E285203FD00B12B68 /* AnswerThumbView.xib in Resources */,
 				BC1081A01FA34E45004C766F /* LeadGenFormCell.xib in Resources */,
 				BCB31DC71FE948F400BB25E7 /* SelectableView.xib in Resources */,
 				BCB31DCD1FEA821500BB25E7 /* AnswerListView.xib in Resources */,
@@ -1102,12 +1139,14 @@
 				BC2CCB4A2034629000ED4C0D /* Collection.swift in Sources */,
 				BC29FF802018A2BC00FBEA08 /* Services.swift in Sources */,
 				BC89D34C1F7A97B2006DC865 /* OpeningFilter.swift in Sources */,
+				4F7F2F5A2852025500B12B68 /* AnswerThumbView.swift in Sources */,
 				BC16CFEC1F3093B60044EBFA /* SurveyAssembly.swift in Sources */,
 				BCF087741F4C5EF600F4874A /* MutableCollection.swift in Sources */,
 				BCBAC8D61F9767CE003F8529 /* ImageStorage.swift in Sources */,
 				BC0421812008EE3D00679012 /* LeadGenFormPresenter.swift in Sources */,
 				BCB404891F17B41A004B0F95 /* Bundle.swift in Sources */,
 				BCBD9A7B1F62A10E007933C8 /* UIColor.swift in Sources */,
+				4FBAD5EB27FEBF090018894C /* AnswerEmojiInteractor.swift in Sources */,
 				BCC1D4691FF40D6E007CD322 /* AnswerListResponseBuilder.swift in Sources */,
 				BCEEBBC11F82BE5500AA165B /* NSLayoutConstraint.swift in Sources */,
 				BCB31DC91FEA5E8F00BB25E7 /* AnswerListView.swift in Sources */,
@@ -1146,6 +1185,7 @@
 				BCC75BA81F25F96600B03CDC /* SurveysFilter.swift in Sources */,
 				BCC251A31F1CACE40034A6D8 /* Question.swift in Sources */,
 				BCC1D4601FF40C75007CD322 /* LeadGenFormResponseBuilder.swift in Sources */,
+				4FBAD5EA27FEBF090018894C /* AnswerEmojiView.swift in Sources */,
 				BC29FF7C20178C5300FBEA08 /* HTTPURLResponse.swift in Sources */,
 				BC536E0F1F7B933D007D5983 /* RequireMap.swift in Sources */,
 				D4E489FA2142809700BDA41C /* UIDevice.swift in Sources */,
@@ -1168,6 +1208,7 @@
 				BC536E0D1F7B922D007D5983 /* DeviceTypeFilter.swift in Sources */,
 				BC9D32B41FA312BD00B639D8 /* LeadGenViewBuilder.swift in Sources */,
 				BCC1D46B1FF40E6C007CD322 /* AbstractAnswerComponents.swift in Sources */,
+				4F7F2F5C285203D500B12B68 /* AnswerThumbInteractor.swift in Sources */,
 				BC536E0B1F7ACF27007D5983 /* UserTypeFilter.swift in Sources */,
 				BC16CFE91F3091ED0044EBFA /* ClientInfo.swift in Sources */,
 				BC04218520090F1200679012 /* TextChangeListener.swift in Sources */,
@@ -1243,7 +1284,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEVELOPMENT_TEAM = 8MN9J7W5UB;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1254,7 +1295,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEVELOPMENT_TEAM = 8MN9J7W5UB;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1264,6 +1305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1285,6 +1327,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1310,7 +1353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1326,6 +1369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1347,6 +1391,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1366,10 +1411,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1396,8 +1442,12 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Qualaroo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -1430,8 +1480,12 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Qualaroo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qualaroo.QualarooSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1453,7 +1507,11 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = QualarooTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pappApproved.QualarooSDKiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1473,7 +1531,11 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = QualarooTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pappApproved.QualarooSDKiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;

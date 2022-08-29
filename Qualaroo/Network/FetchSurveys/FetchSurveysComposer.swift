@@ -80,7 +80,7 @@ class FetchSurveysComposer {
     case .production:
       return "api.qualaroo.com"
     case .staging:
-      return "staging-app.qualaroo.com"
+        return "staging.qualaroo.com"
     }
   }
 

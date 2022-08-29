@@ -47,6 +47,7 @@ class LeadGenFormFactory {
     return LeadGenForm(leadGenFormId: try leadGenFormId(),
                        alias: alias(),
                        description: description(),
+                       font_style_decription: fontStyleDescription(),
                        buttonText: buttonText(),
                        nextNodeId: nextNodeId(),
                        questionList: questions)
@@ -75,6 +76,12 @@ class LeadGenFormFactory {
     }
     return description.plainText()
   }
+    private func fontStyleDescription() -> String {
+      guard let font_style_description = dictionary["font_style_description"] as? String else {
+        return "normal"
+      }
+      return font_style_description.plainText()
+    }
   
   private func buttonText() -> String {
     guard let nextButtonText = dictionary["send_text"] as? String else {
@@ -104,6 +111,7 @@ struct LeadGenForm {
   let leadGenFormId: NodeId
   let alias: String?
   let description: String
+  let font_style_decription:String
   let buttonText: String
   let nextNodeId: NodeId?
   let questionList: [Question]
@@ -127,6 +135,7 @@ extension LeadGenForm: Equatable {
     return lhs.leadGenFormId == rhs.leadGenFormId &&
            lhs.alias == rhs.alias &&
            lhs.description == rhs.description &&
+           lhs.font_style_decription == rhs.font_style_decription &&
            lhs.buttonText == rhs.buttonText &&
            lhs.nextNodeId == rhs.nextNodeId &&
            lhs.questionList == rhs.questionList
