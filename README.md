@@ -51,7 +51,7 @@ platform :ios, '9.0'
 
 target 'TargetName' do
   pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.6'
-  pod 'Qualaroo/Flutter', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.5'
+  pod 'Qualaroo/Flutter', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.6'
 end
 ```
 
@@ -62,7 +62,7 @@ $ pod install
 ### Carthage
 Simply add:
 ```
-github "qualaroo/ios-sdk" ~> 1.14.5
+github "qualaroo/ios-sdk" ~> 1.14.6
 ```
 to your `Cartfile`
 
