@@ -8,6 +8,8 @@
 //  under which redistribution and use of this file is permitted.
 //
 
+import UIKit
+
 class SurveyHeaderView: XibView {
   
   struct CopyViewModel {
