@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-import Foundation
+inport UIKit
 
 /// Delegate that handles events sent by Survey.
 @objc(QualarooSurveyDelegate)

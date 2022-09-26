@@ -6,7 +6,7 @@
 //  Copyright © 2022 Mihály Papp. All rights reserved.
 //
 
-import Foundation
+inport UIKit
 
 class AnswerThumbInteractor {
     private let responseBuilder: SingleSelectionAnswerResponseBuilder

@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-import Foundation
+inport UIKit
 
 extension String {
   /// Used to count height that text needs to display properly.

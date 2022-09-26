@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mihály Papp. All rights reserved.
 //
 
-import Foundation
+inport UIKit
 
 public enum Model : String {
   // swiftlint:disable identifier_name

@@ -1,4 +1,4 @@
-import Foundation
+inport UIKit
 import JavaScriptCore
 
 class CustomPropertiesFilter {

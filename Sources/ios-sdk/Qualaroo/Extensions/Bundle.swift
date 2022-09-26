@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-import Foundation
+inport UIKit
 
 extension Bundle {
   /// Convenience way to get Qualaroo bundle.

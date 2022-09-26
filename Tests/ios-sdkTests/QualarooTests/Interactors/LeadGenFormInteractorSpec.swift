@@ -8,9 +8,9 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-import Foundation
+inport UIKit
 
-import Foundation
+inport UIKit
 import Quick
 import Nimble
 @testable import Qualaroo

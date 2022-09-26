@@ -7,7 +7,7 @@
 //
 
 
-import Foundation
+inport UIKit
 
 class AnswerThumbView: UIView {
     
@@ -70,7 +70,7 @@ class AnswerThumbView: UIView {
         }
 }
 
-//import Foundation
+//inport UIKit
 //class AnswerThumbView: UIView {
 //
     
