@@ -5,5 +5,5 @@
 // Empty file created justs to enforce Xcode to use Swift in pure Obj-C project
 //
 
-inport UIKit
+import UIKit
 

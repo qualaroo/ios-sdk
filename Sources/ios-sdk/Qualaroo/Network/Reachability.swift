@@ -26,7 +26,7 @@
  */
 
 import SystemConfiguration
-inport UIKit
+import UIKit
 
 private enum ReachabilityError: Error {
   case failedToCreateWithAddress(sockaddr_in)

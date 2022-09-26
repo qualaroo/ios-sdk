@@ -7,7 +7,7 @@
 //
 
 
-inport UIKit
+import UIKit
 
 class AnswerThumbView: UIView {
     
@@ -70,7 +70,7 @@ class AnswerThumbView: UIView {
         }
 }
 
-//inport UIKit
+//import UIKit
 //class AnswerThumbView: UIView {
 //
     

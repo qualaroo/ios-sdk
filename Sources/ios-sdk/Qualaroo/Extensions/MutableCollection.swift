@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-inport UIKit
+import UIKit
 
 extension MutableCollection where Index == Int {
   /// Shuffle the elements of `self` in-place.

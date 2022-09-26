@@ -6,7 +6,7 @@
 //  Copyright © 2021 Mihály Papp. All rights reserved.
 //
 
-inport UIKit
+import UIKit
 class AnswerEmojiView: UIView {
     
 //    @IBOutlet weak var stackContainer: UIStackView!

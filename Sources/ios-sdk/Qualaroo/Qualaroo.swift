@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-inport UIKit
+import UIKit
 
 /// Main component of SDK
 public class Qualaroo: NSObject, Loggable {

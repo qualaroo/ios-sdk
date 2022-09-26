@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-inport UIKit
+import UIKit
 
 class UserResponseAdapter {
   func toUserResponse(_ response: NodeResponse) -> UserResponse? {

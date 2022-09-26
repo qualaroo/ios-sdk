@@ -7,7 +7,7 @@
 //  Please refer to the LICENSE.md file for the terms and conditions
 //  under which redistribution and use of this file is permitted.
 //
-inport UIKit
+import UIKit
 
 class PersistentMemory {
   

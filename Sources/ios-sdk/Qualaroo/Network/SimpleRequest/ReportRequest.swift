@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mihály Papp. All rights reserved.
 //
 
-inport UIKit
+import UIKit
 
 class ReportRequest {
   

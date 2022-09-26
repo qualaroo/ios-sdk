@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-inport UIKit
+import UIKit
 
 extension UIColor {
   convenience init?(red: UInt, green: UInt, blue: UInt) {

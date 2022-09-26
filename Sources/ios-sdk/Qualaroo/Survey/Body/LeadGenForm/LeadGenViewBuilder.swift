@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-inport UIKit
+import UIKit
 
 class LeadGenViewBuilder {
   static func createView(forLeadGenForm leadGenForm: LeadGenForm,

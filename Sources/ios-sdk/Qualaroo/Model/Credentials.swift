@@ -8,7 +8,7 @@
 //  under which redistribution and use of this file is permitted.
 //
 
-inport UIKit
+import UIKit
 
 /// Wrapper class for credentials. Initialized by apiKey that client can get from Qualaroo dashboard.
 class Credentials {
