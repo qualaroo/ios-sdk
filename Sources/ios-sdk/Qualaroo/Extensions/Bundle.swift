@@ -34,7 +34,7 @@ extension Foundation.Bundle {
 
         for candidate in candidates {
             let bundlePath = candidate?.appendingPathComponent(bundleName + ".bundle")
-            if let bundle = bundlePath.flatMap(Bundle.init(url:)) {
+            if let bundle = bundlePath.flatMap(Bundle.init(url: bundlePath!)) {
                 return bundle
             }
         }
