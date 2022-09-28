@@ -18,9 +18,10 @@ extension Bundle {
   /// Convenience way to get Qualaroo bundle.
   ///
   /// - Returns: Bundle used internally by Qualaroo Framework.
-  static func qualaroo() -> Bundle? {
-      let bundle: Bundle = .module
-      return bundle
+    static func qualaroo() -> Bundle? {
+        let bundle: Bundle = .module
+        return bundle
+    }
 //    if (containsQualarooResources(bundle)) {
 //        Qualaroo.log("Using Qualaroo.self bundle")
 //        return bundle
