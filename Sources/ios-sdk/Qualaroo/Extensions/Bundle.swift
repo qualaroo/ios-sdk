@@ -28,9 +28,9 @@ extension Bundle {
     
     let qualarooBundleUrl = url.appendingPathComponent("Qualaroo.bundle")
     let qualarooBundle = Bundle(url: qualarooBundleUrl)
-    if (!containsQualarooResources(qualarooBundle)) {
-        Qualaroo.log("Qualaroo.bundle does not exist or does not contain Qualaroo resources. Main path: \(url)")
-    }
+//    if (!containsQualarooResources(qualarooBundle)) {
+//        Qualaroo.log("Qualaroo.bundle does not exist or does not contain Qualaroo resources. Main path: \(url)")
+//    }
     return qualarooBundle
   }
     
