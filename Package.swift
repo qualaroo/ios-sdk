@@ -22,9 +22,9 @@ let package = Package(
             name: "ios-sdk",
             dependencies: [],
             resources: [
-                .process("Qualaroo/Survey/QualarooStoryboard.storyboard",
-                         "Qualaroo/QualarooImages.xcassets",
-                         "Qualaroo/Survey/**/*.xib")
+                .process("Qualaroo/Survey/QualarooStoryboard.storyboard"),
+                .process("Qualaroo/QualarooImages.xcassets"),
+                .process("Qualaroo/Survey/**/*.xib")
             ]),
         .testTarget(
             name: "ios-sdkTests",
