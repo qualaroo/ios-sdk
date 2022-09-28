@@ -16,7 +16,7 @@ private class BundleFinder {}
 
 extension Foundation.Bundle {
     /// Returns the resource bundle associated with the current Swift module.
-    static func qualaroo() -> Bundle {
+    static func qualaroo() -> Bundle? {
         let bundleName = "Qualaroo"
 
         let candidates: [URL?] = [
