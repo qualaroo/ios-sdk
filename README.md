@@ -54,19 +54,10 @@ target 'TargetName' do
   pod 'Qualaroo/Flutter', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.7'
 end
 ```
-
 Then, run the following command:
 ```
 $ pod install
 ```
-### Carthage
-Simply add:
-```
-github "qualaroo/ios-sdk" ~> 1.14.7
-```
-to your `Cartfile`
-
-
 ### Swift Package Manager (SPM)
 ```
 Step 1: Select File -> Add Packages...
@@ -74,7 +65,12 @@ Step 2: Search url https://github.com/qualaroo/ios-sdk
 Step 3: Click the button "Add Package" 
 Step 4: Check if the package is added at Target -> General -> Framework, Libraries, and Embedded Content
 ```
-
+### Carthage
+Simply add:
+```
+github "qualaroo/ios-sdk" ~> 1.14.7
+```
+to your `Cartfile`
 ## Usage
 Framework can be used for both iPhones and iPads.  It supports iOS 9.0 and above.
 
