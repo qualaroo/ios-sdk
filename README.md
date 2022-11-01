@@ -67,7 +67,7 @@ github "qualaroo/ios-sdk" ~> 1.14.7
 to your `Cartfile`
 
 
-### SwiftPackage
+### Swift Package Manager(SPM)
 ```
 Step1: Select File -> Add Packages
 Step2: Search url https://github.com/qualaroo/ios-sdk
