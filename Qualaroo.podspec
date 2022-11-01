@@ -34,16 +34,16 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/qualaroo/ios-sdk.git", :tag => s.version }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files = 'Qualaroo/**/*.{h,m,swift}'
+  s.source_files = 'Sources/Qualaroo/**/*.{h,m,swift}'
   s.requires_arc = true
   s.default_subspecs = :none
   s.resource_bundles = {
-    'Qualaroo' => ['Qualaroo/Survey/QualarooStoryboard.storyboard', 'Qualaroo/QualarooImages.xcassets', 'Qualaroo/Survey/**/*.xib']
+    'Qualaroo' => ['Sources/Qualaroo/Survey/QualarooStoryboard.storyboard', 'Sources/Qualaroo/QualarooImages.xcassets', 'Sources/Qualaroo/Survey/**/*.xib']
   }
   s.subspec 'Flutter' do |flutter|
-  flutter.resources = ['Qualaroo/QualarooImages.xcassets']
+  flutter.resources = ['Sources/Qualaroo/QualarooImages.xcassets']
   end
-  s.public_header_files = 'Qualaroo/Qualaroo.h'
+  s.public_header_files = 'Sources/Qualaroo/Qualaroo.h'
   s.swift_version = '4.2'
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.framework  = "UIKit"

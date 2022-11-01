@@ -66,6 +66,15 @@ github "qualaroo/ios-sdk" ~> 1.14.6
 ```
 to your `Cartfile`
 
+
+### SwiftPackage
+```
+Step1: Select File -> Add Packages
+Step2: Search url https://github.com/qualaroo/ios-sdk
+Step3: Add Package
+Step4: Check Package added in Target -> General -> Framework, Libraries, and Embedded Content
+```
+
 ## Usage
 Framework can be used for both iPhones and iPads.  It supports iOS 9.0 and above.
 
