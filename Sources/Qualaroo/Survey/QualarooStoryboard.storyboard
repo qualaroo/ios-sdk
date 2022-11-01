@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7rs-Yg-BHL">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Survey View-->
+        <scene sceneID="qNA-5Q-CMk">
+            <objects>
+                <viewController storyboardIdentifier="SurveyView" id="7rs-Yg-BHL" customClass="SurveyView" customModule="Qualaroo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ofh-Ms-gGy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ufv-SE-ZJP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YrF-tf-Bx3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdJ-LY-2E9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SurveyView" insetsLayoutMarginsFromSafeArea="NO" id="SvJ-yi-xQ6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9lB-wi-l0m" appends="YES" id="QAd-QN-6pT"/>
+                                </connections>
+                            </visualEffectView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-Qr-XSk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="yAi-Dz-qdm"/>
+                                </constraints>
+                            </progressView>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mqv-DR-zmQ">
+                                <rect key="frame" x="0.0" y="2" width="240" height="665"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MmA-5W-THl" customClass="SurveyHeaderView" customModule="Qualaroo">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="128" id="xak-IU-ePN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KtM-qx-hci" customClass="SurveyButtonsView" customModule="Qualaroo">
+                                        <rect key="frame" x="0.0" y="256" width="240" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="44" placeholder="YES" id="DaS-rk-ouY"/>
+                                        </constraints>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LxX-aG-zkz">
+                                        <rect key="frame" x="0.0" y="128" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="128" id="Fje-Ps-JRp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LxX-aG-zkz" firstAttribute="top" secondItem="MmA-5W-THl" secondAttribute="bottom" id="48m-DZ-pdE"/>
+                                    <constraint firstItem="KtM-qx-hci" firstAttribute="leading" secondItem="Mqv-DR-zmQ" secondAttribute="leading" id="4BA-RS-CbA"/>
+                                    <constraint firstItem="MmA-5W-THl" firstAttribute="top" secondItem="Mqv-DR-zmQ" secondAttribute="top" id="6Nr-FV-p8i"/>
+                                    <constraint firstAttribute="width" constant="240" id="7zR-lj-LxH"/>
+                                    <constraint firstItem="KtM-qx-hci" firstAttribute="top" secondItem="LxX-aG-zkz" secondAttribute="bottom" id="WmK-Lt-Fg7"/>
+                                    <constraint firstAttribute="trailing" secondItem="KtM-qx-hci" secondAttribute="trailing" id="Zki-ui-seE"/>
+                                    <constraint firstAttribute="trailing" secondItem="MmA-5W-THl" secondAttribute="trailing" id="a6i-ME-iPp"/>
+                                    <constraint firstItem="MmA-5W-THl" firstAttribute="leading" secondItem="Mqv-DR-zmQ" secondAttribute="leading" id="jLk-hW-pcU"/>
+                                    <constraint firstAttribute="trailing" secondItem="LxX-aG-zkz" secondAttribute="trailing" id="m3r-HD-tej"/>
+                                    <constraint firstItem="LxX-aG-zkz" firstAttribute="leading" secondItem="Mqv-DR-zmQ" secondAttribute="leading" id="u9w-1N-vJ8"/>
+                                    <constraint firstAttribute="bottom" secondItem="KtM-qx-hci" secondAttribute="bottom" id="zCe-wc-shy"/>
+                                </constraints>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UXp-yV-TKg">
+                                <rect key="frame" x="0.0" y="665" width="240" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="hPF-fN-SaS"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bxZ-Qr-XSk" firstAttribute="leading" secondItem="Mqv-DR-zmQ" secondAttribute="leading" id="08v-zI-KxF"/>
+                            <constraint firstItem="tdJ-LY-2E9" firstAttribute="top" secondItem="YrF-tf-Bx3" secondAttribute="top" id="183-Xm-k7C"/>
+                            <constraint firstItem="UXp-yV-TKg" firstAttribute="trailing" secondItem="Mqv-DR-zmQ" secondAttribute="trailing" id="1q5-dX-iej"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Mqv-DR-zmQ" secondAttribute="bottom" id="4qX-uN-Ygb"/>
+                            <constraint firstItem="UXp-yV-TKg" firstAttribute="leading" secondItem="YrF-tf-Bx3" secondAttribute="leading" id="5dp-b2-0ZM"/>
+                            <constraint firstAttribute="bottom" secondItem="UXp-yV-TKg" secondAttribute="bottom" id="6XX-Ve-Tev"/>
+                            <constraint firstItem="bxZ-Qr-XSk" firstAttribute="bottom" secondItem="Mqv-DR-zmQ" secondAttribute="top" id="8eW-36-u62"/>
+                            <constraint firstItem="bxZ-Qr-XSk" firstAttribute="leading" secondItem="YrF-tf-Bx3" secondAttribute="leading" id="9mm-hL-r7O"/>
+                            <constraint firstItem="tdJ-LY-2E9" firstAttribute="leading" secondItem="YrF-tf-Bx3" secondAttribute="leading" id="LHk-a0-Adz"/>
+                            <constraint firstItem="bxZ-Qr-XSk" firstAttribute="top" secondItem="ofh-Ms-gGy" secondAttribute="bottom" id="MkB-uW-awg"/>
+                            <constraint firstItem="Mqv-DR-zmQ" firstAttribute="centerY" secondItem="YrF-tf-Bx3" secondAttribute="centerY" priority="250" id="Nkc-HX-IxW"/>
+                            <constraint firstItem="Mqv-DR-zmQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ofh-Ms-gGy" secondAttribute="bottom" id="T3M-1A-6qf"/>
+                            <constraint firstItem="bxZ-Qr-XSk" firstAttribute="trailing" secondItem="YrF-tf-Bx3" secondAttribute="trailing" id="bvl-lb-hyu"/>
+                            <constraint firstAttribute="bottom" secondItem="Mqv-DR-zmQ" secondAttribute="bottom" priority="900" id="duo-oO-kOy"/>
+                            <constraint firstItem="UXp-yV-TKg" firstAttribute="leading" secondItem="Mqv-DR-zmQ" secondAttribute="leading" id="gFK-Yh-fe9"/>
+                            <constraint firstItem="bxZ-Qr-XSk" firstAttribute="trailing" secondItem="Mqv-DR-zmQ" secondAttribute="trailing" id="h4y-al-a8r"/>
+                            <constraint firstAttribute="bottom" secondItem="tdJ-LY-2E9" secondAttribute="bottom" id="oKV-KY-fP2"/>
+                            <constraint firstItem="UXp-yV-TKg" firstAttribute="trailing" secondItem="YrF-tf-Bx3" secondAttribute="trailing" id="oNK-Gq-M7o"/>
+                            <constraint firstItem="Mqv-DR-zmQ" firstAttribute="centerX" secondItem="YrF-tf-Bx3" secondAttribute="centerX" id="yie-eY-cdo"/>
+                            <constraint firstAttribute="trailing" secondItem="tdJ-LY-2E9" secondAttribute="trailing" id="zSK-ZX-mPf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bodyContainerHeightConstraint" destination="Fje-Ps-JRp" id="6Sj-GP-BXY"/>
+                        <outlet property="bodyContainerView" destination="LxX-aG-zkz" id="XLv-fZ-LnA"/>
+                        <outlet property="bottomProgressBar" destination="UXp-yV-TKg" id="tGj-3r-iVx"/>
+                        <outlet property="bottomProgressBarHeight" destination="hPF-fN-SaS" id="pLw-su-fKc"/>
+                        <outlet property="bottomProgressBarLeadingConstraint" destination="gFK-Yh-fe9" id="IG5-J4-eZS"/>
+                        <outlet property="bottomProgressBarLeadingFullscreenConstraint" destination="5dp-b2-0ZM" id="dbH-rO-cwq"/>
+                        <outlet property="bottomProgressBarTrailingConstraint" destination="1q5-dX-iej" id="8kw-0O-INS"/>
+                        <outlet property="bottomProgressBarTrailingFullscreenConstraint" destination="oNK-Gq-M7o" id="aK3-RT-YAP"/>
+                        <outlet property="containerBottomConstraint" destination="duo-oO-kOy" id="JyD-XI-qad"/>
+                        <outlet property="containerCenterConstraint" destination="Nkc-HX-IxW" id="moB-2Y-GG8"/>
+                        <outlet property="containerView" destination="Mqv-DR-zmQ" id="Nnf-HH-D8F"/>
+                        <outlet property="containerWidthConstraint" destination="7zR-lj-LxH" id="Phu-M6-0qQ"/>
+                        <outlet property="dimRecognizer" destination="9lB-wi-l0m" id="hoh-T4-EE8"/>
+                        <outlet property="dimView" destination="tdJ-LY-2E9" id="L0O-2z-HyO"/>
+                        <outlet property="footer" destination="KtM-qx-hci" id="IBP-RC-bYJ"/>
+                        <outlet property="header" destination="MmA-5W-THl" id="112-Nk-a9O"/>
+                        <outlet property="topProgressBar" destination="bxZ-Qr-XSk" id="TQX-dU-lgp"/>
+                        <outlet property="topProgressBarBottomConstraint" destination="8eW-36-u62" id="MS6-J0-dVo"/>
+                        <outlet property="topProgressBarLeadingConstraint" destination="08v-zI-KxF" id="HxI-3b-9ip"/>
+                        <outlet property="topProgressBarLeadingFullscreenConstraint" destination="9mm-hL-r7O" id="nQN-8h-FDb"/>
+                        <outlet property="topProgressBarTopConstraint" destination="MkB-uW-awg" id="3DU-qe-6dw"/>
+                        <outlet property="topProgressBarTrailingConstraint" destination="h4y-al-a8r" id="HaG-nP-Zas"/>
+                        <outlet property="topProgressBarTrailingFullscreenConstraint" destination="bvl-lb-hyu" id="oCg-j5-Q6b"/>
+                        <outlet property="topProgressHeight" destination="yAi-Dz-qdm" id="rCZ-Gn-UfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="olP-BU-y30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9lB-wi-l0m">
+                    <connections>
+                        <action selector="backgroundDimTapped:" destination="7rs-Yg-BHL" id="H7v-Zp-m34"/>
+                        <outlet property="delegate" destination="7rs-Yg-BHL" id="8mk-Sz-zJ7"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="415" y="267"/>
+        </scene>
+    </scenes>
+</document>
