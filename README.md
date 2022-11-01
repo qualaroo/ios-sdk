@@ -69,10 +69,10 @@ to your `Cartfile`
 
 ### Swift Package Manager(SPM)
 ```
-Step1: Select File -> Add Packages
-Step2: Search url https://github.com/qualaroo/ios-sdk
-Step3: Add Package
-Step4: Check Package added in Target -> General -> Framework, Libraries, and Embedded Content
+Step 1: Select File -> Add Packages...
+Step 2: Search url https://github.com/qualaroo/ios-sdk
+Step 3: Click the button "Add Package" 
+Step 4: Check if the package is added at Target -> General -> Framework, Libraries, and Embedded Content
 ```
 
 ## Usage
