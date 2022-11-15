@@ -199,5 +199,5 @@ If possible, share your Podfile with us by creating a [new issue](https://github
 
 ## Communication
 - If you are a developer and you need help with some internal SDK issue or you found a bug write: support@qualaroo.com
-- If you want to know how can you benefit by using this SDK, or how to create survey using Qualaroo Dashboard write: info@qularoo.com
+- If you want to know how can you benefit by using this SDK, or how to create survey using Qualaroo Dashboard write: support@proprofs.com
 - If you need a feature or piece of functionality that SDK is currently not providing you, write: support@qualaroo.com
