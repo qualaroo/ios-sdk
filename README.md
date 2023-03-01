@@ -62,8 +62,9 @@ $ pod install
 ```
 Step 1: Select File -> Add Packages...
 Step 2: Search url https://github.com/qualaroo/ios-sdk
-Step 3: Click the button "Add Package" 
-Step 4: Check if the package is added at Target -> General -> Framework, Libraries, and Embedded Content
+Step 3: Select Depedency Rule -> Exact Version -> 1.14.8
+Step 4: Click the button "Add Package" 
+Step 5: Check if the package is added at Target -> General -> Framework, Libraries, and Embedded Content
 ```
 ### Carthage
 Simply add:
