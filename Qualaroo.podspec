@@ -37,7 +37,10 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/Qualaroo/**/*.{h,m,swift}'
   s.requires_arc = true
   s.default_subspecs = :none
-  s.resources = 'Sources/Qualaroo/**/*.{storyboard,xib,xcassets}'
+   s.resource_bundles = {
+    'Qualaroo' => ['Sources/Qualaroo/QualarooImages.xcassets','Sources/Qualaroo/Survey/QualarooStoryboard.storyboard', 'Sources/Qualaroo/Survey/**/*.xib']
+  }
+  # s.resources = 'Sources/Qualaroo/**/*.{storyboard,xib,xcassets}'
   s.subspec 'Flutter' do |flutter|
   flutter.resources = ['Sources/Qualaroo/QualarooImages.xcassets']
   end
@@ -45,4 +48,5 @@ Pod::Spec.new do |s|
   s.swift_version = '4.2'
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.framework  = "UIKit"
+  s.static_framework = true
 end
