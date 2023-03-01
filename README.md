@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/qualaroo/ios-sdk/">
-    <img src="https://img.shields.io/badge/version-1.14.7-blue.svg"/>
+    <img src="https://img.shields.io/badge/version-1.14.8-blue.svg"/>
   </a>
   <img src="https://img.shields.io/badge/swift-5.1-green.svg"/>
   <a href="https://travis-ci.org/qualaroo/ios-sdk">
@@ -40,7 +40,7 @@ To integrate QualarooSDKiOS into your Xcode project using CocoaPods, specify it 
 platform :ios, '9.0'
 
 target 'TargetName' do
-  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.7'
+  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.8'
 end
 ```
 
@@ -50,8 +50,8 @@ To integrate QualarooSDKiOS into your Flutter app using CocoaPods, specify it in
 platform :ios, '9.0'
 
 target 'TargetName' do
-  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.7'
-  pod 'Qualaroo/Flutter', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.7'
+  pod 'Qualaroo', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.8'
+  pod 'Qualaroo/Flutter', :git => 'https://github.com/qualaroo/ios-sdk.git', :tag => '1.14.8'
 end
 ```
 Then, run the following command:
@@ -68,7 +68,7 @@ Step 4: Check if the package is added at Target -> General -> Framework, Librari
 ### Carthage
 Simply add:
 ```
-github "qualaroo/ios-sdk" ~> 1.14.7
+github "qualaroo/ios-sdk" ~> 1.14.8
 ```
 to your `Cartfile`
 ## Usage

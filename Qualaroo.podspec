@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "Qualaroo"
-  s.version      = "1.14.6"
+  s.version      = "1.14.8"
   s.summary      = "Qualaroo makes it easy to survey specific groups of application users to gain qualitative information."
   s.description  = <<-DESC
 		     Growing your business starts by understanding what your customers and potential customers want and what’s preventing them from achieving it. Qualaroo makes it easy to uncover these critical insights with our website and mobile application survey software. Uncover visitor confusion with your product offerings, understand objections in your purchase funnel, and more.
@@ -37,9 +37,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/Qualaroo/**/*.{h,m,swift}'
   s.requires_arc = true
   s.default_subspecs = :none
-  s.resource_bundles = {
-    'Qualaroo' => ['Sources/Qualaroo/Survey/QualarooStoryboard.storyboard', 'Sources/Qualaroo/QualarooImages.xcassets', 'Sources/Qualaroo/Survey/**/*.xib']
-  }
+  s.resources = 'Sources/Qualaroo/**/*.{storyboard,xib,xcassets}'
   s.subspec 'Flutter' do |flutter|
   flutter.resources = ['Sources/Qualaroo/QualarooImages.xcassets']
   end
@@ -47,5 +45,4 @@ Pod::Spec.new do |s|
   s.swift_version = '4.2'
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.framework  = "UIKit"
-
 end
