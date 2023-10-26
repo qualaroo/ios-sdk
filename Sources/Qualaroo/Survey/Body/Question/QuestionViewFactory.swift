@@ -67,6 +67,10 @@ class QuestionViewFactory {
                    maxText: question.npsMaxText ?? "",
                    textColor: theme.colors.text,
                    npsColor: theme.colors.uiSelected,
+                   npsBackgroundColor: theme.colors.npsBackgroundColor,
+                   npsSelectedColor:  theme.colors.npsSelectedColor,
+                   ansColor:  theme.colors.ansColor,
+                   ansSelectedColor:  theme.colors.ansSelectedColor,
                    interactor: interactor)
     return view
   }

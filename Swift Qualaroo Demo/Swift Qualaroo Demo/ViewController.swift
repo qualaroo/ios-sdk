@@ -16,7 +16,7 @@ class ViewController: UIViewController {
   }
 
   @IBAction func showSurvey(_ sender: Any) {
-    Qualaroo.shared.showSurvey(with: "YourSurveyAlias",
+    Qualaroo.shared.showSurvey(with: "nps__net_promoter_score",
                                on: self,
                                delegate: self)
   }

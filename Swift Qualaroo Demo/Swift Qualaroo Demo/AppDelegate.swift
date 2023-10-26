@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    Qualaroo.shared.configure(with: "YourApiKey==")
+    Qualaroo.shared.configure(with: "Njk0OTU6OGY2N2ViYWVjMTZmN2M0ZjBjNTVmYzcyOTJlZGFkMmVlMjFhOTk3YTo2Nzc4Nw==")
     return true
   }
   

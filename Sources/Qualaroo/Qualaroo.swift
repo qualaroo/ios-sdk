@@ -58,7 +58,7 @@ public class Qualaroo: NSObject, Loggable {
   private var debugMode = false
   
   func currentEnvironment() -> Environment {
-    return .production
+    return .staging
   }
     
   enum Environment {

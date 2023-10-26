@@ -28,6 +28,10 @@ class AnswerNpsView: UIView {
                  maxText: String,
                  textColor: UIColor,
                  npsColor: UIColor,
+                 npsBackgroundColor: UIColor,
+                 npsSelectedColor:  UIColor,
+                 ansColor:  UIColor,
+                 ansSelectedColor:  UIColor,
                  interactor: AnswerNpsInteractor) {
 
     self.backgroundColor = backgroundColor
@@ -38,14 +42,14 @@ class AnswerNpsView: UIView {
     npsSegmentedControl.layer.borderColor = textColor.cgColor
     npsSegmentedControl.layer.borderWidth = 1
     npsSegmentedControl.setDividerImage(imageWithColor(color: textColor), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
-    npsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: textColor], for: UIControl.State.normal)
-    npsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: backgroundColor], for: UIControl.State.selected)
-    if #available(iOS 13.0, *) {
-        npsSegmentedControl.selectedSegmentTintColor = npsColor
-        npsSegmentedControl.backgroundColor = backgroundColor
+    npsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: ansColor], for: UIControl.State.normal)
+    npsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: ansSelectedColor], for: UIControl.State.selected)
+      npsSegmentedControl.backgroundColor = npsBackgroundColor
+      if #available(iOS 13.0, *) {
+          npsSegmentedControl.selectedSegmentTintColor = npsSelectedColor
     } else {
         //tint color does no longer work starting with iOS 13.0
-        npsSegmentedControl.tintColor = npsColor
+        npsSegmentedControl.tintColor = npsSelectedColor
     }
     self.interactor = interactor
     enableTapAndSlide()
