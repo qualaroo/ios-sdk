@@ -310,7 +310,32 @@ extension SurveyView: SurveyViewInterface {
       self.containerBottomConstraint.constant = height
       self.containerCenterConstraint.constant = -height/2
       self.view.layoutIfNeeded()
-      }.run()
+      }.run(withCompletion: { _ in
+        self.scrollFocusedInputToVisible()
+      })
+  }
+  
+  private func scrollFocusedInputToVisible() {
+    guard let body = embeddedBody, let input = firstResponder(in: body) else { return }
+    var ancestor = input.superview
+    while let candidate = ancestor, candidate.isDescendant(of: body) {
+      if let scrollView = candidate as? UIScrollView {
+        if scrollView.isTracking || scrollView.isDecelerating { return }
+        scrollView.layoutIfNeeded()
+        let inputRect = input.convert(input.bounds, to: scrollView)
+        scrollView.scrollRectToVisible(inputRect, animated: true)
+        return
+      }
+      ancestor = candidate.superview
+    }
+  }
+  
+  private func firstResponder(in view: UIView) -> UIView? {
+    if view.isFirstResponder { return view }
+    for subview in view.subviews {
+      if let responder = firstResponder(in: subview) { return responder }
+    }
+    return nil
   }
   
   func dimBackground() {
